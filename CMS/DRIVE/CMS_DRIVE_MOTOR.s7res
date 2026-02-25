@@ -1,0 +1,17 @@
+﻿MultiLingualTexts:
+  - id: MLC_3MU
+    en-US: 1 = Motor temperature normal
+  - id: MLC_3QR
+    en-US: Spare
+  - id: MLC_4TY
+    en-US: Spare
+  - id: MLC_S2
+    en-US: Spare
+  - id: MLC_4PL
+    en-US: Spare
+  - id: MLC_3dU
+    en-US: 1 = Motor temperature warning
+  - id: MLC_3DZ
+    en-US: Spare
+  - id: MLC_58Z
+    en-US: 1 = Motor temperature fault

@@ -1,0 +1,25 @@
+﻿TYPE
+    SPEED_SETPOINTS : STRUCT
+        { S7_MLC := "MLC_3St" }
+        iSpeedSP1 : Int := 4000;
+        { S7_MLC := "MLC_3E8" }
+        iSpeedSP2 : Int := 8000;
+        { S7_MLC := "MLC_c7" }
+        iSpeedSP3 : Int := 12000;
+        { S7_MLC := "MLC_Mh" }
+        iSpeedSP4 : Int := 16384;
+        { S7_MLC := "MLC_32X" }
+        iSpeedSP5 : Int := 16384;
+        { S7_MLC := "MLC_3V4" }
+        iSpeedReduced : Int := 4000;
+        { S7_MLC := "MLC_3yN" }
+        iSpeedSPAutoMode : Int := 100;
+        { S7_MLC := "MLC_4pB" }
+        iRampAccelaration : Int := 16384;
+        { S7_MLC := "MLC_4Hv" }
+        iRampDeceleration : Int := 16384;
+        iTorqueLimitPos : Int;
+        iTorqueLimitNeg : Int;
+        iReserve3 : Int;
+    END_STRUCT;
+END_TYPE

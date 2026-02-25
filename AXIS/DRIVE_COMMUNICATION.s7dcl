@@ -1,0 +1,8 @@
+﻿TYPE
+    DRIVE_COMMUNICATION : STRUCT
+        { S7_Setpoint := "False" }
+        PZD_IN : _.PZD_IN;
+        { S7_Setpoint := "False" }
+        PZD_OUT : _.PZD_OUT;
+    END_STRUCT;
+END_TYPE

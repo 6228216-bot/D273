@@ -1,0 +1,17 @@
+﻿MultiLingualTexts:
+  - id: MLC_4Ks
+    en-US: 1 = Drive OFF
+  - id: MLC_3DR
+    en-US: 1 = Drive READY
+  - id: MLC_4VT
+    en-US: 1 = Drive ON
+  - id: MLC_4DP
+    en-US: Spare
+  - id: MLC_53Q
+    en-US: Spare
+  - id: MLC_34r
+    en-US: 1 = Drive WARNING
+  - id: MLC_5BF
+    en-US: Spare
+  - id: MLC_3T7
+    en-US: 1 = Drive FAULT

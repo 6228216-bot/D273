@@ -1,0 +1,33 @@
+﻿MultiLingualTexts:
+  - id: MLC_fn
+    en-US: Enable target control
+  - id: MLC_3RY
+    en-US: Enable creeping
+  - id: MLC_3h9
+    en-US: Start homing
+  - id: MLC_4m6
+    en-US: Enable actual position and velocity calculation
+  - id: MLC_4fL
+    en-US: Pre limit switch 1
+  - id: MLC_3LB
+    en-US: Pre limit switch 2
+  - id: MLC_4cw
+    en-US: End limit switch
+  - id: MLC_PB
+    en-US: Setpoint switchover
+  - id: MLC_4ny
+    en-US: Enable field weakening
+  - id: MLC_Xs
+    en-US: Reset load memory
+  - id: MLC_4YB
+    en-US: Enable start pulse
+  - id: MLC_hW
+    en-US: Set or save torque
+  - id: MLC_4wU
+    en-US: Enable torque coupling
+  - id: MLC_3Tg
+    en-US: Enable speed synchronization
+  - id: MLC_326
+    en-US: Enable position synchronization
+  - id: MLC_3bh
+    en-US: Enable master speed reduction

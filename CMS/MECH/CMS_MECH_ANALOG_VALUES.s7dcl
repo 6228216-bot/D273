@@ -1,0 +1,14 @@
+﻿TYPE
+    CMS_MECH_ANALOG_VALUES : STRUCT
+        { S7_MLC := "MLC_3nd" }
+        rAbsActualPosition : Real;
+        { S7_MLC := "MLC_3tF" }
+        rMasterSwitchSP : Real;
+        { S7_MLC := "MLC_vj" }
+        rRelatActualSpeed : Real;
+        { S7_MLC := "MLC_396" }
+        rAbsActualSpeed : Real;
+        { S7_MLC := "MLC_53s" }
+        rAbsPositionSP : Real;
+    END_STRUCT;
+END_TYPE

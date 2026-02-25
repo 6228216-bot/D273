@@ -1,0 +1,17 @@
+﻿MultiLingualTexts:
+  - id: MLC_4kk
+    en-US: E-stop 01 (LCP Gantry landside)
+  - id: MLC_4W9
+    en-US: E-stop 02 (LCP cabin chair)
+  - id: MLC_3eP
+    en-US: E-stop 03 (LCP checker cabin)
+  - id: MLC_t6
+    en-US: E-stop 04 (LCP M-house, Hoist)
+  - id: MLC_3X9
+    en-US: E-stop 05 (LCP M-house, Trolley)
+  - id: MLC_3CC
+    en-US: E-stop 06 (LCP M-house, Boomhoist)
+  - id: MLC_446
+    en-US: E-stop 07 (LCP Trim-List-Skew)
+  - id: MLC_ki
+    en-US: E-stop 08 (LCP Trolley)

@@ -1,0 +1,20 @@
+﻿TYPE
+    CMS_DRIVE_MOTOR : STRUCT
+        { S7_MLC := "MLC_3MU" }
+        bMotorTempNormal : Bool;
+        { S7_MLC := "MLC_3QR" }
+        bSpare1 : Bool;
+        { S7_MLC := "MLC_4TY" }
+        bSpare2 : Bool;
+        { S7_MLC := "MLC_S2" }
+        bSpare3 : Bool;
+        { S7_MLC := "MLC_4PL" }
+        bSpare4 : Bool;
+        { S7_MLC := "MLC_3dU" }
+        bMotorTempWarning : Bool;
+        { S7_MLC := "MLC_3DZ" }
+        bSpare5 : Bool;
+        { S7_MLC := "MLC_58Z" }
+        bMotorTempFault : Bool;
+    END_STRUCT;
+END_TYPE

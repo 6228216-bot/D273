@@ -1,0 +1,9 @@
+﻿TYPE
+    DRIVE_OPER_HOURS : STRUCT
+        diDriveOperHours : DInt;
+        diDriveResetableOperHours : DInt;
+        iResetableOperMinutes : Int;
+        dtLastResetDateTime : Date_And_Time;
+        bResetCmd : Bool;
+    END_STRUCT;
+END_TYPE

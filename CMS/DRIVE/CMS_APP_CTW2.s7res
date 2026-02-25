@@ -1,0 +1,33 @@
+﻿MultiLingualTexts:
+  - id: MLC_485
+    en-US: Align offset position
+  - id: MLC_4KQ
+    en-US: Master move offset speed
+  - id: MLC_4df
+    en-US: Enable monitoring
+  - id: MLC_WF
+    en-US: Pass speed unchanged
+  - id: MLC_fe
+    en-US: Reserved
+  - id: MLC_4nC
+    en-US: Reserved
+  - id: MLC_3xH
+    en-US: Reserved
+  - id: MLC_tw
+    en-US: Reserved
+  - id: MLC_3Wr
+    en-US: Enable grab control
+  - id: MLC_495
+    en-US: Save grab open
+  - id: MLC_ut
+    en-US: Save grab closed
+  - id: MLC_4fV
+    en-US: Enable slack rope controller
+  - id: MLC_3y2
+    en-US: Enable current equal controller
+  - id: MLC_4cg
+    en-US: Enable continuous load measurement
+  - id: MLC_au
+    en-US: Set positive offset speed
+  - id: MLC_3ZZ
+    en-US: Set negative offset speed

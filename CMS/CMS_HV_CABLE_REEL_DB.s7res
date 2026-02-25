@@ -1,0 +1,7 @@
+﻿MultiLingualTexts:
+  - id: MLC_he
+    en-US: HV cable reel status bits group 2
+  - id: MLC_32w
+    en-US: HV cable reel status bits group 1
+  - id: MLC_3Xz
+    en-US: HV cable reel general status bits

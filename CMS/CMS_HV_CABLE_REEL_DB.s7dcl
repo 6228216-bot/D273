@@ -1,0 +1,10 @@
+﻿TYPE
+    CMS_HV_CABLE_REEL_DB : STRUCT
+        { S7_MLC := "MLC_he" }
+        byHVCableReelStatusBits2 : _.CMS_HV_CABLE_REEL_STATUS_BITS2;
+        { S7_MLC := "MLC_32w" }
+        byHVCableReelStatusBits1 : _.CMS_HV_CABLE_REEL_STATUS_BITS1;
+        { S7_MLC := "MLC_3Xz" }
+        byHVCableReelGeneralBits : _.CMS_HV_CABLE_REEL_GENERAL_BITS;
+    END_STRUCT;
+END_TYPE

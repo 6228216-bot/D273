@@ -1,0 +1,12 @@
+﻿TYPE
+    CMS_INTERLOCKS_BITS_1 : STRUCT
+        bit0 : Bool;
+        bit1 : Bool;
+        bit2 : Bool;
+        bit3 : Bool;
+        bit4 : Bool;
+        bit5 : Bool;
+        bit6 : Bool;
+        bit7 : Bool;
+    END_STRUCT;
+END_TYPE

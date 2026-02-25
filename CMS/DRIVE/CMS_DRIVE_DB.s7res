@@ -1,0 +1,57 @@
+﻿MultiLingualTexts:
+  - id: MLC_4UG
+    en-US: Control word 1
+  - id: MLC_4fY
+    en-US: Control word 2
+  - id: MLC_3JT
+    en-US: Ramp up time in ms
+  - id: MLC_4Kt
+    en-US: Ramp down time in ms
+  - id: MLC_4F2
+    en-US: App control word 1
+  - id: MLC_42U
+    en-US: App control word 2
+  - id: MLC_3kb
+    en-US: Status word 1
+  - id: MLC_3H4
+    en-US: Status word 2
+  - id: MLC_4WL
+    en-US: Fault number
+  - id: MLC_Ts
+    en-US: App status word 1
+  - id: MLC_3Xw
+    en-US: App status word 2
+  - id: MLC_3hb
+    en-US: Stop category bits
+  - id: MLC_3KP
+    en-US: Brake 1 bits
+  - id: MLC_36v
+    en-US: Brake 2 bits
+  - id: MLC_36z
+    en-US: Drive status bits
+  - id: MLC_4Vt
+    en-US: Motor status bits
+  - id: MLC_4zm
+    en-US: Drive faults status
+  - id: MLC_4ZC
+    en-US: Actual Position in m
+  - id: MLC_4NR
+    en-US: Speed setpoint from PLC in %
+  - id: MLC_s6
+    en-US: Actual speed in %
+  - id: MLC_fR
+    en-US: Actual speed in RPM
+  - id: MLC_36W
+    en-US: Position setpoint in m
+  - id: MLC_3g3
+    en-US: Actual voltage in V
+  - id: MLC_3Tw
+    en-US: Actual current in A
+  - id: MLC_4tB
+    en-US: Actual torque in Nm
+  - id: MLC_t3
+    en-US: Torque setpoint in Nm
+  - id: MLC_3y9
+    en-US: Speed setpoint in %
+  - id: MLC_3T4
+    en-US: Current setpoint in A

@@ -1,0 +1,33 @@
+﻿MultiLingualTexts:
+  - id: MLC_4n4
+    en-US: Control from cabin
+  - id: MLC_QY
+    en-US: Control from E-house
+  - id: MLC_37p
+    en-US: Control from M-house → LCP Hoist
+  - id: MLC_3mB
+    en-US: Control from M-house → LCP Trolley
+  - id: MLC_4bj
+    en-US: Control from M-house → LCP Boomhoist
+  - id: MLC_3D8
+    en-US: Control from LCP Trolley
+  - id: MLC_3h5
+    en-US: Control from LCP Gantry Checker cabin
+  - id: MLC_3SH
+    en-US: Control from LCP Trim-List-Skew
+  - id: MLC_4Ya
+    en-US: Control from LCP Boomhoist
+  - id: MLC_Va
+    en-US: spare
+  - id: MLC_3AM
+    en-US: spare
+  - id: MLC_4Q2
+    en-US: spare
+  - id: MLC_3VW
+    en-US: spare
+  - id: MLC_52v
+    en-US: spare
+  - id: MLC_56w
+    en-US: spare
+  - id: MLC_49q
+    en-US: spare

@@ -1,0 +1,24 @@
+﻿TYPE
+    DRIVE_RECEIVED_FAULTS : STRUCT
+        { S7_MLC := "MLC_3V3" }
+        connectionFault : Bool;
+        { S7_MLC := "MLC_4b7" }
+        driveFault : Bool;
+        { S7_MLC := "MLC_4HN" }
+        driveOverheat : Bool;
+        { S7_MLC := "MLC_SV" }
+        motorOverheat : Bool;
+        { S7_MLC := "MLC_3kS" }
+        motorBlocked : Bool;
+        { S7_MLC := "MLC_42F" }
+        motorStalled : Bool;
+        { S7_MLC := "MLC_3tc" }
+        brakeOpenCmd : Bool;
+        { S7_MLC := "MLC_3Nh" }
+        reserve07 : Bool;
+        { S7_MLC := "MLC_58t" }
+        iFaultActualNumber : Int;
+        { S7_MLC := "MLC_5BV" }
+        iAlarmActualNumber : Int;
+    END_STRUCT;
+END_TYPE

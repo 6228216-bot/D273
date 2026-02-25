@@ -1,0 +1,30 @@
+﻿TYPE
+    CMS_MECH_STATUS_BITS : STRUCT
+        { S7_MLC := "MLC_3q6" }
+        byMotion : _.CMS_MOTION_STATUS_BITS;
+        { S7_MLC := "MLC_ec" }
+        byStop : _.CMS_STOP_BITS;
+        { S7_MLC := "MLC_3jh" }
+        bySwitches2 : _.CMS_MECH_SWITCHES2;
+        { S7_MLC := "MLC_tG" }
+        bySwitches1 : _.CMS_MECH_SWITCHES1;
+        { S7_MLC := "MLC_38c" }
+        bySpare : _.CMS_SPARE_BITS;
+        { S7_MLC := "MLC_37m" }
+        byStick : _.CMS_STICK_BITS;
+        { S7_MLC := "MLC_3PB" }
+        byRopeDrum : _.CMS_ROPE_DRUM_BITS;
+        { S7_MLC := "MLC_56z" }
+        byInterlocks2 : _.CMS_INTERLOCKS_BITS_2;
+        { S7_MLC := "MLC_T5" }
+        byInterlocks1 : _.CMS_INTERLOCKS_BITS_1;
+        { S7_MLC := "MLC_4CJ" }
+        bySafetyBrake4 : _.CMS_BRAKE_BITS;
+        { S7_MLC := "MLC_PF" }
+        bySafetyBrake3 : _.CMS_BRAKE_BITS;
+        { S7_MLC := "MLC_3cX" }
+        bySafetyBrake2 : _.CMS_BRAKE_BITS;
+        { S7_MLC := "MLC_wB" }
+        bySafetyBrake1 : _.CMS_BRAKE_BITS;
+    END_STRUCT;
+END_TYPE

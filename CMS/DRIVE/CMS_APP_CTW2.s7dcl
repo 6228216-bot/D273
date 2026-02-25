@@ -1,0 +1,36 @@
+﻿TYPE
+    CMS_APP_CTW2 : STRUCT
+        { S7_MLC := "MLC_485" }
+        bAlignOffsetPosition : Bool;
+        { S7_MLC := "MLC_4KQ" }
+        bMasterMoveOffsetSpeed : Bool;
+        { S7_MLC := "MLC_4df" }
+        bEnableMonitoring : Bool;
+        { S7_MLC := "MLC_WF" }
+        bPassSpeedUnchanged : Bool;
+        { S7_MLC := "MLC_fe" }
+        bReserved12 : Bool;
+        { S7_MLC := "MLC_4nC" }
+        bReserved13 : Bool;
+        { S7_MLC := "MLC_3xH" }
+        bReserved14 : Bool;
+        { S7_MLC := "MLC_tw" }
+        bReserved15 : Bool;
+        { S7_MLC := "MLC_3Wr" }
+        bEnableGrabControl : Bool;
+        { S7_MLC := "MLC_495" }
+        bSaveGrabOpen : Bool;
+        { S7_MLC := "MLC_ut" }
+        bSaveGrabClosed : Bool;
+        { S7_MLC := "MLC_4fV" }
+        bEnableSlackRopeController : Bool;
+        { S7_MLC := "MLC_3y2" }
+        bEnableCurrentEqualController : Bool;
+        { S7_MLC := "MLC_4cg" }
+        bEnableContinuousLoadMeasurement : Bool;
+        { S7_MLC := "MLC_au" }
+        bSetPositiveOffsetSpeed : Bool;
+        { S7_MLC := "MLC_3ZZ" }
+        bSetNegativeOffsetSpeed : Bool;
+    END_STRUCT;
+END_TYPE

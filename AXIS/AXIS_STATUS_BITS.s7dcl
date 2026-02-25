@@ -1,0 +1,36 @@
+﻿TYPE
+    AXIS_STATUS_BITS : STRUCT
+        { S7_MLC := "MLC_38m" }
+        bMovementFRUActive : Bool;
+        { S7_MLC := "MLC_Sm" }
+        bMovementBLDActive : Bool;
+        { S7_MLC := "MLC_3PL" }
+        bAxisStandstill : Bool;
+        { S7_MLC := "MLC_3yw" }
+        bNoPulsesEnabled : Bool;
+        { S7_MLC := "MLC_r9" }
+        reserve11 : Bool;
+        { S7_MLC := "MLC_3FW" }
+        reserve13 : Bool;
+        { S7_MLC := "MLC_3VL" }
+        reserve12 : Bool;
+        { S7_MLC := "MLC_45S" }
+        reserve14 : Bool;
+        { S7_MLC := "MLC_4si" }
+        bBrakeTestActivated : Bool;
+        { S7_MLC := "MLC_4pt" }
+        bBrakeTestInProgress : Bool;
+        { S7_MLC := "MLC_4uv" }
+        bBrakeTestFinished : Bool;
+        { S7_MLC := "MLC_hL" }
+        bBrakeTestSuccessfull : Bool;
+        { S7_MLC := "MLC_4CS" }
+        bSpeedSPPositive : Bool;
+        { S7_MLC := "MLC_3x8" }
+        bSpeedSPNegative : Bool;
+        { S7_MLC := "MLC_3bD" }
+        reserve17 : Bool;
+        { S7_MLC := "MLC_583" }
+        CONNECTION_FAULT : Array[1..4] of Bool;
+    END_STRUCT;
+END_TYPE

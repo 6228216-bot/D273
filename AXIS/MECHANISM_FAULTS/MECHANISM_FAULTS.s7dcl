@@ -1,0 +1,15 @@
+﻿TYPE
+    MECHANISM_FAULTS : STRUCT
+        { S7_Setpoint := "False" }
+        DRIVE_FAULTS : _.DRIVE_FAULTS;
+        { S7_Setpoint := "False" }
+        BRAKE_FAULTS : _.BRAKE_FAULTS;
+        { S7_Setpoint := "False" }
+        MOTOR_FAN_FAULTS : _.FAN_FAULTS;
+        { S7_Setpoint := "False" }
+        MOTOR_FAULTS : _.MOTOR_FAULTS;
+        ANALOG_FAULTS : _.DRIVE_ANALOG_FAULTS;
+        { S7_Setpoint := "False" }
+        CONTROL_BITS : _.MECH_ALARM_CONTROL_BITS;
+    END_STRUCT;
+END_TYPE

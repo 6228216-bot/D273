@@ -1,0 +1,21 @@
+﻿MultiLingualTexts:
+  - id: MLC_3V3
+    ru-RU: Ошибка связи с ПЧ
+  - id: MLC_4b7
+    ru-RU: Ошибка ПЧ
+  - id: MLC_4HN
+    ru-RU: Перегрев ПЧ
+  - id: MLC_SV
+    ru-RU: Перегрев двигателя
+  - id: MLC_3kS
+    ru-RU: Двигатель блокирован
+  - id: MLC_42F
+    ru-RU: Двигатель опрокинут
+  - id: MLC_3tc
+    ru-RU: Команда открытия тормоза
+  - id: MLC_3Nh
+    ru-RU: reserve07
+  - id: MLC_58t
+    ru-RU: Код активной ошибки ПЧ
+  - id: MLC_5BV
+    ru-RU: Код активного предупреждения ПЧ

@@ -1,0 +1,39 @@
+﻿MultiLingualTexts:
+  - id: MLC_wg
+    en-US: Master switch status structure
+    ru-RU: Состояние джойстика
+  - id: MLC_PH
+    en-US: Axis status bits structure
+    ru-RU: Биты состояния механизма
+  - id: MLC_4mc
+    en-US: Axis actual values structure
+    ru-RU: Переменные состояния
+  - id: MLC_Mg
+    en-US: Drives actual values structure
+  - id: MLC_3mh
+    en-US: Axis control bits structure
+    ru-RU: Биты управления механизмом
+  - id: MLC_Mq
+    en-US: Axis setpoints (speed, acceleration, position)
+    ru-RU: Задания скорости, ускорения, положения
+  - id: MLC_4tF
+    en-US: Brake test data per drive
+    ru-RU: Проверка тормоза по каждому приводу
+  - id: MLC_42s
+    en-US: Axis limit switches and hardware interlocks structure
+    ru-RU: Актуальное состояние концевых выключателей
+  - id: MLC_3sz
+    en-US: Software interlocks structure
+    ru-RU: Программные блокировки
+  - id: MLC_4s4
+    en-US: Drive communication data structure
+    ru-RU: Обмен данными по интерфейсу
+  - id: MLC_4Cm
+    en-US: Drive fault feedback array
+    ru-RU: Ошибки, полученные из ПЧ
+  - id: MLC_R3
+    en-US: Rated values and scaling parameters structure
+    ru-RU: Номинальные характеристики двигателей
+  - id: MLC_3h4
+    en-US: Hardware I/O mapping for drives
+    ru-RU: Адреса ПЧ оси в формате Hardware Identifier

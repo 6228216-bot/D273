@@ -1,0 +1,29 @@
+﻿TYPE
+    AXIS_LIMIT_SWITCHES : STRUCT
+        { S7_MLC := "MLC_3wD" }
+        bEmLimSwitchFRU : Bool;
+        { S7_MLC := "MLC_4WW" }
+        bEmLimSwitchBLD : Bool;
+        { S7_MLC := "MLC_4nw" }
+        bLimitSwitchFRU : Bool;
+        { S7_MLC := "MLC_af" }
+        bLimitSwitchBLD : Bool;
+        { S7_MLC := "MLC_4Mx" }
+        bSlowDownFRU : Bool;
+        { S7_MLC := "MLC_3gN" }
+        bSlowDownBLD : Bool;
+        { S7_MLC := "MLC_4vf" }
+        bReferencePoint : Bool;
+        { S7_MLC := "MLC_3UR" }
+        bExtFRUDenied : Bool;
+        { S7_MLC := "MLC_4HN" }
+        bExtBLDDenied : Bool;
+        reserve11 : Bool;
+        reserve12 : Bool;
+        reserve13 : Bool;
+        reserve14 : Bool;
+        reserve15 : Bool;
+        reserve16 : Bool;
+        reserve17 : Bool;
+    END_STRUCT;
+END_TYPE

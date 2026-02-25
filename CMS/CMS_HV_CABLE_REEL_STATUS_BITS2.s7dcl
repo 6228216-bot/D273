@@ -1,0 +1,20 @@
+﻿TYPE
+    CMS_HV_CABLE_REEL_STATUS_BITS2 : STRUCT
+        { S7_MLC := "MLC_4wv" }
+        bManualOperation : Bool;
+        { S7_MLC := "MLC_3F6" }
+        bAutomaticOperation : Bool;
+        { S7_MLC := "MLC_4fx" }
+        bSpare3 : Bool;
+        { S7_MLC := "MLC_3Hc" }
+        bSpare4 : Bool;
+        { S7_MLC := "MLC_aK" }
+        bSpare5 : Bool;
+        { S7_MLC := "MLC_463" }
+        bSpare6 : Bool;
+        { S7_MLC := "MLC_3Uq" }
+        bSpare7 : Bool;
+        { S7_MLC := "MLC_3nr" }
+        bSpare8 : Bool;
+    END_STRUCT;
+END_TYPE

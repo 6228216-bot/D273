@@ -1,0 +1,22 @@
+﻿TYPE
+    DRIVE_FAULTS : STRUCT
+        { S7_MLC := "MLC_4iJ" }
+        driveCBNotOn : Bool;
+        { S7_MLC := "MLC_3p5" }
+        driveMCNotOn : Bool;
+        { S7_MLC := "MLC_4Ai" }
+        driveMCSelfEnabled : Bool;
+        { S7_MLC := "MLC_Rq" }
+        driveConnectionFailed : Bool;
+        { S7_MLC := "MLC_3Mw" }
+        driveFailed : Bool;
+        { S7_MLC := "MLC_4Tx" }
+        driveOverheat : Bool;
+        { S7_MLC := "MLC_iW" }
+        motorModuleFanCB : Bool;
+        { S7_MLC := "MLC_3fC" }
+        drive24SupplyFault : Bool;
+        { S7_MLC := "MLC_sM" }
+        driveDCDisconnector : Bool;
+    END_STRUCT;
+END_TYPE

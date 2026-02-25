@@ -1,0 +1,20 @@
+﻿TYPE
+    CMS_HV_CABLE_REEL_GENERAL_BITS : STRUCT
+        { S7_MLC := "MLC_4wv" }
+        bOff : Bool;
+        { S7_MLC := "MLC_3F6" }
+        bReady : Bool;
+        { S7_MLC := "MLC_4fx" }
+        bOn : Bool;
+        { S7_MLC := "MLC_3Hc" }
+        bSpare3 : Bool;
+        { S7_MLC := "MLC_aK" }
+        bSpare4 : Bool;
+        { S7_MLC := "MLC_463" }
+        bWarning : Bool;
+        { S7_MLC := "MLC_3Uq" }
+        bSpare5 : Bool;
+        { S7_MLC := "MLC_3nr" }
+        bFault : Bool;
+    END_STRUCT;
+END_TYPE

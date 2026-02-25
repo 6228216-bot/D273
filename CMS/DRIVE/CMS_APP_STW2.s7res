@@ -1,0 +1,33 @@
+﻿MultiLingualTexts:
+  - id: MLC_Ns
+    en-US: Align offset position active
+  - id: MLC_594
+    en-US: Master move offset speed active
+  - id: MLC_3WF
+    en-US: Monitoring limit exceeded
+  - id: MLC_4eC
+    en-US: Grab torque limit exceeded
+  - id: MLC_W9
+    en-US: Reserved
+  - id: MLC_3Fn
+    en-US: Reserved
+  - id: MLC_3Yj
+    en-US: Reserved
+  - id: MLC_36A
+    en-US: Reserved
+  - id: MLC_4eq
+    en-US: Grab position saved
+  - id: MLC_395
+    en-US: Grab open
+  - id: MLC_3a7
+    en-US: Grab closed
+  - id: MLC_s9
+    en-US: Slack rope control active
+  - id: MLC_j9
+    en-US: Current equal control active
+  - id: MLC_5A2
+    en-US: Grab touchdown
+  - id: MLC_3bh
+    en-US: Positive offset speed active
+  - id: MLC_59W
+    en-US: Negative offset speed active

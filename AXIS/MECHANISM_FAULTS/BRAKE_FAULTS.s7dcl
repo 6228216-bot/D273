@@ -1,0 +1,22 @@
+﻿TYPE
+    BRAKE_FAULTS : STRUCT
+        { S7_MLC := "MLC_3Bm" }
+        brakeCB1NotOn : Bool;
+        { S7_MLC := "MLC_4cV" }
+        brakeCB2NotOn : Bool;
+        { S7_MLC := "MLC_4aG" }
+        brakeMC1NotOn : Bool;
+        { S7_MLC := "MLC_3sM" }
+        brakeMC1SelfEnabled : Bool;
+        { S7_MLC := "MLC_3sW" }
+        brakeMC2NotOn : Bool;
+        { S7_MLC := "MLC_3SC" }
+        brakeMC2SelfEnabled : Bool;
+        { S7_MLC := "MLC_3R6" }
+        brakeNotOpened : Bool;
+        { S7_MLC := "MLC_Qp" }
+        brakeNotClosed : Bool;
+        { S7_MLC := "MLC_4B4" }
+        brakePadWear : Bool;
+    END_STRUCT;
+END_TYPE

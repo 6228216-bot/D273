@@ -1,0 +1,20 @@
+﻿TYPE
+    MECH_ALARM_CONTROL_BITS : STRUCT
+        { S7_MLC := "MLC_pQ" }
+        driveCoastStop : Bool;
+        { S7_MLC := "MLC_jR" }
+        driveFastStop : Bool;
+        { S7_MLC := "MLC_3Xf" }
+        driveNormalStop : Bool;
+        { S7_MLC := "MLC_3Zx" }
+        craneCoastStop : Bool;
+        { S7_MLC := "MLC_4LX" }
+        craneFastStop : Bool;
+        { S7_MLC := "MLC_3Np" }
+        craneNormalStop : Bool;
+        { S7_MLC := "MLC_4GQ" }
+        mechanismFault : Bool;
+        { S7_MLC := "MLC_452" }
+        mechanismAlarm : Bool;
+    END_STRUCT;
+END_TYPE

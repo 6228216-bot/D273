@@ -1,0 +1,20 @@
+﻿TYPE
+    AXIS_RATED_VALUES : STRUCT
+        { S7_MLC := "MLC_4BF" }
+        rRatedSpeed : Real;
+        { S7_MLC := "MLC_4pW" }
+        rRatedCurrent : Real;
+        { S7_MLC := "MLC_3mr" }
+        rRatedTorque : Real;
+        { S7_MLC := "MLC_339" }
+        rRatedVoltage : Real;
+        { S7_MLC := "MLC_sB" }
+        rRatedTemperature : Real;
+        { S7_MLC := "MLC_3tr" }
+        rReferenceSpeed : Real;
+        { S7_MLC := "MLC_4Be" }
+        rReferenceCurrent : Real;
+        { S7_MLC := "MLC_4jc" }
+        rReferenceTorque : Real;
+    END_STRUCT;
+END_TYPE

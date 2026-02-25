@@ -1,0 +1,11 @@
+﻿MultiLingualTexts:
+  - id: MLC_3nd
+    en-US: Absolute actual position in m
+  - id: MLC_3tF
+    en-US: Speed setpoint from masterswitch in %
+  - id: MLC_vj
+    en-US: Actual speed in %
+  - id: MLC_396
+    en-US: Actual speed in m/s
+  - id: MLC_53s
+    en-US: Position setpoint in m

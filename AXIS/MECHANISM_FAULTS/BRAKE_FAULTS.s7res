@@ -1,0 +1,27 @@
+﻿MultiLingualTexts:
+  - id: MLC_3Bm
+    en-US: Circuit breaker for brake 1 tripped
+    ru-RU: Автомат тормоза 1 отключен
+  - id: MLC_4cV
+    en-US: Circuit breaker for brake 2 tripped
+    ru-RU: Автомат тормоза 2 отключен
+  - id: MLC_4aG
+    en-US: Brake 1 magnetic contactor didn't started in time
+    ru-RU: Контактор тормоза не включился
+  - id: MLC_3sM
+    en-US: Brake 1 magnetic contactor started withiut command
+    ru-RU: Контактор тормоза включен без команды
+  - id: MLC_3sW
+    en-US: Brake 2 magnetic contactor didn't started in time
+    ru-RU: Колодки тормоза изношены
+  - id: MLC_3SC
+    en-US: Brake 2 magnetic contactor started withiut command
+    ru-RU: reserve07
+  - id: MLC_3R6
+    en-US: Brake didn't opened
+    ru-RU: Тормоз не открылся
+  - id: MLC_Qp
+    en-US: Brake didn't closed
+    ru-RU: Тормоз не закрылся
+  - id: MLC_4B4
+    en-US: Brake pad weared

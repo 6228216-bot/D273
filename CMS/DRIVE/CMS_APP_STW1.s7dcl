@@ -1,0 +1,36 @@
+﻿TYPE
+    CMS_APP_STW1 : STRUCT
+        { S7_MLC := "MLC_3aC" }
+        bPositioningActive : Bool;
+        { S7_MLC := "MLC_jz" }
+        bCreepingActive : Bool;
+        { S7_MLC := "MLC_3S9" }
+        bHomingCompleted : Bool;
+        { S7_MLC := "MLC_4qz" }
+        bActualPositionAndVelocityCalculationActive : Bool;
+        { S7_MLC := "MLC_NH" }
+        bLimitationActive : Bool;
+        { S7_MLC := "MLC_rg" }
+        bSpeedControlActive : Bool;
+        { S7_MLC := "MLC_Z7" }
+        bTorqueControlActive : Bool;
+        { S7_MLC := "MLC_vu" }
+        bReserved : Bool;
+        { S7_MLC := "MLC_3gi" }
+        bMeasuringSuccessful : Bool;
+        { S7_MLC := "MLC_3tW" }
+        bCurrentLimitExceeded : Bool;
+        { S7_MLC := "MLC_ir" }
+        bOverspeedDetected : Bool;
+        { S7_MLC := "MLC_3DJ" }
+        bSetTorqueActive : Bool;
+        { S7_MLC := "MLC_jQ" }
+        bTorqueCouplingActive : Bool;
+        { S7_MLC := "MLC_Ye" }
+        bSpeedSynchronizationActive : Bool;
+        { S7_MLC := "MLC_Mi" }
+        bPositionSynchronizationActive : Bool;
+        { S7_MLC := "MLC_47x" }
+        bMasterDriveSpeedReductionActive : Bool;
+    END_STRUCT;
+END_TYPE

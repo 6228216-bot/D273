@@ -1,0 +1,27 @@
+﻿MultiLingualTexts:
+  - id: MLC_3q6
+    en-US: Motion status bits
+  - id: MLC_ec
+    en-US: Stop bits
+  - id: MLC_3jh
+    en-US: Switches group 2 bits
+  - id: MLC_tG
+    en-US: Switches group 1 bits
+  - id: MLC_38c
+    en-US: Spare bits
+  - id: MLC_37m
+    en-US: Stick bits
+  - id: MLC_3PB
+    en-US: Rope drum bits
+  - id: MLC_56z
+    en-US: Interlocks group 2 bits
+  - id: MLC_T5
+    en-US: Interlocks group 1 bits
+  - id: MLC_4CJ
+    en-US: Safety brake 4 bits
+  - id: MLC_PF
+    en-US: Safety brake 3 bits
+  - id: MLC_3cX
+    en-US: Safety brake 2 bits
+  - id: MLC_wB
+    en-US: Safety brake 1 bits

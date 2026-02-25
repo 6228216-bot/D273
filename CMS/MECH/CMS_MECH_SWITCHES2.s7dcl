@@ -1,0 +1,20 @@
+﻿TYPE
+    CMS_MECH_SWITCHES2 : STRUCT
+        { S7_MLC := "MLC_nU" }
+        bLimitSwitchBLDStop : Bool;
+        { S7_MLC := "MLC_35f" }
+        bLimitSwitchBLDEmStop : Bool;
+        { S7_MLC := "MLC_4U2" }
+        bSpare1 : Bool;
+        { S7_MLC := "MLC_3GZ" }
+        bSpare2 : Bool;
+        { S7_MLC := "MLC_3Xu" }
+        bSpare3 : Bool;
+        { S7_MLC := "MLC_37r" }
+        bSpare4 : Bool;
+        { S7_MLC := "MLC_3h5" }
+        bSpare5 : Bool;
+        { S7_MLC := "MLC_ik" }
+        bOverSpeedCheck : Bool;
+    END_STRUCT;
+END_TYPE

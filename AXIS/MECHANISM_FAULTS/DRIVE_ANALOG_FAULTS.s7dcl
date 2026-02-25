@@ -1,0 +1,8 @@
+﻿TYPE
+    DRIVE_ANALOG_FAULTS : STRUCT
+        iFaultActualNumber : Int;
+        iAlarmActualNumber : Int;
+        iFaultLastNumber : Int;
+        iAlarmLastNumber : Int;
+    END_STRUCT;
+END_TYPE

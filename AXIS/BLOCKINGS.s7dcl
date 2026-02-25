@@ -1,0 +1,20 @@
+﻿TYPE
+    BLOCKINGS : STRUCT
+        bBlockLimitSwitchFRU : Bool;
+        bBlockLimitSwitchBLD : Bool;
+        bBlockSlowDownFRU : Bool;
+        bBlockSlowDownBLD : Bool;
+        bBlockEmLimSwitchFRU : Bool;
+        bBlockEmLimSwitchBLD : Bool;
+        encoderN2Active : Bool;
+        "4motorsFor1driveActive" : Bool;
+        bEncoderDeactivate : Bool;
+        bBlocklimitSwitchFRUBLD : Bool;
+        bDrive1Block : Bool;
+        bDrive2Block : Bool;
+        bDrive3Block : Bool;
+        bDrive4Block : Bool;
+        bOverspeedBlock : Bool;
+        reserve17 : Bool;
+    END_STRUCT;
+END_TYPE

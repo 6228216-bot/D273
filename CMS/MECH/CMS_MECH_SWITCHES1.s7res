@@ -1,0 +1,17 @@
+﻿MultiLingualTexts:
+  - id: MLC_3dV
+    en-US: 1= Hoisting emergency switch Active
+  - id: MLC_47t
+    en-US: 1= Hoisting limit switch Active
+  - id: MLC_59G
+    en-US: 1 = Pre-limit switch check hoisting
+  - id: MLC_3kf
+    en-US: 1 = Pre-limit switch hoisting
+  - id: MLC_4b7
+    en-US: 1 = Position check
+  - id: MLC_3Tv
+    en-US: Spare
+  - id: MLC_4SX
+    en-US: 1 = Pre-limit switch lowering
+  - id: MLC_r5
+    en-US: 1 = Pre-limit switch check lowering

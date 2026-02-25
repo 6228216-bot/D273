@@ -1,0 +1,28 @@
+﻿MultiLingualTexts:
+  - id: MLC_3wD
+    en-US: Emergency limit switch positive direction
+    ru-RU: Аварийный концевой в положительном направлении
+  - id: MLC_4WW
+    en-US: Emergency limit switch negative direction
+    ru-RU: Аварийный концевой в отрицательном направлении
+  - id: MLC_4nw
+    en-US: Stop limit switch positive direction
+    ru-RU: Концевой остановки в положительном направлении
+  - id: MLC_af
+    en-US: Stop limit switch negative direction
+    ru-RU: Концевой остановки в отрицательном направлении
+  - id: MLC_4Mx
+    en-US: Slow down limit switch positive direction
+    ru-RU: Концевой замедления в положительном направлении
+  - id: MLC_3gN
+    en-US: Slow down limit switch negative direction
+    ru-RU: Концевой замедления в отрицательном направлении
+  - id: MLC_4vf
+    en-US: Referencing point for position control
+    ru-RU: Метка реферирования энкодера для позиционера
+  - id: MLC_3UR
+    en-US: FRU denied external signal
+    ru-RU: Внешний запрет на движение в положительном направлении
+  - id: MLC_4HN
+    en-US: BLD denied external signal
+    ru-RU: Внешний запрет на движение в отрицательном направлении

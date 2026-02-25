@@ -1,0 +1,15 @@
+﻿TYPE
+    DRIVE_ABSOLUTE_VALUES : STRUCT
+        { S7_MLC := "MLC_hY" }
+        rAbsoluteSpeed : Real;
+        { S7_MLC := "MLC_3WA" }
+        rAbsoluteCurrent : Real;
+        { S7_MLC := "MLC_3N7" }
+        rAbsoluteTorque : Real;
+        { S7_MLC := "MLC_4rt" }
+        rAbsoluteVoltage : Real;
+        { S7_MLC := "MLC_4Qh" }
+        rAbsoluteTemperature : Real;
+        rReserve1 : Real;
+    END_STRUCT;
+END_TYPE

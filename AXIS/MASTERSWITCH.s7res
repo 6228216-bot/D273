@@ -1,0 +1,14 @@
+﻿MultiLingualTexts:
+  - id: MLC_43t
+    en-US: Speed setpoint output discrete
+    ru-RU: Выход задания джойстика
+  - id: MLC_Ub
+    en-US: Zero position of masterswitcch
+    ru-RU: Нулевое положение джойстика
+  - id: MLC_3Ye
+    en-US: Fault of masterswitch output
+    ru-RU: Выход ошибки джойстика
+  - id: MLC_4fm
+    en-US: Speed setpoint output analog
+  - id: MLC_3p6
+    en-US: Master switch analog active

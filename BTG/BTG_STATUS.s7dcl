@@ -1,0 +1,54 @@
+﻿TYPE
+    BTG_STATUS : STRUCT
+        { S7_MLC := "MLC_Sk" }
+        bNoTransponderFound : Bool;
+        { S7_MLC := "MLC_Mu" }
+        bMaxPosDiffError : Bool;
+        { S7_MLC := "MLC_3Sm" }
+        bTransmitterError : Bool;
+        { S7_MLC := "MLC_W4" }
+        bSupplyCommonError : Bool;
+        { S7_MLC := "MLC_4Ru" }
+        bSupplyAnalogPlusError : Bool;
+        { S7_MLC := "MLC_3QQ" }
+        bSupplyLogicError : Bool;
+        { S7_MLC := "MLC_32A" }
+        bSupplyAnalogMinusError : Bool;
+        { S7_MLC := "MLC_45a" }
+        bit7 : Bool;
+        { S7_MLC := "MLC_Nc" }
+        bTransponderDetected : Bool;
+        { S7_MLC := "MLC_44p" }
+        bit9 : Bool;
+        { S7_MLC := "MLC_39y" }
+        bNoTransponderFoundPosValid : Bool;
+        { S7_MLC := "MLC_3dy" }
+        bit11 : Bool;
+        { S7_MLC := "MLC_4Cd" }
+        bit12 : Bool;
+        { S7_MLC := "MLC_3RF" }
+        bit13 : Bool;
+        { S7_MLC := "MLC_3tL" }
+        bit14 : Bool;
+        { S7_MLC := "MLC_Pk" }
+        bit15 : Bool;
+        { S7_MLC := "MLC_3v7" }
+        bit16 : Bool;
+        { S7_MLC := "MLC_4C6" }
+        bit17 : Bool;
+        { S7_MLC := "MLC_4kM" }
+        bit18 : Bool;
+        { S7_MLC := "MLC_3YJ" }
+        bit19 : Bool;
+        { S7_MLC := "MLC_3VX" }
+        bit20 : Bool;
+        { S7_MLC := "MLC_g4" }
+        bit21 : Bool;
+        { S7_MLC := "MLC_3By" }
+        bit22 : Bool;
+        { S7_MLC := "MLC_4Bh" }
+        bit23 : Bool;
+        { S7_MLC := "MLC_4HH" }
+        siLiveCount : SInt;
+    END_STRUCT;
+END_TYPE

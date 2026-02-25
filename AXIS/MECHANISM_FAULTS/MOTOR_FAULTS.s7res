@@ -1,0 +1,21 @@
+﻿MultiLingualTexts:
+  - id: MLC_3fz
+    en-US: Motor1 Disconector Not On
+    ru-RU: Разъединитель двигателя отключен
+  - id: MLC_4k2
+    en-US: Motor2 Disconector Not On
+    ru-RU: motor2DisconectorNotOn
+  - id: MLC_3M5
+    en-US: Motor 1 temperature is too high
+    ru-RU: Перегрев двигателя
+  - id: MLC_vD
+    en-US: Motor 2 temperature is too high
+    ru-RU: motor2Overheat
+  - id: MLC_aL
+    en-US: Motor is blocked
+    ru-RU: Двигатель блокирован
+  - id: MLC_45q
+    en-US: Motor is stalled
+    ru-RU: Двигатель опрокинут
+  - id: MLC_4fq
+    ru-RU: Автомат обогрева двигателя

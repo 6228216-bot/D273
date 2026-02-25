@@ -1,0 +1,51 @@
+﻿MultiLingualTexts:
+  - id: MLC_Sk
+    en-US: Set if movement is detected by the pulse encoder, but no transponder update
+  - id: MLC_Mu
+    en-US: encoder error
+  - id: MLC_3Sm
+    en-US: Set if transmitter strength drops below the given threshold value
+  - id: MLC_W4
+    en-US: Vtransmitter error
+  - id: MLC_4Ru
+    en-US: +Vanalog error
+  - id: MLC_3QQ
+    en-US: Vlogic error (5V)
+  - id: MLC_32A
+    en-US: '-Vanalog error'
+  - id: MLC_45a
+    en-US: Unused
+  - id: MLC_Nc
+    en-US: Transponder under the antenna is detected
+  - id: MLC_44p
+    en-US: Unused
+  - id: MLC_39y
+    en-US: Keep on driving on encoder only Keep on driving on error = YES
+  - id: MLC_3dy
+    en-US: reserve
+  - id: MLC_4Cd
+    en-US: reserve
+  - id: MLC_3RF
+    en-US: reserve
+  - id: MLC_3tL
+    en-US: reserve
+  - id: MLC_Pk
+    en-US: reserve
+  - id: MLC_3v7
+    en-US: reserve
+  - id: MLC_4C6
+    en-US: reserve
+  - id: MLC_4kM
+    en-US: reserve
+  - id: MLC_3YJ
+    en-US: reserve
+  - id: MLC_3VX
+    en-US: reserve
+  - id: MLC_g4
+    en-US: reserve
+  - id: MLC_3By
+    en-US: reserve
+  - id: MLC_4Bh
+    en-US: reserve
+  - id: MLC_4HH
+    en-US: 8-bit keep alive counter

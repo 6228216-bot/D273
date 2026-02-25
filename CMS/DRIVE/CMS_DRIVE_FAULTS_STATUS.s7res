@@ -1,0 +1,17 @@
+﻿MultiLingualTexts:
+  - id: MLC_V3
+    en-US: 1 = SINAMICS fault
+  - id: MLC_4WP
+    en-US: 1 = SIMOTION fault
+  - id: MLC_59u
+    en-US: 1 = Function block fault
+  - id: MLC_3nL
+    en-US: 1 = SINAMICS warning
+  - id: MLC_3fJ
+    en-US: 1 = Spare
+  - id: MLC_4bw
+    en-US: 1 = Spare
+  - id: MLC_U7
+    en-US: 1 = Spare
+  - id: MLC_kS
+    en-US: 1 = Spare

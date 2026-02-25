@@ -1,0 +1,18 @@
+﻿TYPE
+    MOTOR_FAULTS : STRUCT
+        { S7_MLC := "MLC_3fz" }
+        motor1DisconectorNotOn : Bool;
+        { S7_MLC := "MLC_4k2" }
+        motor2DisconectorNotOn : Bool;
+        { S7_MLC := "MLC_3M5" }
+        motor1Overheat : Bool;
+        { S7_MLC := "MLC_vD" }
+        motor2Overheat : Bool;
+        { S7_MLC := "MLC_aL" }
+        motorBlocked : Bool;
+        { S7_MLC := "MLC_45q" }
+        motorStalled : Bool;
+        { S7_MLC := "MLC_4fq" }
+        motorHeatingCB : Bool;
+    END_STRUCT;
+END_TYPE

@@ -1,0 +1,20 @@
+﻿TYPE
+    AXIS_ACTUAL_VALUES : STRUCT
+        { S7_MLC := "MLC_543" }
+        diPosition : DInt;
+        reserve2 : DInt;
+        reserve3 : DInt;
+        { S7_MLC := "MLC_4CC" }
+        rWeight : Real;
+        reserve5 : DInt;
+        reserve6 : DInt;
+        reserve7 : DInt;
+        bReserve1 : Bool;
+        bReserve2 : Bool;
+        bReserve3 : Bool;
+        bReserve4 : Bool;
+        bReserve5 : Bool;
+        bReserve6 : Bool;
+        bReserve7 : Bool;
+    END_STRUCT;
+END_TYPE

@@ -1,0 +1,17 @@
+﻿MultiLingualTexts:
+  - id: MLC_TF
+    en-US: Wind ok
+  - id: MLC_4Ly
+    en-US: spare
+  - id: MLC_52a
+    en-US: spare
+  - id: MLC_4Pn
+    en-US: spare
+  - id: MLC_3S8
+    en-US: spare
+  - id: MLC_4hm
+    en-US: Wind warning
+  - id: MLC_wX
+    en-US: spare
+  - id: MLC_es
+    en-US: Wind fault

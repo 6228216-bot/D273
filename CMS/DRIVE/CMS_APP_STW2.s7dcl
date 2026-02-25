@@ -1,0 +1,36 @@
+﻿TYPE
+    CMS_APP_STW2 : STRUCT
+        { S7_MLC := "MLC_Ns" }
+        bAlignOffsetPositionActive : Bool;
+        { S7_MLC := "MLC_594" }
+        bMasterMoveOffsetSpeedActive : Bool;
+        { S7_MLC := "MLC_3WF" }
+        bMonitoringLimitExceeded : Bool;
+        { S7_MLC := "MLC_4eC" }
+        bGrabTorqueLimitExceeded : Bool;
+        { S7_MLC := "MLC_W9" }
+        bReserved12 : Bool;
+        { S7_MLC := "MLC_3Fn" }
+        bReserved13 : Bool;
+        { S7_MLC := "MLC_3Yj" }
+        bReserved14 : Bool;
+        { S7_MLC := "MLC_36A" }
+        bReserved15 : Bool;
+        { S7_MLC := "MLC_4eq" }
+        bGrabPositionSaved : Bool;
+        { S7_MLC := "MLC_395" }
+        bGrabOpen : Bool;
+        { S7_MLC := "MLC_3a7" }
+        bGrabClosed : Bool;
+        { S7_MLC := "MLC_s9" }
+        bSlackRopeControlActive : Bool;
+        { S7_MLC := "MLC_j9" }
+        bCurrentEqualControlActive : Bool;
+        { S7_MLC := "MLC_5A2" }
+        bGrabTouchdown : Bool;
+        { S7_MLC := "MLC_3bh" }
+        bPositiveOffsetSpeedActive : Bool;
+        { S7_MLC := "MLC_59W" }
+        bNegativeOffsetSpeedActive : Bool;
+    END_STRUCT;
+END_TYPE

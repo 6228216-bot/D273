@@ -1,0 +1,20 @@
+﻿TYPE
+    CMS_DRIVE_STATUS : STRUCT
+        { S7_MLC := "MLC_4Ks" }
+        bOff : Bool;
+        { S7_MLC := "MLC_3DR" }
+        bReady : Bool;
+        { S7_MLC := "MLC_4VT" }
+        bOn : Bool;
+        { S7_MLC := "MLC_4DP" }
+        bSpare1 : Bool;
+        { S7_MLC := "MLC_53Q" }
+        bSpare2 : Bool;
+        { S7_MLC := "MLC_34r" }
+        bWarning : Bool;
+        { S7_MLC := "MLC_5BF" }
+        bSpare3 : Bool;
+        { S7_MLC := "MLC_3T7" }
+        bFault : Bool;
+    END_STRUCT;
+END_TYPE

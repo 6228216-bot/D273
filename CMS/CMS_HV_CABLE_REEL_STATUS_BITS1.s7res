@@ -1,0 +1,17 @@
+﻿MultiLingualTexts:
+  - id: MLC_4wv
+    en-US: Reel empty
+  - id: MLC_3F6
+    en-US: Reel full
+  - id: MLC_4fx
+    en-US: Cable slack
+  - id: MLC_3Hc
+    en-US: Cable tight
+  - id: MLC_aK
+    en-US: spare
+  - id: MLC_463
+    en-US: spare
+  - id: MLC_3Uq
+    en-US: Temperature high
+  - id: MLC_3nr
+    en-US: Main voltage fault

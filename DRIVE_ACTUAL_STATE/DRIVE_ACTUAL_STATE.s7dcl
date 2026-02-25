@@ -1,0 +1,11 @@
+﻿TYPE
+    DRIVE_ACTUAL_STATE : STRUCT
+        { S7_Setpoint := "False" }
+        RELATIVE_VALUES : _.DRIVE_RELATIVE_VALUES;
+        { S7_Setpoint := "False" }
+        ABSOLUTE_VALUES : _.DRIVE_ABSOLUTE_VALUES;
+        { S7_Setpoint := "False" }
+        STATUS_BITS : _.DRIVE_STATUS_BITS;
+        iLastFault : Int;
+    END_STRUCT;
+END_TYPE

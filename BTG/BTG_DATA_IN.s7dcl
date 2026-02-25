@@ -1,0 +1,15 @@
+﻿TYPE
+    BTG_DATA_IN : STRUCT
+        { S7_MLC := "MLC_3jZ" }
+        diPos : DInt;
+        { S7_MLC := "MLC_3BH" }
+        STATUS_BITS : _.BTG_STATUS;
+        {
+            S7_MLC := "MLC_3Li";
+            S7_Setpoint := "True"
+        }
+        diLastTransponderCode : Array[0..3] of UInt;
+        { S7_MLC := "MLC_3QK" }
+        diPulsePerMetrCalc : DInt;
+    END_STRUCT;
+END_TYPE

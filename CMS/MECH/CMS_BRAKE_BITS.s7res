@@ -1,0 +1,17 @@
+﻿MultiLingualTexts:
+  - id: MLC_P6
+    en-US: Brake ok and open
+  - id: MLC_357
+    en-US: Brake ok and closed
+  - id: MLC_3YC
+    en-US: spare
+  - id: MLC_Rk
+    en-US: spare
+  - id: MLC_3m3
+    en-US: Brake warning and open
+  - id: MLC_4px
+    en-US: Brake warning and closed
+  - id: MLC_3SB
+    en-US: Brake fault and open
+  - id: MLC_3uX
+    en-US: Brake fault and closed

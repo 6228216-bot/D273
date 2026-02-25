@@ -1,0 +1,36 @@
+﻿TYPE
+    CMS_APP_CTW1 : STRUCT
+        { S7_MLC := "MLC_fn" }
+        bEnableTargetControl : Bool;
+        { S7_MLC := "MLC_3RY" }
+        bEnableCreeping : Bool;
+        { S7_MLC := "MLC_3h9" }
+        bStartHoming : Bool;
+        { S7_MLC := "MLC_4m6" }
+        bEnableActualPositionAndVelocityCalculation : Bool;
+        { S7_MLC := "MLC_4fL" }
+        bPreLimitSwitch1 : Bool;
+        { S7_MLC := "MLC_3LB" }
+        bPreLimitSwitch2 : Bool;
+        { S7_MLC := "MLC_4cw" }
+        bEndLimitSwitch : Bool;
+        { S7_MLC := "MLC_PB" }
+        bSetpointSwitchover : Bool;
+        { S7_MLC := "MLC_4ny" }
+        bEnableFieldWeakening : Bool;
+        { S7_MLC := "MLC_Xs" }
+        bResetLoadMemory : Bool;
+        { S7_MLC := "MLC_4YB" }
+        bEnableStartPulse : Bool;
+        { S7_MLC := "MLC_hW" }
+        bSetOrSaveTorque : Bool;
+        { S7_MLC := "MLC_4wU" }
+        bEnableTorqueCoupling : Bool;
+        { S7_MLC := "MLC_3Tg" }
+        bEnableSpeedSynchronization : Bool;
+        { S7_MLC := "MLC_326" }
+        bEnablePositionSynchronization : Bool;
+        { S7_MLC := "MLC_3bh" }
+        bEnableMasterSpeedReduction : Bool;
+    END_STRUCT;
+END_TYPE

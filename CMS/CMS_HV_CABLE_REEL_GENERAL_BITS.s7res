@@ -1,0 +1,17 @@
+﻿MultiLingualTexts:
+  - id: MLC_4wv
+    en-US: Off
+  - id: MLC_3F6
+    en-US: Ready
+  - id: MLC_4fx
+    en-US: On
+  - id: MLC_3Hc
+    en-US: spare
+  - id: MLC_aK
+    en-US: spare
+  - id: MLC_463
+    en-US: Warning
+  - id: MLC_3Uq
+    en-US: spare
+  - id: MLC_3nr
+    en-US: Fault

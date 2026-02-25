@@ -1,0 +1,20 @@
+﻿TYPE
+    FAN_FAULTS : STRUCT
+        { S7_MLC := "MLC_3aE" }
+        fanCBNotOn : Bool;
+        { S7_MLC := "MLC_4ac" }
+        fanMCNotOn : Bool;
+        { S7_MLC := "MLC_4Kb" }
+        fanMCSelfEnabled : Bool;
+        { S7_MLC := "MLC_iL" }
+        reserve03 : Bool;
+        { S7_MLC := "MLC_4Jc" }
+        reserve04 : Bool;
+        { S7_MLC := "MLC_4aG" }
+        reserve05 : Bool;
+        { S7_MLC := "MLC_4Ta" }
+        reserve06 : Bool;
+        { S7_MLC := "MLC_4yf" }
+        reserve07 : Bool;
+    END_STRUCT;
+END_TYPE

@@ -1,0 +1,30 @@
+﻿TYPE
+    BRAKES_TEST : STRUCT
+        { S7_MLC := "MLC_3jZ" }
+        bBrakeTestInProgress : Bool;
+        { S7_MLC := "MLC_39X" }
+        bBrakeTestFinished : Bool;
+        { S7_MLC := "MLC_M6" }
+        bLastBrakeTestIsSuccessfull : Bool;
+        { S7_MLC := "MLC_4hK" }
+        bReserve03 : Bool;
+        { S7_MLC := "MLC_nD" }
+        bReserve04 : Bool;
+        { S7_MLC := "MLC_5AB" }
+        bReserve05 : Bool;
+        { S7_MLC := "MLC_4PB" }
+        bReserve06 : Bool;
+        { S7_MLC := "MLC_UE" }
+        bReserve07 : Bool;
+        { S7_MLC := "MLC_4n2" }
+        iLastFailedTorque : Int;
+        { S7_MLC := "MLC_4EY" }
+        iReserve1 : Int;
+        { S7_MLC := "MLC_4Ke" }
+        iReserve2 : Int;
+        { S7_MLC := "MLC_MK" }
+        dtLastSuccessfullBrakeTest : DTL;
+        { S7_MLC := "MLC_Yp" }
+        dtLastFaultyBrakeTest : DTL;
+    END_STRUCT;
+END_TYPE

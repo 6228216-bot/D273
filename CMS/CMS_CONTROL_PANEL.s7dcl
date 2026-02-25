@@ -1,0 +1,36 @@
+﻿TYPE
+    CMS_CONTROL_PANEL : STRUCT
+        { S7_MLC := "MLC_4n4" }
+        bControlFromCabin : Bool;
+        { S7_MLC := "MLC_QY" }
+        bControlFromEHouse : Bool;
+        { S7_MLC := "MLC_37p" }
+        bControlFromMHouse_LCPHoist : Bool;
+        { S7_MLC := "MLC_3mB" }
+        bControlFromMHouse_LCPTrolley : Bool;
+        { S7_MLC := "MLC_4bj" }
+        bControlFromMHouse_LCPBoomhoist : Bool;
+        { S7_MLC := "MLC_3D8" }
+        bControlFromLCPTrolley : Bool;
+        { S7_MLC := "MLC_3h5" }
+        bControlFromLCPGantryCheckerCabin : Bool;
+        { S7_MLC := "MLC_3SH" }
+        bControlFromLCPTrimListSkew : Bool;
+        { S7_MLC := "MLC_4Ya" }
+        bControlFromLCPBoomhoist : Bool;
+        { S7_MLC := "MLC_Va" }
+        bSpare1 : Bool;
+        { S7_MLC := "MLC_3AM" }
+        bSpare2 : Bool;
+        { S7_MLC := "MLC_4Q2" }
+        bSpare3 : Bool;
+        { S7_MLC := "MLC_3VW" }
+        bSpare4 : Bool;
+        { S7_MLC := "MLC_52v" }
+        bSpare5 : Bool;
+        { S7_MLC := "MLC_56w" }
+        bSpare6 : Bool;
+        { S7_MLC := "MLC_49q" }
+        bSpare7 : Bool;
+    END_STRUCT;
+END_TYPE

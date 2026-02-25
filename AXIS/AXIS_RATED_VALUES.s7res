@@ -1,0 +1,17 @@
+﻿MultiLingualTexts:
+  - id: MLC_4BF
+    ru-RU: Номинальная скорость
+  - id: MLC_4pW
+    ru-RU: Номинальный ток
+  - id: MLC_3mr
+    ru-RU: Номинальный момент
+  - id: MLC_339
+    ru-RU: Номинальное напряжение
+  - id: MLC_sB
+    ru-RU: Номинальная температура
+  - id: MLC_3tr
+    ru-RU: Шкала скорости в приводе
+  - id: MLC_4Be
+    ru-RU: Шкала тока в приводе
+  - id: MLC_4jc
+    ru-RU: Шкала момента в приводе

@@ -1,0 +1,20 @@
+﻿MultiLingualTexts:
+  - id: MLC_3aE
+    en-US: Circuit breaker of motor fan tripped
+    ru-RU: Автомат вентилятора отключен
+  - id: MLC_4ac
+    en-US: Motor fan magnetic contactor didn't start in time
+    ru-RU: Контактор вентилятора не включился
+  - id: MLC_4Kb
+    en-US: Motor fan magnetic contactor started without command
+    ru-RU: Контактор вентилятора включен без команды
+  - id: MLC_iL
+    ru-RU: reserve03
+  - id: MLC_4Jc
+    ru-RU: reserve04
+  - id: MLC_4aG
+    ru-RU: reserve05
+  - id: MLC_4Ta
+    ru-RU: reserve06
+  - id: MLC_4yf
+    ru-RU: reserve07

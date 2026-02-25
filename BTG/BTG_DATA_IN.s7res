@@ -1,0 +1,9 @@
+﻿MultiLingualTexts:
+  - id: MLC_3jZ
+    en-US: Position, mm
+  - id: MLC_3BH
+    en-US: Status bits
+  - id: MLC_3Li
+    en-US: Last transponder code
+  - id: MLC_3QK
+    en-US: Calculated number of pulses per meter

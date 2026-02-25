@@ -1,0 +1,13 @@
+﻿MultiLingualTexts:
+  - id: MLC_3vQ
+    en-US: Netto load left in t
+  - id: MLC_4Rx
+    en-US: Netto load right in t
+  - id: MLC_3ud
+    en-US: Netto load total in t
+  - id: MLC_4BS
+    en-US: Gross load left in t
+  - id: MLC_4f4
+    en-US: Gross load right in t
+  - id: MLC_4bk
+    en-US: Gross load total in t

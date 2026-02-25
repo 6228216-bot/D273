@@ -1,0 +1,11 @@
+﻿MultiLingualTexts:
+  - id: MLC_3Tf
+    ru-RU: Актуальная скорость в %
+  - id: MLC_3z3
+    ru-RU: Актуальный ток в %
+  - id: MLC_4Hx
+    ru-RU: Актуальный момент в %
+  - id: MLC_3pi
+    ru-RU: Актуальное напряжение в %
+  - id: MLC_3Kn
+    ru-RU: Актуальная температура в %

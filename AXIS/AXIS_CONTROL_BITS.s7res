@@ -1,0 +1,93 @@
+﻿MultiLingualTexts:
+  - id: MLC_469
+    en-US: 1 = No coast stop active
+    ru-RU: 1=Стоп выбегом не активен
+  - id: MLC_4bb
+    en-US: 1 = No fast stop active
+    ru-RU: 1=Быстрый стоп не активен
+  - id: MLC_4i7
+    en-US: 1 = No normal stop active
+    ru-RU: 1=Нормальный стоп не активен
+  - id: MLC_XX
+    en-US: 1 = No blocking active
+    ru-RU: 1=Нет блокировки работы
+  - id: MLC_4MK
+    en-US: 1 = No Em stop active
+    ru-RU: резерв
+  - id: MLC_4U4
+    en-US: 1 = Null circuit signals collected
+    ru-RU: Нулевая цепь собрана
+  - id: MLC_4j6
+    en-US: 1 = Axis enabled
+    ru-RU: Рарешение включения оси (механизма)
+  - id: MLC_dg
+    en-US: Axis (mechanism) readiness indication
+    ru-RU: Индикация говтоности оси (механизма)
+  - id: MLC_52X
+    en-US: 1 = Start moving (OFF1)
+  - id: MLC_4eB
+    en-US: 0 = FRU emergency limit switch operated
+    ru-RU: 0=Аварийный концевой в положительном направлении сработал
+  - id: MLC_VQ
+    en-US: 0 = BLD emergency limit switch operated
+    ru-RU: 0=Аварийный концевой в отрицательном направлении сработал
+  - id: MLC_3jf
+    en-US: 0 = FRU limit switch operated
+    ru-RU: 0=Концевой останова в положительном направлении сработал
+  - id: MLC_TE
+    en-US: 0 = BLD limit switch operated
+    ru-RU: 0=Концевой останова в отрицательном направлении сработал
+  - id: MLC_357
+    en-US: 0 = FRU slow down limit switch operated
+    ru-RU: 0=Концевой замедления в положительном направлении сработал
+  - id: MLC_cu
+    en-US: 0 = BLD slow down limit switch operated
+    ru-RU: 0=Концевой замедления в отрицательном направлении сработал
+  - id: MLC_va
+    en-US: External FRU direction not allowed
+    ru-RU: 1=Запрет движения в положительном направлении
+  - id: MLC_e6
+    en-US: External BLD direction not allowed
+    ru-RU: 1=Запрет движения в отрицательном направлении
+  - id: MLC_TX
+    en-US: Deceleration ramp decrease required
+    ru-RU: Требуется уменьшение времени торможения
+  - id: MLC_4Fj
+    en-US: Acceleration ramp increase required
+    ru-RU: Требуется увеличение времени разгона
+  - id: MLC_3LX
+    en-US: Speed reduction required
+    ru-RU: Требуется снижение максимальной скорости
+  - id: MLC_4Ra
+    en-US: Torque synchronized
+    ru-RU: 1=Синхронизация момента
+  - id: MLC_53x
+    en-US: Torque control active
+    ru-RU: 1=Управление по моменту
+  - id: MLC_4h3
+    en-US: Brake control active
+    ru-RU: 1=Закрыть тормоз
+  - id: MLC_pT
+    en-US: Reserved
+    ru-RU: резерв
+  - id: MLC_459
+    en-US: Brake test mode active
+    ru-RU: Режим проверки тормоза
+  - id: MLC_Qu
+    en-US: Brake test allowed
+    ru-RU: Проверка тормоза возможна. Устанавливается в программе, если на двигателе есть энкодер
+  - id: MLC_hJ
+    en-US: Hold load active
+    ru-RU: Требуется удержать груз двигателем
+  - id: MLC_4rr
+    en-US: Drive 1 operates as slave
+    ru-RU: 1=Привод 1 ведомый по моменту
+  - id: MLC_3nZ
+    en-US: Drive 2 operates as slave
+    ru-RU: 1=Привод 2 ведомый по моменту
+  - id: MLC_3Pt
+    en-US: Drive 3 operates as slave
+    ru-RU: 1=Привод 3 ведомый по моменту
+  - id: MLC_4y8
+    en-US: Drive 4 operates as slave
+    ru-RU: 1=Привод 4 ведомый по моменту

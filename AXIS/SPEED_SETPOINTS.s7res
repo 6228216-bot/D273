@@ -1,0 +1,28 @@
+﻿MultiLingualTexts:
+  - id: MLC_3St
+    en-US: Speed setpoint for masterswitch position 1
+    ru-RU: Задание скорости для положения джойстика 1
+  - id: MLC_3E8
+    en-US: Speed setpoint for masterswitch position 2
+    ru-RU: Задание скорости для положения джойстика 2
+  - id: MLC_c7
+    en-US: Speed setpoint for masterswitch position 3
+    ru-RU: Задание скорости для положения джойстика 3
+  - id: MLC_Mh
+    en-US: Speed setpoint for masterswitch position 4
+    ru-RU: Задание скорости для положения джойстика 4
+  - id: MLC_32X
+    en-US: Speed setpoint for masterswitch position 5
+    ru-RU: Задание скорости для положения джойстика 5
+  - id: MLC_3V4
+    en-US: Speed setpoint for reduced speed
+    ru-RU: Задание скорости для пониженной скорости
+  - id: MLC_3yN
+    en-US: Speed setpoint for automatic mode
+    ru-RU: Задание скорости для автоматического режима
+  - id: MLC_4pB
+    en-US: Acceleration time
+    ru-RU: Время разгона
+  - id: MLC_4Hv
+    en-US: Deceleration time
+    ru-RU: Время торможения

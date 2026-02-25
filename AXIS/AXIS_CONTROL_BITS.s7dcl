@@ -1,0 +1,66 @@
+﻿TYPE
+    AXIS_CONTROL_BITS : STRUCT
+        { S7_MLC := "MLC_469" }
+        bNoCoastStop : Bool;
+        { S7_MLC := "MLC_4bb" }
+        bNoFastStop : Bool;
+        { S7_MLC := "MLC_4i7" }
+        bNoNormalStop : Bool;
+        { S7_MLC := "MLC_XX" }
+        bNoBlocking : Bool;
+        { S7_MLC := "MLC_4MK" }
+        bNoEmStop : Bool;
+        { S7_MLC := "MLC_4U4" }
+        bAxisNullCircuit : Bool;
+        { S7_MLC := "MLC_4j6" }
+        bAxisEnabled : Bool;
+        { S7_MLC := "MLC_dg" }
+        bAxisReadyIndication : Bool;
+        { S7_MLC := "MLC_52X" }
+        bStartMove : Bool;
+        { S7_MLC := "MLC_4eB" }
+        bNoEmLimSwitchFRU : Bool;
+        { S7_MLC := "MLC_VQ" }
+        bNoEmLimSwitchBLD : Bool;
+        { S7_MLC := "MLC_3jf" }
+        bNoLimSwitchFRU : Bool;
+        { S7_MLC := "MLC_TE" }
+        bNoLimSwitchBLD : Bool;
+        { S7_MLC := "MLC_357" }
+        bNoSlowDownFRU : Bool;
+        { S7_MLC := "MLC_cu" }
+        bNoSlowDownBLD : Bool;
+        { S7_MLC := "MLC_va" }
+        bExtFRUDenied : Bool;
+        { S7_MLC := "MLC_e6" }
+        bExtBLDDenied : Bool;
+        { S7_MLC := "MLC_TX" }
+        bDecelRampDecreasingNeeded : Bool;
+        { S7_MLC := "MLC_4Fj" }
+        bRampIncreasingNeeded : Bool;
+        { S7_MLC := "MLC_3LX" }
+        bSpeedMaxReducingNeeded : Bool;
+        { S7_MLC := "MLC_4Ra" }
+        bSynchroTorque : Bool;
+        { S7_MLC := "MLC_53x" }
+        bTorqueControl : Bool;
+        { S7_MLC := "MLC_4h3" }
+        bCloseBrake : Bool;
+        { S7_MLC := "MLC_pT" }
+        reserve27 : Bool;
+        { S7_MLC := "MLC_459" }
+        bBrakeTestMode : Bool;
+        { S7_MLC := "MLC_Qu" }
+        bBrakeTestAllowed : Bool;
+        { S7_MLC := "MLC_hJ" }
+        bHoldLoadNeeded : Bool;
+        { S7_MLC := "MLC_4rr" }
+        bDrive1IsSlave : Bool;
+        { S7_MLC := "MLC_3nZ" }
+        bDrive2IsSlave : Bool;
+        { S7_MLC := "MLC_3Pt" }
+        bDrive3IsSlave : Bool;
+        { S7_MLC := "MLC_4y8" }
+        bDrive4IsSlave : Bool;
+    END_STRUCT;
+END_TYPE

@@ -1,0 +1,33 @@
+﻿MultiLingualTexts:
+  - id: MLC_3aC
+    en-US: Positioning active
+  - id: MLC_jz
+    en-US: Creeping active
+  - id: MLC_3S9
+    en-US: Homing completed
+  - id: MLC_4qz
+    en-US: Actual position and velocity calculation active
+  - id: MLC_NH
+    en-US: Limitation active
+  - id: MLC_rg
+    en-US: Speed control active
+  - id: MLC_Z7
+    en-US: Torque control active
+  - id: MLC_vu
+    en-US: Reserved
+  - id: MLC_3gi
+    en-US: Measuring successful
+  - id: MLC_3tW
+    en-US: Current limit exceeded
+  - id: MLC_ir
+    en-US: Overspeed detected
+  - id: MLC_3DJ
+    en-US: Set torque active
+  - id: MLC_jQ
+    en-US: Torque coupling active
+  - id: MLC_Ye
+    en-US: Speed synchronization active
+  - id: MLC_Mi
+    en-US: Position synchronization active
+  - id: MLC_47x
+    en-US: Master drive speed reduction active

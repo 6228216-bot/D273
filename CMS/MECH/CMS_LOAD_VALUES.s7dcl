@@ -1,0 +1,16 @@
+﻿TYPE
+    CMS_LOAD_VALUES : STRUCT
+        { S7_MLC := "MLC_3vQ" }
+        rNetLoadLeft : Real;
+        { S7_MLC := "MLC_4Rx" }
+        rNetLoadRight : Real;
+        { S7_MLC := "MLC_3ud" }
+        rNetLoadTotal : Real;
+        { S7_MLC := "MLC_4BS" }
+        rGrossLoadLeft : Real;
+        { S7_MLC := "MLC_4f4" }
+        rGrossLoadRight : Real;
+        { S7_MLC := "MLC_4bk" }
+        rGrossLoadTotal : Real;
+    END_STRUCT;
+END_TYPE

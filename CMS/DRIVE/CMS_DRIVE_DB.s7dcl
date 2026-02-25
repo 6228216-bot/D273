@@ -1,0 +1,102 @@
+﻿TYPE
+    CMS_DRIVE_DB : STRUCT
+        { S7_MLC := "MLC_4UG" }
+        CTW1 : _.CTW1;
+        { S7_MLC := "MLC_4fY" }
+        CTW2 : _.CTW2;
+        {
+            S7_MLC := "MLC_3JT";
+            S7_Setpoint := "True"
+        }
+        iRampUpTime : Int;
+        {
+            S7_MLC := "MLC_4Kt";
+            S7_Setpoint := "True"
+        }
+        iRampDownTime : Int;
+        { S7_MLC := "MLC_4F2" }
+        APP_CTW1 : _.CMS_APP_CTW1;
+        { S7_MLC := "MLC_42U" }
+        APP_CTW2 : _.CMS_APP_CTW2;
+        { S7_MLC := "MLC_3kb" }
+        STW1 : _.STW1;
+        { S7_MLC := "MLC_3H4" }
+        STW2 : _.STW2;
+        {
+            S7_MLC := "MLC_4WL";
+            S7_Setpoint := "True"
+        }
+        iFaultNumber : Int;
+        { S7_MLC := "MLC_Ts" }
+        APP_STW1 : _.CMS_APP_STW1;
+        { S7_MLC := "MLC_3Xw" }
+        APP_STW2 : _.CMS_APP_STW2;
+        { S7_MLC := "MLC_3hb" }
+        byStopBits : _.CMS_STOP_BITS;
+        { S7_MLC := "MLC_3KP" }
+        byBrakeBits2 : _.CMS_BRAKE_BITS;
+        { S7_MLC := "MLC_36v" }
+        byBrakeBits1 : _.CMS_BRAKE_BITS;
+        { S7_MLC := "MLC_36z" }
+        byStatus : _.CMS_DRIVE_STATUS;
+        { S7_MLC := "MLC_4Vt" }
+        byMotor : _.CMS_DRIVE_MOTOR;
+        { S7_MLC := "MLC_4zm" }
+        byDriveFaultsStatus : _.CMS_DRIVE_FAULTS_STATUS;
+        {
+            S7_MLC := "MLC_4ZC";
+            S7_Setpoint := "True"
+        }
+        rPositionActual : Real;
+        {
+            S7_MLC := "MLC_4NR";
+            S7_Setpoint := "True"
+        }
+        rSpeedSP_PLC : Real;
+        {
+            S7_MLC := "MLC_s6";
+            S7_Setpoint := "True"
+        }
+        rRealatSpeedActual : Real;
+        {
+            S7_MLC := "MLC_fR";
+            S7_Setpoint := "True"
+        }
+        rAbsSpeedActual : Real;
+        {
+            S7_MLC := "MLC_36W";
+            S7_Setpoint := "True"
+        }
+        rPositionSP : Real;
+        {
+            S7_MLC := "MLC_3g3";
+            S7_Setpoint := "True"
+        }
+        rAbsVoltageActual : Real;
+        {
+            S7_MLC := "MLC_3Tw";
+            S7_Setpoint := "True"
+        }
+        rAbsCurrentActual : Real;
+        {
+            S7_MLC := "MLC_4tB";
+            S7_Setpoint := "True"
+        }
+        rAbsTorqueActual : Real;
+        {
+            S7_MLC := "MLC_t3";
+            S7_Setpoint := "True"
+        }
+        rAbsTorqueSP : Real;
+        {
+            S7_MLC := "MLC_3y9";
+            S7_Setpoint := "True"
+        }
+        rRelatSpeedSP : Real;
+        {
+            S7_MLC := "MLC_3T4";
+            S7_Setpoint := "True"
+        }
+        rAbsCurrentSP : Real;
+    END_STRUCT;
+END_TYPE

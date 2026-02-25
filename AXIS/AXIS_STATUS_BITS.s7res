@@ -1,0 +1,49 @@
+﻿MultiLingualTexts:
+  - id: MLC_38m
+    en-US: Axis is moving in positive direction
+    ru-RU: Механизм движется в положительном направлении
+  - id: MLC_Sm
+    en-US: Axis is moving in negative direction
+    ru-RU: Механизм движется в отрицательном направлении
+  - id: MLC_3PL
+    en-US: Axis is at standstill
+    ru-RU: Механизм в состоянии покоя
+  - id: MLC_3yw
+    en-US: Pulse output is disabled
+    ru-RU: Нет управляющих импульсов - двигатели отключены
+  - id: MLC_r9
+    en-US: Reserved
+    ru-RU: Заданная позиция достигнута
+  - id: MLC_3FW
+    en-US: Reserved
+    ru-RU: Измеренное положение действительно
+  - id: MLC_3VL
+    en-US: Reserved
+    ru-RU: Требуется реферирование
+  - id: MLC_45S
+    en-US: Reserved
+    ru-RU: Требуется синхронизация
+  - id: MLC_4si
+    en-US: Brake test is activated
+    ru-RU: Режим проверки тормоза активирован
+  - id: MLC_4pt
+    en-US: Brake test is in progress
+    ru-RU: Проверка тормоза в процессе выполнения
+  - id: MLC_4uv
+    en-US: Brake test is finished
+    ru-RU: Проверка тормоза завершена
+  - id: MLC_hL
+    en-US: Brake test completed successfully
+    ru-RU: Проверка тормоза завершена успешно
+  - id: MLC_4CS
+    en-US: Speed setpoint is positive
+    ru-RU: Задание скорости положительное
+  - id: MLC_3x8
+    en-US: Speed setpoint is negative
+    ru-RU: Задание скорости отрицательное
+  - id: MLC_3bD
+    en-US: Reserved
+    ru-RU: резерв
+  - id: MLC_583
+    en-US: Connection fault detected (per channel)
+    ru-RU: Неисправность связи с ПЧ

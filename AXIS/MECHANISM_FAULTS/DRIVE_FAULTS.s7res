@@ -1,0 +1,24 @@
+﻿MultiLingualTexts:
+  - id: MLC_4iJ
+    ru-RU: Автомат ПЧ отключен
+  - id: MLC_3p5
+    ru-RU: Контактор ПЧ не включился
+  - id: MLC_4Ai
+    ru-RU: Контактор ПЧ включен без команды
+  - id: MLC_Rq
+    en-US: Connection fault to motor module
+    ru-RU: Ошибка связи с ПЧ
+  - id: MLC_3Mw
+    en-US: Motor module in fault state
+    ru-RU: Ошибка ПЧ
+  - id: MLC_4Tx
+    en-US: Motor module inside temperature is too high
+    ru-RU: Перегрев преобразователя
+  - id: MLC_iW
+    en-US: Circuit breaker of motor module fan tripped
+    ru-RU: reserve06
+  - id: MLC_3fC
+    en-US: 24V power supply of motor module failed
+    ru-RU: reserve07
+  - id: MLC_sM
+    en-US: Drive DC 600V Fuse switch

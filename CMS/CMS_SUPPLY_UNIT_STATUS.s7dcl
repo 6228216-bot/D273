@@ -1,0 +1,20 @@
+﻿TYPE
+    CMS_SUPPLY_UNIT_STATUS : STRUCT
+        { S7_MLC := "MLC_uS" }
+        bOff : Bool;
+        { S7_MLC := "MLC_4Ej" }
+        bReady : Bool;
+        { S7_MLC := "MLC_3uS" }
+        bOn : Bool;
+        { S7_MLC := "MLC_3y3" }
+        bSpare1 : Bool;
+        { S7_MLC := "MLC_4pT" }
+        bSpare2 : Bool;
+        { S7_MLC := "MLC_32L" }
+        bWarning : Bool;
+        { S7_MLC := "MLC_Q2" }
+        bSpare3 : Bool;
+        { S7_MLC := "MLC_3AE" }
+        bFault : Bool;
+    END_STRUCT;
+END_TYPE

@@ -1,0 +1,33 @@
+﻿TYPE
+    MASTERSWITCH : STRUCT
+        {
+            S7_Access := "ReadOnly := External";
+            S7_MLC := "MLC_43t";
+            S7_Visibility := "Hidden := External"
+        }
+        iMasterswitchSetpointDiscrete : Int;
+        { S7_MLC := "MLC_Ub" }
+        bMasterswitchZero : Bool;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_MLC := "MLC_3Ye";
+            S7_Visibility := "Hidden := External"
+        }
+        bMasterswitchFault : Bool;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_MLC := "MLC_4fm";
+            S7_Visibility := "Hidden := External"
+        }
+        iMasterSwitchSetpointAnalog : Int;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_MLC := "MLC_3p6";
+            S7_Visibility := "Hidden := External"
+        }
+        bMasterSwitchAnalogActive : Bool;
+        reserve3 : Bool;
+        reserve4 : Bool;
+        reserve5 : Bool;
+    END_STRUCT;
+END_TYPE

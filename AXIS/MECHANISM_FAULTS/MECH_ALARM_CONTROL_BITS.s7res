@@ -1,0 +1,25 @@
+﻿MultiLingualTexts:
+  - id: MLC_pQ
+    en-US: Coast stop of mechanism needed
+    ru-RU: Мновенный стоп
+  - id: MLC_jR
+    en-US: Fast stop of mechanism needed
+    ru-RU: Быстрый стоп
+  - id: MLC_3Xf
+    en-US: Normal stop of mechanism needed
+    ru-RU: Нормальный стоп
+  - id: MLC_3Zx
+    en-US: Coast stop of crane needed
+    ru-RU: Мгновенный стоп крана
+  - id: MLC_4LX
+    en-US: Fast stop of crane needed
+    ru-RU: Быстрый стоп крана
+  - id: MLC_3Np
+    en-US: Normal stop of crane needed
+    ru-RU: Нормальный стоп крана
+  - id: MLC_4GQ
+    en-US: Mechanism has unacknowledged fault
+    ru-RU: Ошибка
+  - id: MLC_452
+    en-US: Mechanism has unacknowledged warning
+    ru-RU: Предупреждение

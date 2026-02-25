@@ -1,0 +1,17 @@
+﻿TYPE
+    DRIVE_RELATIVE_VALUES : STRUCT
+        { S7_MLC := "MLC_3Tf" }
+        rRelativeSpeed : Real;
+        { S7_MLC := "MLC_3z3" }
+        rRelativeCurrent : Real;
+        { S7_MLC := "MLC_4Hx" }
+        rRelativeTorque : Real;
+        { S7_MLC := "MLC_3pi" }
+        rRelativeVoltage : Real;
+        { S7_MLC := "MLC_3Kn" }
+        rRelativeTemperature : Real;
+        rRelativeSpeedAbs : Real;
+        rRelativeSpeedSP : Real;
+        rRelativeTorqueAbs : Real;
+    END_STRUCT;
+END_TYPE

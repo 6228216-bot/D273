@@ -1,0 +1,20 @@
+﻿TYPE
+    CMS_DRIVE_FAULTS_STATUS : STRUCT
+        { S7_MLC := "MLC_V3" }
+        bSinamicsFault : Bool;
+        { S7_MLC := "MLC_4WP" }
+        bSimotionFault : Bool;
+        { S7_MLC := "MLC_59u" }
+        bFunctionBlockFault : Bool;
+        { S7_MLC := "MLC_3nL" }
+        bSinamicsWarning : Bool;
+        { S7_MLC := "MLC_3fJ" }
+        bSpare1 : Bool;
+        { S7_MLC := "MLC_4bw" }
+        bSpare2 : Bool;
+        { S7_MLC := "MLC_U7" }
+        bSpare3 : Bool;
+        { S7_MLC := "MLC_kS" }
+        bSpare4 : Bool;
+    END_STRUCT;
+END_TYPE

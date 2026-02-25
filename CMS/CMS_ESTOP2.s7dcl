@@ -1,0 +1,20 @@
+﻿TYPE
+    CMS_ESTOP2 : STRUCT
+        { S7_MLC := "MLC_4kk" }
+        bEStop09 : Bool;
+        { S7_MLC := "MLC_4W9" }
+        bEStop10 : Bool;
+        { S7_MLC := "MLC_3eP" }
+        bEStop11 : Bool;
+        { S7_MLC := "MLC_t6" }
+        bEStop12 : Bool;
+        { S7_MLC := "MLC_3X9" }
+        bEStop13 : Bool;
+        { S7_MLC := "MLC_3CC" }
+        bEStop14 : Bool;
+        { S7_MLC := "MLC_446" }
+        bEStop15 : Bool;
+        { S7_MLC := "MLC_ki" }
+        bEStop16 : Bool;
+    END_STRUCT;
+END_TYPE

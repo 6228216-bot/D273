@@ -1,0 +1,11 @@
+﻿MultiLingualTexts:
+  - id: MLC_hY
+    ru-RU: Актуальная скорость в об/мин
+  - id: MLC_3WA
+    ru-RU: Актуальный ток в А
+  - id: MLC_3N7
+    ru-RU: Актуальный момент в Нм
+  - id: MLC_4rt
+    ru-RU: Актуальное напряжение в В
+  - id: MLC_4Qh
+    ru-RU: Актуальная температура в С

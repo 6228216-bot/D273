@@ -1,0 +1,17 @@
+﻿MultiLingualTexts:
+  - id: MLC_4kk
+    en-US: E-stop 09 (E-house 1)
+  - id: MLC_4W9
+    en-US: E-stop 10 (E-house 2)
+  - id: MLC_3eP
+    en-US: E-stop 11 (M-house 3)
+  - id: MLC_t6
+    en-US: E-stop 12 (PLC room)
+  - id: MLC_3X9
+    en-US: E-stop 13 (Cable reel level)
+  - id: MLC_3CC
+    en-US: E-stop 14 (A frame)
+  - id: MLC_446
+    en-US: E-stop 15 (Trolley)
+  - id: MLC_ki
+    en-US: E-stop 16 (Cabin)

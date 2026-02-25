@@ -1,0 +1,20 @@
+﻿TYPE
+    CMS_HV_CABLE_REEL_STATUS_BITS1 : STRUCT
+        { S7_MLC := "MLC_4wv" }
+        bReelEmpty : Bool;
+        { S7_MLC := "MLC_3F6" }
+        bReelFull : Bool;
+        { S7_MLC := "MLC_4fx" }
+        bCableSlack : Bool;
+        { S7_MLC := "MLC_3Hc" }
+        bCableTight : Bool;
+        { S7_MLC := "MLC_aK" }
+        bSpare1 : Bool;
+        { S7_MLC := "MLC_463" }
+        bSpare2 : Bool;
+        { S7_MLC := "MLC_3Uq" }
+        bTemperatureHigh : Bool;
+        { S7_MLC := "MLC_3nr" }
+        bMainVoltageFault : Bool;
+    END_STRUCT;
+END_TYPE

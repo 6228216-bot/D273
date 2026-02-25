@@ -1,0 +1,17 @@
+﻿MultiLingualTexts:
+  - id: MLC_4kk
+    en-US: E-stop 17 (Gantry landside left)
+  - id: MLC_4W9
+    en-US: E-stop 18 (Gantry landside right)
+  - id: MLC_3eP
+    en-US: E-stop 19 (Gantry waterside left)
+  - id: MLC_t6
+    en-US: E-stop 20 (Gantry waterside right)
+  - id: MLC_3X9
+    en-US: E-stop 21
+  - id: MLC_3CC
+    en-US: E-stop 22
+  - id: MLC_446
+    en-US: E-stop 23
+  - id: MLC_ki
+    en-US: E-stop 24

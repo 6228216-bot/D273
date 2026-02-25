@@ -1,0 +1,33 @@
+﻿TYPE
+    AXIS_DB : STRUCT
+        { S7_MLC := "MLC_wg" }
+        MASTERSWITCH : _.MASTERSWITCH;
+        { S7_MLC := "MLC_PH" }
+        STATUS_BITS : _.AXIS_STATUS_BITS;
+        { S7_MLC := "MLC_4mc" }
+        ACTUAL_VALUES : _.AXIS_ACTUAL_VALUES;
+        { S7_MLC := "MLC_Mg" }
+        DRIVE_ACTUAL_VALUES : Array[1..4] of _.DRIVE_ACTUAL_STATE;
+        { S7_MLC := "MLC_3mh" }
+        CONTROL_BITS : _.AXIS_CONTROL_BITS;
+        { S7_MLC := "MLC_Mq" }
+        SETPOINTS : _.AXIS_SETPOINTS;
+        { S7_MLC := "MLC_4tF" }
+        BRAKE_TEST_DRIVE : Array[1..4] of _.BRAKES_TEST;
+        { S7_MLC := "MLC_42s" }
+        LIMIT_SWITCHES : _.AXIS_LIMIT_SWITCHES;
+        { S7_MLC := "MLC_3sz" }
+        BLOCKINGS : _.BLOCKINGS;
+        { S7_MLC := "MLC_4s4" }
+        DRIVE_COMMUNICATION : Array[1..4] of _.DRIVE_COMMUNICATION;
+        { S7_MLC := "MLC_4Cm" }
+        FAULT_RECEIVED : Array[1..4] of _.DRIVE_RECEIVED_FAULTS;
+        { S7_MLC := "MLC_R3" }
+        RATED_VALUES : _.AXIS_RATED_VALUES;
+        {
+            S7_MLC := "MLC_3h4";
+            S7_Setpoint := "True"
+        }
+        HW_IO_DRIVES : Array[1..4] of HW_IO;
+    END_STRUCT;
+END_TYPE

@@ -1,0 +1,40 @@
+﻿MultiLingualTexts:
+  - id: MLC_3GW
+    en-US: Speed, acceleration, position setpoints
+    ru-RU: Задания скорости, ускорения, положения
+  - id: MLC_4PY
+    en-US: Speed setpoint from -100.0 to +100.0
+    ru-RU: Задание скорости от джойстика
+  - id: MLC_4xX
+    en-US: Acceleration ramp mode default 100.0
+    ru-RU: Задание скорости от системы выравнивания моста
+  - id: MLC_4wU
+    en-US: Acceleration ramp scaling default 100.0
+    ru-RU: Коэффициент рампы ускорения
+  - id: MLC_vR
+    en-US: Deceleration ramp scaling default 100.0
+    ru-RU: Коэффициент рампы замедления
+  - id: MLC_3Zh
+    en-US: Acceleration override for automatic mode
+    ru-RU: Ускорение для автоматического режима
+  - id: MLC_3Yq
+    en-US: Deceleration override for automatic mode
+    ru-RU: Замедление для автоматического режима
+  - id: MLC_4jN
+    en-US: Increased ramp coefficient
+    ru-RU: Коэффициент рампы ускорения увеличенный (по блокирвоке части приводов оси)
+  - id: MLC_4f5
+    en-US: Deceleration coefficient
+    ru-RU: Коэффициент рампы уменьшенный (по концевым)
+  - id: MLC_4k6
+    en-US: Torque setpoint from -100.0 to +100.0
+    ru-RU: Задание момента
+  - id: MLC_3pe
+    en-US: Positive torque limit default 100.0
+    ru-RU: Ограничение положительного момента
+  - id: MLC_Yu
+    en-US: Negative torque limit default 100.0
+    ru-RU: Ограничение отрицательного момента
+  - id: MLC_4CP
+    en-US: Brake test torque
+    ru-RU: Максимальный момент для проверки тормоза, в %
