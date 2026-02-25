@@ -1,0 +1,141 @@
+﻿MultiLingualTexts:
+  - id: MLC_38e
+    en-US: Interlock status (True = no active blockings)
+  - id: MLC_3dT
+    en-US: Infeed/Line module is ready and in operation
+  - id: MLC_4Qy
+    en-US: Main Line Contactor is in open/stopped state
+  - id: MLC_4qF
+    en-US: Automatic operation mode is active
+  - id: MLC_3hq
+    en-US: Fault reset / Acknowledge command
+  - id: MLC_XY
+    en-US: Axis readiness lamp
+  - id: MLC_M8
+    en-US: Axis data block instance
+  - id: MLC_yG
+    en-US: Operator warning horn
+    ru-RU: Звонок предупреждения оператору
+  - id: MLC_4Gp
+    en-US: Movement start horn (automatic)
+    ru-RU: Звонок о начале движения - автоматическое включение
+  - id: MLC_h4
+    en-US: Internal enable signal for drive speed setpoints
+  - id: MLC_3sA
+    en-US: Flag to prevent intermediate stops during travel
+  - id: MLC_LJ
+    en-US: Power-on (OFF1) command bit for drives
+  - id: MLC_4tF
+    en-US: Jog 1 (forward) command bit
+  - id: MLC_3d8
+    en-US: Jog 2 (backward) command bit
+  - id: MLC_526
+    en-US: Requirement flag for positioning task sequence
+  - id: MLC_3j9
+    en-US: Tracking mode active (master/slave sync)
+  - id: MLC_4vQ
+    en-US: Global flag indicating no stop conditions are active
+  - id: MLC_4Mg
+    en-US: Command to initiate a traversing task
+  - id: MLC_LL
+    en-US: 'Error flag: Invalid control source detected'
+  - id: MLC_4DJ
+    en-US: Joystick delay for brake test
+  - id: MLC_4Ra
+    en-US: Effective ramp down value
+  - id: MLC_4N2
+    en-US: Distance to target position
+  - id: MLC_Wa
+    en-US: Timer for axis standstill detection
+  - id: MLC_mn
+    en-US: Pulse timer for homing/reference sequence
+  - id: MLC_4WN
+    en-US: Delay/Pulse timer for starting traversing tasks
+  - id: MLC_hV
+    en-US: Stability timer for target position reach signal
+  - id: MLC_3Tz
+    en-US: Delay for joystick neutral position detection
+  - id: MLC_3nC
+    en-US: Zero value for block initialization
+  - id: MLC_58u
+    en-US: Status of FILL instruction
+  - id: MLC_5Ax
+    en-US: Mechanism function
+    ru-RU: Функция механизма
+  - id: MLC_QK
+    en-US: Automatic horn activation at start of motion
+    ru-RU: Автоматическая подача звонка при начале движения
+  - id: MLC_45x
+    en-US: Initialization of variables from TEMP area
+    ru-RU: Инициализация переменных из области TEMP
+  - id: MLC_59r
+    en-US: Initialization of drive control data
+    ru-RU: Инициализация данных управления приводами
+  - id: MLC_4SS
+    en-US: 1 = No OFF2 (enable is possible)
+  - id: MLC_tJ
+    en-US: 1 = No OFF3 (enable possible)
+  - id: MLC_4vU
+    en-US: No any stop command present
+    ru-RU: Нет никакой команды остановки
+  - id: MLC_3ck
+    en-US: 1 = Control by PLC
+  - id: MLC_wj
+    en-US: Drive Data Set selection bit 0
+  - id: MLC_33W
+    en-US: Drive Data Set selection bit 1
+  - id: MLC_3hs
+    en-US: 1= Acknowledge faults
+  - id: MLC_3Kd
+    en-US: Start command
+  - id: MLC_54c
+    en-US: 1=Torque control operation
+  - id: MLC_3hh
+    en-US: 1=Unconditionaly close holding brake
+  - id: MLC_43M
+    en-US: OFF1 switch-off delay in brake test mode
+    ru-RU: Задержка выключения OFF1 в режиме проверки тормоза
+  - id: MLC_XB
+    en-US: Default acceleration and braking ramp coefficients
+    ru-RU: Коэффициенты рампы разгона и торможения по умолчанию
+  - id: MLC_XZ
+    en-US: Increased ramp
+    ru-RU: Увеличенная рампа
+  - id: MLC_3LN
+    en-US: Reduced braking ramp
+    ru-RU: Уменьшенная рампа торможения
+  - id: MLC_3i3
+    en-US: Speed setpoint coefficients
+    ru-RU: Коэффициенты заданий скорости
+  - id: MLC_3xi
+    en-US: Torque limitation coefficients
+    ru-RU: Коэффициенты ограничений моментов
+  - id: MLC_3dz
+    en-US: Speed setpoint from scaling
+    ru-RU: Задание скорости от джойстика
+  - id: MLC_Q6
+    en-US: In torque control mode, speed setpoints are reset
+    ru-RU: При управлении по моменту - задания скорости обнуляются
+  - id: MLC_45H
+    en-US: Speed setpoint from skew correction system – ramp = zero
+    ru-RU: Задание скорости от системы устранения перекоса. Рампа - ноль
+  - id: MLC_4UK
+    en-US: When holding the load – speed = 0
+    ru-RU: При удержании груза - скорость 0
+  - id: MLC_4dW
+    en-US: Mechanism is stanstill
+    ru-RU: Механизм в состоянии покоя - таймер
+  - id: MLC_3wp
+    en-US: Copying control signals to drives 1 and 2
+    ru-RU: Копирование управления в привода 1, 2
+  - id: MLC_3LD
+    en-US: Copying control signals to drives 3 and 4
+    ru-RU: Копирование управления в привода 3, 4
+  - id: MLC_4G7
+    en-US: Drive 1 block
+  - id: MLC_3kc
+    en-US: Drive 2 block
+  - id: MLC_3Cz
+    en-US: Drive 3 block
+  - id: MLC_49N
+    en-US: Drive 4 block

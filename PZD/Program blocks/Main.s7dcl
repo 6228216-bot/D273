@@ -1,0 +1,46 @@
+﻿{
+    S7_Optimized := "TRUE";
+    S7_PreferredLanguage := "LAD";
+    S7_Version := "0.1"
+}
+ORGANIZATION_BLOCK "Main"
+    {
+        S7_Language := "LAD";
+        S7_NetworkComment := "MLC_4pM";
+        S7_NetworkTitle := "MLC_4t4"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Contact( "mLOGIC0" )
+            wire#w1
+            S_Coil( "mLOGIC1" )
+        END_RUNG
+        RUNG wire#powerrail
+            I_Contact( "mLOGIC1" )
+        END_RUNG wire#w1
+        RUNG wire#w1
+            R_Coil( "mLOGIC0" )
+        END_RUNG
+        RUNG wire#w1
+            R_Coil( "mAlarmDelay" )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkComment := "MLC_4wJ";
+        S7_NetworkTitle := "MLC_4Ya"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Contact( "mTEMP_LOGIC0" )
+            wire#w1
+            S_Coil( "mTEMP_LOGIC1" )
+        END_RUNG
+        RUNG wire#powerrail
+            I_Contact( "mTEMP_LOGIC1" )
+        END_RUNG wire#w1
+        RUNG wire#w1
+            R_Coil( "mTEMP_LOGIC0" )
+        END_RUNG
+    END_NETWORK
+END_ORGANIZATION_BLOCK

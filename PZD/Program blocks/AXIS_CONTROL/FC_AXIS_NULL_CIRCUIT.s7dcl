@@ -1,0 +1,81 @@
+﻿{
+    S7_Author := "YuryAbrosimov";
+    S7_BlockComment := "MLC_3qz";
+    S7_BlockNumber := "9";
+    S7_Optimized := "FALSE";
+    S7_PreferredLanguage := "LAD";
+    S7_Version := "0.2"
+}
+FUNCTION "FC_AXIS_NULL_CIRCUIT" : Void
+    VAR_INPUT 
+        { S7_MLC := "MLC_4Ur" }
+        bMasterSwitchNull : Bool;
+        { S7_MLC := "MLC_4De" }
+        bLineModuleOperation : Bool;
+    END_VAR
+    VAR_OUTPUT 
+        { S7_MLC := "MLC_3dR" }
+        bIndication : Bool;
+    END_VAR
+    VAR_IN_OUT 
+        { S7_MLC := "MLC_xU" }
+        AXIS_CONTROL_BITS : _.AXIS_CONTROL_BITS;
+    END_VAR
+    VAR_TEMP 
+        { S7_MLC := "MLC_4Kd" }
+        bNoControlStop : Bool;
+    END_VAR
+
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_3X8"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Contact( "mLOGIC1" )
+            R_Coil( #bNoControlStop )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_3ba"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Contact( #AXIS_CONTROL_BITS.bNoFastStop )
+            Contact( #AXIS_CONTROL_BITS.bNoNormalStop )
+            Coil( #bNoControlStop )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_3s4"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Contact( #bMasterSwitchNull )
+            wire#w1
+            Contact( #bNoControlStop )
+            Contact( #AXIS_CONTROL_BITS.bNoCoastStop )
+            Contact( #bLineModuleOperation )
+            Coil( #AXIS_CONTROL_BITS.bAxisNullCircuit )
+        END_RUNG
+        RUNG wire#powerrail
+            Contact( #AXIS_CONTROL_BITS.bAxisNullCircuit )
+        END_RUNG wire#w1
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_gA"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Contact( #AXIS_CONTROL_BITS.bAxisNullCircuit )
+            wire#w1
+            Coil( #AXIS_CONTROL_BITS.bAxisEnabled )
+        END_RUNG
+        RUNG wire#w1
+            Coil( #bIndication )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION

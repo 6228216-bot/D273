@@ -1,0 +1,16 @@
+﻿{
+    S7_BlockNumber := "150";
+    S7_Optimized := "FALSE";
+    S7_StandardRetain := "TRUE";
+    S7_Version := "0.1"
+}
+DATA_BLOCK DB_AXIS_LONG_TRAVEL : AXIS_DB
+    RATED_VALUES.rRatedSpeed := 1420.0;
+    RATED_VALUES.rRatedCurrent := 15.0;
+    RATED_VALUES.rRatedTorque := 50.44;
+    RATED_VALUES.rRatedVoltage := 400.0;
+    RATED_VALUES.rRatedTemperature := 100.0;
+    RATED_VALUES.rReferenceSpeed := 1500.0;
+    RATED_VALUES.rReferenceCurrent := 22.5;
+    RATED_VALUES.rReferenceTorque := 100.87;
+END_DATA_BLOCK

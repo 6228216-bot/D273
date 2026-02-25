@@ -1,0 +1,87 @@
+﻿{
+    S7_Optimized := "FALSE";
+    S7_PreferredLanguage := "LAD";
+    S7_Version := "0.1"
+}
+FUNCTION "FC_PROFINET_READ4BYTES" : Void
+    VAR_INPUT 
+        { S7_MLC := "MLC_4PA" }
+        HW_ADDRESS : HW_IO;
+    END_VAR
+    VAR_OUTPUT 
+        DATA_IN : Array[0..3] of Byte;
+        { S7_MLC := "MLC_33A" }
+        bReadOK : Bool;
+    END_VAR
+    VAR_TEMP 
+        { S7_MLC := "MLC_4e5" }
+        READING_ARRAY : Array[0..3] of Byte;
+        iZero : Int;
+        iStatusFill : Int;
+        iStatusReading : Int;
+        iStatusWriting : Int;
+        iStatusMove : Int;
+    END_VAR
+
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_WW"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            
+            Move(
+                in := 0, 
+                out1 => #iZero
+            )
+            R_Coil( #bReadOK )
+        END_RUNG
+        RUNG wire#powerrail
+            S_Fill(
+                BVAL := #iZero, 
+                RET_VAL => #iStatusFill, 
+                BLK => #READING_ARRAY
+            )
+            S_Fill(
+                BVAL := #iZero, 
+                RET_VAL => #iStatusFill, 
+                BLK => #DATA_IN
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_vm"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            DPRD_DAT(
+                LADDR := #HW_ADDRESS, 
+                RET_VAL => #iStatusReading, 
+                RECORD => #READING_ARRAY
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_4T8"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            { S7_Templates := "SrcType := Int" }
+            EQ_Contact(
+                in1 := #iStatusReading, 
+                in2 := 0
+            )
+            wire#w1
+            S_BlockMove(
+                srcBlock := #READING_ARRAY, 
+                ret_val => #iStatusMove, 
+                dstBlock => #DATA_IN
+            )
+        END_RUNG
+        RUNG wire#w1
+            S_Coil( #bReadOK )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION

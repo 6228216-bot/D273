@@ -1,0 +1,55 @@
+﻿MultiLingualTexts:
+  - id: MLC_4jd
+    en-US: Position Hardware address
+  - id: MLC_32L
+    en-US: Status Hardware address
+  - id: MLC_vp
+    en-US: Last codeHardware address
+  - id: MLC_46j
+    en-US: Pulse per meter Hardware address
+  - id: MLC_4h5
+    en-US: Alive timeout value
+  - id: MLC_Nd
+    en-US: Position, mm raw data
+  - id: MLC_3rh
+    en-US: Status bits
+  - id: MLC_3sF
+    en-US: Calculated number of pulses per meter
+  - id: MLC_3yF
+    en-US: Last transponder code
+  - id: MLC_4mg
+    en-US: Last keep-alive counter value
+  - id: MLC_49a
+    en-US: Keep-alive timeout timer
+  - id: MLC_3Vr
+    en-US: Position data read successfully in this cycle
+  - id: MLC_Qj
+    en-US: Status data read successfully in this cycle
+  - id: MLC_4SH
+    en-US: Last position code read successfully in this cycle
+  - id: MLC_56N
+    en-US: Pulses-per-meter value read successfully in this cycle
+  - id: MLC_SE
+    en-US: New data is being received (keep-alive active)
+  - id: MLC_4ua
+    en-US: Communication with BTG device is OK
+  - id: MLC_Ub
+    en-US: Positive edge trigger
+  - id: MLC_4yU
+    en-US: Temporary buffer for position data (4 bytes)
+  - id: MLC_5Bv
+    en-US: Temporary buffer for status data (4 bytes)
+  - id: MLC_442
+    en-US: Temporary buffer for last code (4 bytes)
+  - id: MLC_37B
+    en-US: Temporary buffer for pulses-per-meter value (4 bytes)
+  - id: MLC_T4
+    en-US: Initialization
+  - id: MLC_3SD
+    en-US: Communication with BTG device
+  - id: MLC_42Z
+    en-US: Communication is OK
+  - id: MLC_cq
+    en-US: Read data is NOT alive
+  - id: MLC_3Xy
+    en-US: Store last keep-alive counter value

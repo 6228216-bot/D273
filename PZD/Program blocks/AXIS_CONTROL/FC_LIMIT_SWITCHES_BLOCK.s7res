@@ -1,0 +1,21 @@
+﻿MultiLingualTexts:
+  - id: MLC_4cQ
+    ru-RU: Блокировка концевых выключателей
+  - id: MLC_3UC
+    en-US: 0=FRU Emergency limit switch operated
+  - id: MLC_3ER
+    en-US: 0=BLD Emergency limit switch operated
+  - id: MLC_38M
+    en-US: 0=FRU Limit switch operated
+  - id: MLC_34H
+    en-US: 0=BLD Limit switch operated
+  - id: MLC_4t2
+    en-US: 0=FRU Slow down limit switch operated
+  - id: MLC_yR
+    en-US: 0=BLD Slow down limit switch operated
+  - id: MLC_4Ni
+    en-US: External FRU direction not allowed
+    ru-RU: 1=Запрет движения в положительном направлении
+  - id: MLC_3UR
+    en-US: External BLD direction not allowed
+    ru-RU: 1=Запрет движения в отрицательном направлении

@@ -1,0 +1,210 @@
+﻿MultiLingualTexts:
+  - id: MLC_4Lg
+    ru-RU: Блок управления выпрямителями
+  - id: MLC_3F7
+    en-US: HW address of the DO telegramm
+  - id: MLC_35g
+    en-US: Command to start after main contactor started
+  - id: MLC_nr
+    en-US: Stop command
+  - id: MLC_39c
+    en-US: All drives are stopped before stop of line module
+  - id: MLC_3sD
+    en-US: 1=No crane normal stop command
+  - id: MLC_43q
+    en-US: 1=No crane fast stop command
+  - id: MLC_37r
+    en-US: 1=No crane coast stop command
+  - id: MLC_34T
+    en-US: Fault acknowledgement
+  - id: MLC_4Ni
+    en-US: Line module started
+  - id: MLC_4xp
+    en-US: Actual voltage in DC-Line
+  - id: MLC_wP
+    en-US: Struct for receiving data
+  - id: MLC_ZT
+    ru-RU: Слово состояния
+  - id: MLC_4UC
+    en-US: b8
+  - id: MLC_4m5
+    en-US: plcControlActive
+  - id: MLC_3kS
+    en-US: b10
+  - id: MLC_4hi
+    en-US: prechargFinished
+  - id: MLC_4LV
+    en-US: main line contactor started
+  - id: MLC_3Q3
+    en-US: main lime contactor start command r863.1
+  - id: MLC_39B
+    en-US: b14
+  - id: MLC_nW
+    en-US: b15
+  - id: MLC_4hc
+    en-US: readyToStart
+  - id: MLC_4Yd
+    en-US: readyToOperate
+  - id: MLC_4UX
+    en-US: operationEnabled
+  - id: MLC_3p6
+    en-US: faultActive
+  - id: MLC_3Yh
+    en-US: noCoastStopActive
+  - id: MLC_52W
+    en-US: b5
+  - id: MLC_tu
+    en-US: operationInhibited
+  - id: MLC_42S
+    en-US: warnActive
+  - id: MLC_3FN
+    ru-RU: Напряжение звена постоянного тока
+  - id: MLC_4gV
+    en-US: Struct for sending data
+  - id: MLC_4jn
+    ru-RU: Слово управления
+  - id: MLC_3zV
+    en-US: b8
+  - id: MLC_cD
+    en-US: b9
+  - id: MLC_3Ug
+    en-US: Control from PLC
+  - id: MLC_3w4
+    en-US: b11
+  - id: MLC_4t9
+    en-US: b12
+  - id: MLC_3Vk
+    en-US: b13
+  - id: MLC_459
+    en-US: Infeed 1 Active
+  - id: MLC_39z
+    en-US: Infeed 2 Active
+  - id: MLC_4We
+    en-US: Start command
+  - id: MLC_4Kw
+    en-US: No Coast Stop
+  - id: MLC_4y6
+    en-US: b2
+  - id: MLC_56q
+    en-US: Operation Enable
+  - id: MLC_nC
+    en-US: b4
+  - id: MLC_49z
+    en-US: Block motor mode
+  - id: MLC_4Ys
+    en-US: Block generate mode
+  - id: MLC_59G
+    en-US: Acknowledge fault
+    ru-RU: Квитирование сбоев
+  - id: MLC_3He
+    ru-RU: Резерв
+  - id: MLC_37h
+    en-US: Start trigger
+  - id: MLC_45c
+    en-US: Fault of send/receive functions
+  - id: MLC_442
+    en-US: Fault occured in Line Module
+  - id: MLC_4x8
+    en-US: Temp integer 0
+  - id: MLC_qU
+    en-US: Status of FILL instruction
+  - id: MLC_4e7
+    en-US: DO address in WORD type
+  - id: MLC_3JH
+    en-US: Buffer for recieving data
+  - id: MLC_33m
+    en-US: Buffer for sending data
+  - id: MLC_wJ
+    en-US: Status of data send instruction
+  - id: MLC_Ww
+    en-US: Status of data receive instruction
+  - id: MLC_LR
+    en-US: Status of BLKMOVE instruction
+  - id: MLC_3cV
+    en-US: 'Temp Real type value #1'
+  - id: MLC_3Eu
+    en-US: 'Temp Real type value #2'
+  - id: MLC_LB
+    en-US: Actual DC Voltage in Real type
+  - id: MLC_tU
+    en-US: Actual DC Voltage in Int type
+  - id: MLC_5CK
+    en-US: Temp Dint value
+  - id: MLC_4Xq
+    en-US: Actual DC Voltage in DINT type not scaled
+  - id: MLC_tq
+    en-US: Line module started
+  - id: MLC_nt
+    ru-RU: Инициализация
+  - id: MLC_3UA
+    en-US: Copy Drive Object telegram address to WORD type variable
+  - id: MLC_4yb
+    en-US: Control bit for faults acknowledgement
+  - id: MLC_3Hr
+    en-US: Start of Line Module is needed
+  - id: MLC_3Ny
+    en-US: Initalization of data receiving structures
+  - id: MLC_38H
+    ru-RU: Инициализация
+  - id: MLC_4bd
+    en-US: Initalization of data sending structures
+  - id: MLC_56a
+    ru-RU: Инициализация
+  - id: MLC_4dY
+    en-US: Receive data from Line Module
+  - id: MLC_aG
+    ru-RU: Чтение данных
+  - id: MLC_4Vu
+    en-US: Fault of data recieving detection
+  - id: MLC_54t
+    ru-RU: Ошибка связи
+  - id: MLC_Tn
+    en-US: If fault occured during data receiving then go to the end of the block
+  - id: MLC_3qx
+    ru-RU: Переход по ошибке связи в конец
+  - id: MLC_4AK
+    en-US: Copy received buffer to receiving structure
+  - id: MLC_3Ns
+    ru-RU: Разложение данных процесса в фактические переменные
+  - id: MLC_32w
+    en-US: Move Actual DC Voltage to the block output
+  - id: MLC_3NA
+    ru-RU: Ошибка модуля
+  - id: MLC_4nK
+    en-US: Line module started
+  - id: MLC_4ce
+    en-US: Control bit for PLC control
+  - id: MLC_4ZT
+    ru-RU: Управление модулем от ПЛК
+  - id: MLC_3c9
+    en-US: Control bit for faults acknowledgement
+  - id: MLC_tn
+    ru-RU: Квитирование сбоев
+  - id: MLC_Pv
+    en-US: Control bits for operation
+  - id: MLC_S2
+    ru-RU: Управляющие биты
+  - id: MLC_jJ
+    en-US: Initialization of temporary variables
+  - id: MLC_4fw
+    en-US: Initialization of temporary variables
+  - id: MLC_ky
+    en-US: Initialization of receive stuctures
+  - id: MLC_38y
+    en-US: Initialization of receive stuctures
+  - id: MLC_Z9
+    en-US: Initialization of transmit stuctures
+  - id: MLC_fk
+    en-US: Initialization of transmit stuctures
+  - id: MLC_4k3
+    en-US: Reading from slave
+  - id: MLC_3wP
+    en-US: 'Calculating of Actual DC Voltage '
+  - id: MLC_3nj
+    en-US: Actual DC Voltage = Received Value * 400 / 16384
+  - id: MLC_5CW
+    en-US: Conversion of Actual DC Voltage to Int type
+  - id: MLC_4s2
+    en-US: Move Actual DC Voltage to the block output
+  - id: MLC_4Fm
+    en-US: Last network

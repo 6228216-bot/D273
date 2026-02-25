@@ -1,0 +1,12 @@
+﻿{
+    S7_BlockNumber := "508";
+    S7_Optimized := "FALSE";
+    S7_StandardRetain := "FALSE";
+    S7_Version := "0.1"
+}
+DATA_BLOCK CMS_LONG_TRAVEL_MECH_DB
+    VAR
+        STATUS_BITS : _.CMS_MECH_STATUS_BITS;
+        ANALOG_VALUES : _.CMS_MECH_ANALOG_VALUES;
+    END_VAR
+END_DATA_BLOCK

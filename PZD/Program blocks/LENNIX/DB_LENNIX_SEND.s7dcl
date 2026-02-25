@@ -1,0 +1,8 @@
+﻿{
+    S7_BlockNumber := "401";
+    S7_Optimized := "FALSE";
+    S7_StandardRetain := "FALSE";
+    S7_Version := "0.1"
+}
+DATA_BLOCK DB_LENNIX_SEND : LNX_IN_80B
+END_DATA_BLOCK

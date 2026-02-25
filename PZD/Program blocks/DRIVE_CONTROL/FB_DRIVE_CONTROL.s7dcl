@@ -1,0 +1,672 @@
+﻿{
+    S7_Author := "YuryAbrosimov";
+    S7_BlockNumber := "110";
+    S7_Optimized := "FALSE";
+    S7_PreferredLanguage := "LAD";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_DRIVE_CONTROL"
+    VAR_INPUT DB_SPECIFIC
+        { S7_MLC := "MLC_38e" }
+        bNoBlocking : Bool;
+        { S7_MLC := "MLC_3dT" }
+        bLineModuleOperation : Bool;
+        { S7_MLC := "MLC_4Qy" }
+        bMLCStopped : Bool;
+        { S7_MLC := "MLC_4qF" }
+        bAutoMode : Bool;
+        { S7_MLC := "MLC_3hq" }
+        bAcknowledge : Bool;
+    END_VAR
+    VAR_OUTPUT DB_SPECIFIC
+        { S7_MLC := "MLC_XY" }
+        bIndication : Bool;
+    END_VAR
+    VAR_IN_OUT 
+        { S7_MLC := "MLC_M8" }
+        AXIS_DB : _.AXIS_DB;
+    END_VAR
+    VAR_IN_OUT DB_SPECIFIC
+        { S7_MLC := "MLC_yG" }
+        bHornWarning : Bool;
+        { S7_MLC := "MLC_4Gp" }
+        bHornMovement : Bool;
+    END_VAR
+    VAR DB_SPECIFIC
+        { S7_MLC := "MLC_h4" }
+        bSetpointEnable : Bool;
+        { S7_MLC := "MLC_3sA" }
+        bNoIntermediateStop : Bool;
+        { S7_MLC := "MLC_LJ" }
+        bOff1 : Bool;
+        { S7_MLC := "MLC_4tF" }
+        bJog1 : Bool;
+        { S7_MLC := "MLC_3d8" }
+        bJog2 : Bool;
+        { S7_MLC := "MLC_526" }
+        bPositioningNeeded : Bool;
+        { S7_MLC := "MLC_3j9" }
+        bTrackingMode : Bool;
+        { S7_MLC := "MLC_4vQ" }
+        bNoAnyStopNeeded : Bool;
+        { S7_MLC := "MLC_4Mg" }
+        bStartTravTask : Bool;
+        { S7_MLC := "MLC_LL" }
+        bIncorrectSource : Bool;
+        { S7_MLC := "MLC_4DJ" }
+        bJoystickDelayBrakeTest : Bool;
+        { S7_MLC := "MLC_4Ra" }
+        iRampDownEffective : Int;
+        {
+            S7_MLC := "MLC_4N2";
+            S7_Setpoint := "False"
+        }
+        COMMON_CONTROL : _.PZD_OUT;
+        {
+            S7_MLC := "MLC_Wa";
+            S7_Setpoint := "False"
+        }
+        tAxisStandstill : TON_TIME;
+        {
+            S7_MLC := "MLC_mn";
+            S7_Setpoint := "False"
+        }
+        tPulseHoming : TP_TIME;
+        {
+            S7_MLC := "MLC_4WN";
+            S7_Setpoint := "False"
+        }
+        tStartTravTask : TON_TIME;
+        {
+            S7_MLC := "MLC_hV";
+            S7_Setpoint := "False"
+        }
+        tTargetPositionReached : TON_TIME;
+        { S7_Setpoint := "False" }
+        BRAKE_TEST_INST : _.BRAKES_TEST;
+        {
+            S7_MLC := "MLC_3Tz";
+            S7_Setpoint := "False"
+        }
+        tJoystickOFFDelay : TOF_TIME;
+        { S7_Setpoint := "False" }
+        tPulseMovementHorn : TP_TIME;
+        { S7_Setpoint := "False" }
+        tHornStartDelay : TON_TIME;
+    END_VAR
+    VAR_TEMP 
+        { S7_MLC := "MLC_3nC" }
+        iZero : Int;
+        { S7_MLC := "MLC_58u" }
+        iStatusFill : Int;
+        iAccelerationSynchroMode : Int;
+        iDecelerationSynchroMode : Int;
+        iDecelerationLimitSwitch : Int;
+    END_VAR
+
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_5Ax"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            "FC_AXIS"(
+                bLineModuleOperation := #bLineModuleOperation, 
+                bMLCStopped := #bMLCStopped, 
+                bNoBlocking := #bNoBlocking, 
+                bAcknowledge := #bAcknowledge, 
+                AXIS_DB := #AXIS_DB, 
+                bIndication => #bIndication
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_QK"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Contact( #AXIS_DB.CONTROL_BITS.bAxisEnabled )
+            I_Contact( #AXIS_DB.MASTERSWITCH.bMasterswitchZero )
+            wire#w1
+            Contact( #AXIS_DB.STATUS_BITS.bSpeedSPPositive )
+            I_Contact( #AXIS_DB.STATUS_BITS.bMovementFRUActive )
+            I_Contact( #AXIS_DB.STATUS_BITS.bMovementBLDActive )
+            wire#w2
+            { S7_Templates := "time_type := Time" }
+            #tPulseMovementHorn.TP(
+                pt := T#100ms, 
+                et =>  
+            )
+            S_Coil( #bHornMovement )
+        END_RUNG
+        RUNG wire#w1
+            Contact( #AXIS_DB.STATUS_BITS.bSpeedSPNegative )
+            I_Contact( #AXIS_DB.STATUS_BITS.bMovementBLDActive )
+            I_Contact( #AXIS_DB.STATUS_BITS.bMovementFRUActive )
+        END_RUNG wire#w2
+        RUNG wire#w1
+            Contact( #AXIS_DB.STATUS_BITS.bSpeedSPPositive )
+            wire#w3
+            I_Contact( #AXIS_DB.STATUS_BITS.bNoPulsesEnabled )
+            Contact( #AXIS_DB.STATUS_BITS.bAxisStandstill )
+        END_RUNG wire#w2
+        RUNG wire#w1
+            Contact( #AXIS_DB.STATUS_BITS.bSpeedSPNegative )
+        END_RUNG wire#w3
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_45x"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            
+            Move(
+                in := 0, 
+                out1 => #iZero
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_59r"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            S_Fill(
+                BVAL := #iZero, 
+                RET_VAL => #iStatusFill, 
+                BLK => #COMMON_CONTROL
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_4SS"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Contact( #AXIS_DB.CONTROL_BITS.bNoCoastStop )
+            Coil( #COMMON_CONTROL.CTW1.OFF2 )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_tJ"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Contact( #AXIS_DB.CONTROL_BITS.bNoFastStop )
+            Coil( #COMMON_CONTROL.CTW1.OFF3 )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_4vU"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Contact( #AXIS_DB.CONTROL_BITS.bNoCoastStop )
+            Contact( #AXIS_DB.CONTROL_BITS.bNoFastStop )
+            Contact( #AXIS_DB.CONTROL_BITS.bNoNormalStop )
+            Coil( #bNoAnyStopNeeded )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_3ck"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Contact( "mLOGIC1" )
+            wire#w1
+            Coil( #COMMON_CONTROL.CTW1.bPLCControl )
+        END_RUNG
+        RUNG wire#w1
+            Coil( #COMMON_CONTROL.CTW1.bOperationEnable )
+        END_RUNG
+        RUNG wire#w1
+            Coil( #COMMON_CONTROL.CTW1.bSetpointEnable )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_wj"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Contact( "mTEMP_LOGIC0" )
+            Coil( #COMMON_CONTROL.CTW2.bDriveDDSSelectionBit0 )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_33W"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Contact( "mTEMP_LOGIC0" )
+            Coil( #COMMON_CONTROL.CTW2.bDriveDDSSelectionBit1 )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_3hs"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Contact( #bAcknowledge )
+            Coil( #COMMON_CONTROL.CTW1.bAcknowledge )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_3Kd"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Contact( #bNoAnyStopNeeded )
+            Contact( #AXIS_DB.CONTROL_BITS.bNoBlocking )
+            Contact( #AXIS_DB.CONTROL_BITS.bAxisEnabled )
+            wire#w1
+            { S7_Templates := "SrcType := Real" }
+            NE_Contact(
+                in1 := #AXIS_DB.SETPOINTS.rSpeedSP, 
+                in2 := 0.0
+            )
+            Contact( #AXIS_DB.CONTROL_BITS.bStartMove )
+            wire#w2
+            S_SR(
+                operand := #COMMON_CONTROL.CTW1.OFF1, 
+                r1 := wire#w5
+            )
+        END_RUNG
+        RUNG wire#w1
+            Contact( #AXIS_DB.CONTROL_BITS.bHoldLoadNeeded )
+        END_RUNG wire#w2
+        RUNG wire#w1
+            Contact( #bJoystickDelayBrakeTest )
+            I_Contact( #AXIS_DB.STATUS_BITS.bBrakeTestFinished )
+        END_RUNG wire#w2
+        RUNG wire#powerrail
+            { S7_Templates := "SrcType := Real" }
+            EQ_Contact(
+                in1 := #AXIS_DB.SETPOINTS.rSpeedSP, 
+                in2 := 0.0
+            )
+            I_Contact( #AXIS_DB.CONTROL_BITS.bStartMove )
+            wire#w3
+            I_Contact( #bJoystickDelayBrakeTest )
+            wire#w4
+            I_Contact( #AXIS_DB.CONTROL_BITS.bHoldLoadNeeded )
+        END_RUNG wire#w5
+        RUNG wire#w3
+            Contact( #AXIS_DB.STATUS_BITS.bBrakeTestFinished )
+        END_RUNG wire#w4
+        RUNG wire#powerrail
+            I_Contact( #AXIS_DB.CONTROL_BITS.bAxisEnabled )
+        END_RUNG wire#w4
+        RUNG wire#powerrail
+            I_Contact( #AXIS_DB.CONTROL_BITS.bNoBlocking )
+        END_RUNG wire#w4
+        RUNG wire#powerrail
+            I_Contact( #bNoAnyStopNeeded )
+        END_RUNG wire#w4
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_54c"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Contact( #AXIS_DB.CONTROL_BITS.bTorqueControl )
+            wire#w1
+            Coil( #COMMON_CONTROL.CTW2.bTorqueControl )
+        END_RUNG
+        RUNG wire#powerrail
+            Contact( #AXIS_DB.CONTROL_BITS.bBrakeTestMode )
+            Contact( #AXIS_DB.CONTROL_BITS.bBrakeTestAllowed )
+        END_RUNG wire#w1
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_3hh"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Contact( #AXIS_DB.CONTROL_BITS.bBrakeTestMode )
+            Contact( #AXIS_DB.CONTROL_BITS.bBrakeTestAllowed )
+            wire#w1
+            Coil( #COMMON_CONTROL.CTW1.bOpenHoldingBrake )
+        END_RUNG
+        RUNG wire#powerrail
+            Contact( #AXIS_DB.CONTROL_BITS.bHoldLoadNeeded )
+        END_RUNG wire#w1
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_43M"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            { S7_Templates := "SrcType := Real" }
+            NE_Contact(
+                in1 := #AXIS_DB.SETPOINTS.rSpeedSP, 
+                in2 := 0.0
+            )
+            { S7_Templates := "time_type := Time" }
+            #tJoystickOFFDelay.TOF(
+                pt := T#3s, 
+                et =>  
+            )
+            Contact( #AXIS_DB.CONTROL_BITS.bBrakeTestMode )
+            Contact( #AXIS_DB.CONTROL_BITS.bBrakeTestAllowed )
+            Coil( #bJoystickDelayBrakeTest )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_XB"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            
+            Mul(
+                in1 := #AXIS_DB.SETPOINTS.rAccelerationScaling, 
+                in2 := 163.84, 
+                out => #COMMON_CONTROL.iRampUpScaling
+            )
+            
+            Mul(
+                in1 := #AXIS_DB.SETPOINTS.rDecelerationScaling, 
+                in2 := 163.84, 
+                out => #COMMON_CONTROL.iRampDownScaling
+            )
+            
+            Move(
+                in := #COMMON_CONTROL.iRampDownScaling, 
+                out1 => #iRampDownEffective
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_XZ"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Contact( #AXIS_DB.CONTROL_BITS.bRampIncreasingNeeded )
+            { S7_Templates := "SrcType := Real" }
+            GT_Contact(
+                in1 := #AXIS_DB.SETPOINTS.rRampIncreasedCoef, 
+                in2 := #AXIS_DB.SETPOINTS.rAccelerationScaling
+            )
+            
+            Mul(
+                in1 := #AXIS_DB.SETPOINTS.rRampIncreasedCoef, 
+                in2 := 163.84, 
+                out => #COMMON_CONTROL.iRampUpScaling
+            )
+            
+            Move(
+                in := #COMMON_CONTROL.iRampUpScaling, 
+                out1 => #COMMON_CONTROL.iRampDownScaling, 
+                out2 => #iRampDownEffective
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_3LN"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Contact( #AXIS_DB.CONTROL_BITS.bDecelRampDecreasingNeeded )
+            
+            Div(
+                in1 := #AXIS_DB.SETPOINTS.rAccelerationScaling, 
+                in2 := #AXIS_DB.SETPOINTS.rDecelerationCoef, 
+                out => #COMMON_CONTROL.iRampDownScaling
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_3i3"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            
+            Move(
+                in := 16384, 
+                out1 => #COMMON_CONTROL.iMainSetpointScaling, 
+                out2 => #COMMON_CONTROL.iAdditSetpointScaling
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_3xi"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            
+            Move(
+                in := 16384, 
+                out1 => #COMMON_CONTROL.iTorqueLimitPos
+            )
+            
+            Move(
+                in := -16383, 
+                out1 => #COMMON_CONTROL.iTorqueLimitNeg
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_3dz"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            
+            Mul(
+                in1 := #AXIS_DB.SETPOINTS.rSpeedSP, 
+                in2 := 163.84, 
+                out => #COMMON_CONTROL.iSpeedSP
+            )
+            
+            Move(
+                in := 16384, 
+                out1 => #COMMON_CONTROL.iMainSetpointScaling
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_Q6"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Contact( #COMMON_CONTROL.CTW2.bTorqueControl )
+            
+            Move(
+                in := 0, 
+                out1 => #COMMON_CONTROL.iMainSetpointScaling
+            )
+            
+            Move(
+                in := 0, 
+                out1 => #COMMON_CONTROL.iAdditSetpointScaling
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_45H"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Contact( "mTEMP_LOGIC0" )
+            
+            Move(
+                in := 0, 
+                out1 => #COMMON_CONTROL.iRampUpScaling, 
+                out2 => #COMMON_CONTROL.iRampDownScaling
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_4UK"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Contact( #AXIS_DB.CONTROL_BITS.bHoldLoadNeeded )
+            
+            Move(
+                in := 0, 
+                out1 => #COMMON_CONTROL.iMainSetpointScaling
+            )
+            
+            Move(
+                in := 0, 
+                out1 => #COMMON_CONTROL.iAdditSetpointScaling
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_4dW"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            I_Contact( #AXIS_DB.STATUS_BITS.bNoPulsesEnabled )
+            I_Contact( #AXIS_DB.DRIVE_COMMUNICATION[1].PZD_IN.STW1.bOpenBrake )
+            I_Contact( #AXIS_DB.DRIVE_COMMUNICATION[2].PZD_IN.STW1.bOpenBrake )
+            I_Contact( #AXIS_DB.DRIVE_COMMUNICATION[3].PZD_IN.STW1.bOpenBrake )
+            I_Contact( #AXIS_DB.DRIVE_COMMUNICATION[4].PZD_IN.STW1.bOpenBrake )
+            wire#w1
+            { S7_Templates := "time_type := Time" }
+            #tAxisStandstill.TON(
+                pt := T#300ms, 
+                et =>  
+            )
+            Coil( #AXIS_DB.STATUS_BITS.bAxisStandstill )
+        END_RUNG
+        RUNG wire#powerrail
+            { S7_Templates := "SrcType := Int" }
+            LE_Contact(
+                in1 := #AXIS_DB.DRIVE_COMMUNICATION[1].PZD_IN.iMotorSpeed, 
+                in2 := 700
+            )
+            { S7_Templates := "SrcType := Int" }
+            GE_Contact(
+                in1 := #AXIS_DB.DRIVE_COMMUNICATION[1].PZD_IN.iMotorSpeed, 
+                in2 := -700
+            )
+            { S7_Templates := "SrcType := Int" }
+            LE_Contact(
+                in1 := #AXIS_DB.DRIVE_COMMUNICATION[2].PZD_IN.iMotorSpeed, 
+                in2 := 700
+            )
+            { S7_Templates := "SrcType := Int" }
+            GE_Contact(
+                in1 := #AXIS_DB.DRIVE_COMMUNICATION[2].PZD_IN.iMotorSpeed, 
+                in2 := -700
+            )
+        END_RUNG wire#w1
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_3wp"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            
+            Move(
+                in := #COMMON_CONTROL, 
+                out1 => #AXIS_DB.DRIVE_COMMUNICATION[1].PZD_OUT
+            )
+            
+            Move(
+                in := #COMMON_CONTROL, 
+                out1 => #AXIS_DB.DRIVE_COMMUNICATION[2].PZD_OUT
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_3LD"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            
+            Move(
+                in := #COMMON_CONTROL, 
+                out1 => #AXIS_DB.DRIVE_COMMUNICATION[3].PZD_OUT
+            )
+            
+            Move(
+                in := #COMMON_CONTROL, 
+                out1 => #AXIS_DB.DRIVE_COMMUNICATION[4].PZD_OUT
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_4G7"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Contact( #AXIS_DB.BLOCKINGS.bDrive1Block )
+            wire#w1
+            R_Coil( #AXIS_DB.DRIVE_COMMUNICATION[1].PZD_OUT.CTW1.OFF1 )
+        END_RUNG
+        RUNG wire#w1
+            R_Coil( #AXIS_DB.DRIVE_COMMUNICATION[1].PZD_OUT.CTW1.bOperationEnable )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_3kc"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Contact( #AXIS_DB.BLOCKINGS.bDrive2Block )
+            wire#w1
+            R_Coil( #AXIS_DB.DRIVE_COMMUNICATION[2].PZD_OUT.CTW1.OFF1 )
+        END_RUNG
+        RUNG wire#w1
+            R_Coil( #AXIS_DB.DRIVE_COMMUNICATION[2].PZD_OUT.CTW1.bOperationEnable )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_3Cz"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Contact( #AXIS_DB.BLOCKINGS.bDrive3Block )
+            wire#w1
+            R_Coil( #AXIS_DB.DRIVE_COMMUNICATION[3].PZD_OUT.CTW1.OFF1 )
+        END_RUNG
+        RUNG wire#w1
+            R_Coil( #AXIS_DB.DRIVE_COMMUNICATION[3].PZD_OUT.CTW1.bOperationEnable )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_49N"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Contact( #AXIS_DB.BLOCKINGS.bDrive4Block )
+            wire#w1
+            R_Coil( #AXIS_DB.DRIVE_COMMUNICATION[4].PZD_OUT.CTW1.OFF1 )
+        END_RUNG
+        RUNG wire#w1
+            R_Coil( #AXIS_DB.DRIVE_COMMUNICATION[4].PZD_OUT.CTW1.bOperationEnable )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

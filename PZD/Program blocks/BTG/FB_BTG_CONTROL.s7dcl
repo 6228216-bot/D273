@@ -1,0 +1,183 @@
+﻿{
+    S7_Optimized := "FALSE";
+    S7_PreferredLanguage := "LAD";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_BTG_CONTROL"
+    VAR_INPUT DB_SPECIFIC
+        { S7_MLC := "MLC_4jd" }
+        HW_Pos : HW_IO;
+        { S7_MLC := "MLC_32L" }
+        HW_Status : HW_IO;
+        { S7_MLC := "MLC_vp" }
+        HW_LastCode : HW_IO;
+        { S7_MLC := "MLC_46j" }
+        HW_PulsePerMeter : HW_IO;
+        { S7_MLC := "MLC_4h5" }
+        tAliveDelay : Time := T#500ms;
+    END_VAR
+    VAR DB_SPECIFIC
+        {
+            S7_MLC := "MLC_Nd";
+            S7_Setpoint := "True"
+        }
+        diPosRaw : DInt;
+        {
+            S7_MLC := "MLC_3rh";
+            S7_Setpoint := "False"
+        }
+        STATUS_BITS : _.BTG_STATUS;
+        { S7_MLC := "MLC_3sF" }
+        diPulsePerMetrCalc : DInt;
+        { S7_MLC := "MLC_3yF" }
+        aLastTransponderCode : Array[0..3] of UInt;
+        { S7_MLC := "MLC_4mg" }
+        siLastAliveCounter : SInt;
+        { S7_MLC := "MLC_49a" }
+        tAliveCounter : TON_TIME;
+        { S7_MLC := "MLC_3Vr" }
+        bPosReadOK : Bool;
+        { S7_MLC := "MLC_Qj" }
+        bStatusReadOK : Bool;
+        { S7_MLC := "MLC_4SH" }
+        bCodeReadOK : Bool;
+        { S7_MLC := "MLC_56N" }
+        bPPMReadOK : Bool;
+        { S7_MLC := "MLC_SE" }
+        bDataAlive : Bool;
+        { S7_MLC := "MLC_4ua" }
+        bCommOK : Bool;
+        { S7_MLC := "MLC_Ub" }
+        pTrig : Bool;
+    END_VAR
+    VAR_TEMP 
+        { S7_MLC := "MLC_4yU" }
+        bufPos : Array[0..3] of Byte;
+        { S7_MLC := "MLC_5Bv" }
+        bufStat : Array[0..3] of Byte;
+        { S7_MLC := "MLC_442" }
+        bufCode : Array[0..3] of Byte;
+        { S7_MLC := "MLC_37B" }
+        bufPPM : Array[0..3] of Byte;
+        wRetVal : Word;
+    END_VAR
+
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_T4"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            R_Coil( #bDataAlive )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_3SD"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            "FC_PROFINET_READ4BYTES"(
+                HW_ADDRESS := #HW_Pos, 
+                DATA_IN => #bufPos, 
+                bReadOK => #bPosReadOK
+            )
+            Contact( #bPosReadOK )
+            S_BlockMove(
+                srcBlock := #bufPos, 
+                ret_val => #wRetVal, 
+                dstBlock => #diPosRaw
+            )
+        END_RUNG
+        RUNG wire#powerrail
+            "FC_PROFINET_READ4BYTES"(
+                HW_ADDRESS := #HW_Status, 
+                DATA_IN => #bufStat, 
+                bReadOK => #bStatusReadOK
+            )
+            Contact( #bStatusReadOK )
+            S_BlockMove(
+                srcBlock := #bufStat, 
+                ret_val => #wRetVal, 
+                dstBlock => #STATUS_BITS
+            )
+        END_RUNG
+        RUNG wire#powerrail
+            "FC_PROFINET_READ4BYTES"(
+                HW_ADDRESS := #HW_LastCode, 
+                DATA_IN => #bufCode, 
+                bReadOK => #bCodeReadOK
+            )
+            Contact( #bCodeReadOK )
+            S_BlockMove(
+                srcBlock := #bufCode, 
+                ret_val => #wRetVal, 
+                dstBlock => #aLastTransponderCode
+            )
+        END_RUNG
+        RUNG wire#powerrail
+            "FC_PROFINET_READ4BYTES"(
+                HW_ADDRESS := #HW_PulsePerMeter, 
+                DATA_IN => #bufPPM, 
+                bReadOK => #bPPMReadOK
+            )
+            Contact( #bPPMReadOK )
+            S_BlockMove(
+                srcBlock := #bufPPM, 
+                ret_val => #wRetVal, 
+                dstBlock => #diPulsePerMetrCalc
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_42Z"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Contact( #bStatusReadOK )
+            wire#w1
+            Coil( #bCommOK )
+        END_RUNG
+        RUNG wire#w1
+            S_Coil( #bDataAlive )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_cq"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            P_Contact(
+                operand := #bStatusReadOK, 
+                bit := #pTrig
+            )
+            { S7_Templates := "SrcType := SInt" }
+            EQ_Contact(
+                in1 := #siLastAliveCounter, 
+                in2 := #STATUS_BITS.siLiveCount
+            )
+            { S7_Templates := "time_type := Time" }
+            #tAliveCounter.TON(
+                pt := #tAliveDelay, 
+                et =>  
+            )
+            R_Coil( #bDataAlive )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_3Xy"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Contact( #bStatusReadOK )
+            
+            Move(
+                in := #STATUS_BITS.siLiveCount, 
+                out1 => #siLastAliveCounter
+            )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

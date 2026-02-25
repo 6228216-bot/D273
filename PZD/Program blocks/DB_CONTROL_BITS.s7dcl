@@ -1,0 +1,12 @@
+﻿{
+    S7_BlockNumber := "1";
+    S7_Optimized := "TRUE";
+    S7_StandardRetain := "FALSE";
+    S7_Version := "0.1"
+}
+DATA_BLOCK DB_CONTROL_BITS
+    VAR
+        { S7_MLC := "MLC_iQ" }
+        bAcknowledge : Bool;
+    END_VAR
+END_DATA_BLOCK

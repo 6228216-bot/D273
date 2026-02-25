@@ -1,0 +1,8 @@
+﻿{
+    S7_BlockNumber := "5001";
+    S7_Optimized := "TRUE";
+    S7_StandardRetain := "FALSE";
+    S7_Version := "0.1"
+}
+DATA_BLOCK DB_DATA_FROM_SAFETY : DataFromSafety
+END_DATA_BLOCK

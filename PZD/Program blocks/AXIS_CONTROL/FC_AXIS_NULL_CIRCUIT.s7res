@@ -1,0 +1,21 @@
+﻿MultiLingualTexts:
+  - id: MLC_3qz
+    en-US: Axis null circuit
+  - id: MLC_4Ur
+    en-US: Masterswitch in zero position
+  - id: MLC_4De
+    en-US: Rectifier in operation
+  - id: MLC_3dR
+    en-US: Axis readiness lamp
+  - id: MLC_xU
+    en-US: Bits for axis control
+  - id: MLC_4Kd
+    en-US: 1=No drive control stop active
+  - id: MLC_3X8
+    en-US: Stop needed
+  - id: MLC_3ba
+    en-US: 1=No drive control stop active
+  - id: MLC_3s4
+    en-US: 1=Null circuit signals collected
+  - id: MLC_gA
+    en-US: Enable signal and indication

@@ -1,0 +1,13 @@
+﻿MultiLingualTexts:
+  - id: MLC_4PA
+    en-US: Hardware address
+  - id: MLC_33A
+    en-US: Read OK this cycle
+  - id: MLC_4e5
+    en-US: Temporary array
+  - id: MLC_WW
+    en-US: Initialization
+  - id: MLC_vm
+    en-US: Reading
+  - id: MLC_4T8
+    en-US: Moving data to the output

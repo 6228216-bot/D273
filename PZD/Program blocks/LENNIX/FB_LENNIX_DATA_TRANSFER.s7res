@@ -1,0 +1,47 @@
+﻿MultiLingualTexts:
+  - id: MLC_pL
+    en-US: Last received  telegramm number
+  - id: MLC_55T
+    en-US: Connect procedure. Need to be activated only once and then connection will being restored automatically
+  - id: MLC_3bs
+    en-US: Receive procedure. Always active.
+  - id: MLC_4gq
+    en-US: Resetting send telegramm number to avoid overflow
+    ru-RU: Resetting send telegramm number to avoid overflow
+  - id: MLC_4BF
+    en-US: Incrementing telegramm number before send
+  - id: MLC_du
+    en-US: Send procedure. Acyclic function.
+  - id: MLC_yj
+    en-US: Resetting send require if send function done or in processing or failed
+    ru-RU: Resetting send require if send function done or in processing or failed
+  - id: MLC_363
+    en-US: Setting send require when previos procedure finished and no active sending process
+    ru-RU: Setting send require when previos procedure finished and no active sending process
+  - id: MLC_Uw
+    en-US: Resetting require if it didn't reset 100ms after has been set
+    ru-RU: Resetting require if it didn't reset 100ms after has been set
+  - id: MLC_4Sp
+    en-US: Setting require if it didn't set 100ms after has been reset
+    ru-RU: Setting require if it didn't set 100ms after has been reset
+  - id: MLC_XK
+    en-US: Setting require in 5ms cycle
+    ru-RU: Setting require in 5ms cycle
+  - id: MLC_32k
+    en-US: Conditions for connection faults determining
+  - id: MLC_yW
+    en-US: Reconect after fault determined. Firstly reset receive require bit and set connection again
+  - id: MLC_3uV
+    en-US: Try to activate new connection
+    ru-RU: Try to activate new connection
+  - id: MLC_3qA
+    en-US: Set receive bit again after new connection has been set
+    ru-RU: Set receive bit again after new connection has been set
+  - id: MLC_36a
+    en-US: Timer for faut indication
+    ru-RU: Timer for faut indication
+  - id: MLC_4cM
+    en-US: Copy newly received telegramm number to the last one
+  - id: MLC_3xh
+    en-US: Setting fault bits which was received from Lennix
+    ru-RU: Setting fault bits which was received from Lennix

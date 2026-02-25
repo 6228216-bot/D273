@@ -1,0 +1,413 @@
+﻿{
+    S7_BlockNumber := "401";
+    S7_Optimized := "FALSE";
+    S7_PreferredLanguage := "LAD";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_LENNIX_DATA_TRANSFER"
+    VAR_OUTPUT DB_SPECIFIC
+        bCommunicationFault : Bool;
+        bOverTemperature : Bool;
+        bTrackingError : Bool;
+        bFinished : Bool;
+    END_VAR
+    VAR DB_SPECIFIC
+        TCON : STRUCT
+            conReq : Bool;
+            conDone : Bool;
+            conBusy : Bool;
+            conError : Bool;
+            conStatus : Word;
+        END_STRUCT;
+        TRECEIVE : STRUCT
+            rcvReq : Bool;
+            rcvDone : Bool;
+            rcvBusy : Bool;
+            rcvError : Bool;
+            rcvStatus : Word;
+            rcvLength : DWord;
+        END_STRUCT;
+        TSEND : STRUCT
+            sendReq : Bool;
+            sendDone : Bool;
+            sendBusy : Bool;
+            sendError : Bool;
+            sendStatus : Word;
+        END_STRUCT;
+        { S7_MLC := "MLC_pL" }
+        bReceiveNumLast : UInt;
+        tNoReq : IEC_TIMER;
+        tReq : IEC_TIMER;
+        tConnFault : IEC_TIMER;
+        tReconnect : IEC_TIMER;
+        bConnFault : Bool;
+        bConnFaultEdge : Bool;
+        mConnNeg : Bool;
+        mIncrement : Bool;
+        mClockPos : Bool;
+        mClockNeg : Bool;
+        mResetRequest : Bool;
+        tConnFaultInd : IEC_TIMER;
+        CONNECTION_DATA : TCON_IP_v4 := (
+            InterfaceId := 64,
+            "ID" := 16#1,
+            ConnectionType := 16#13,
+            ActiveEstablished := false,
+            RemoteAddress := (
+                ADDR := [
+                    16#C0,
+                    16#A8,
+                    16#EF,
+                    16#C8
+                ]
+            ),
+            RemotePort := 0,
+            LocalPort := 2020
+        );
+        ADDR_DATA_REC : TADDR_Param := (
+            REM_IP_ADDR := [
+                192,
+                168,
+                239,
+                200
+            ],
+            REM_PORT_NR := 2020
+        );
+        ADDR_DATA_SEND : TADDR_Param := (
+            REM_IP_ADDR := [
+                192,
+                168,
+                239,
+                200
+            ],
+            REM_PORT_NR := 2010
+        );
+    END_VAR
+    VAR 
+        TCON_INST : TCON;
+        TURCV_INST : TURCV;
+        TUSEND_INST : TUSEND;
+    END_VAR
+
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_55T"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            #TCON_INST.TCON(
+                REQ := wire#w1, 
+                ID := 1, 
+                DONE => #TCON.conDone, 
+                BUSY => #TCON.conBusy, 
+                ERROR => #TCON.conError, 
+                STATUS => #TCON.conStatus, 
+                CONNECT := #CONNECTION_DATA
+            )
+        END_RUNG
+        RUNG wire#powerrail
+            Contact( #TCON.conReq )
+            I_Contact( "mRestart" )
+        END_RUNG wire#w1
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_3bs"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            #TURCV_INST.TURCV(
+                EN_R := wire#w1, 
+                ID := 1, 
+                LEN := 80, 
+                NDR => #TRECEIVE.rcvDone, 
+                BUSY => #TRECEIVE.rcvBusy, 
+                ERROR => #TRECEIVE.rcvError, 
+                STATUS => #TRECEIVE.rcvStatus, 
+                RCVD_LEN => #TRECEIVE.rcvLength, 
+                DATA := P#DB402.DBX0.0 BYTE 80, 
+                ADDR := #ADDR_DATA_REC
+            )
+        END_RUNG
+        RUNG wire#powerrail
+            Contact( #TRECEIVE.rcvReq )
+        END_RUNG wire#w1
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_4gq"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            { S7_Templates := "SrcType := UInt" }
+            GE_Contact(
+                in1 := "DB_LENNIX_SEND".iMessageNo, 
+                in2 := 32767
+            )
+            
+            Move(
+                in := 0, 
+                out1 => "DB_LENNIX_SEND".iMessageNo
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_4BF"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Contact( "mLOGIC1" )
+            P_Contact(
+                operand := #TSEND.sendDone, 
+                bit := #mIncrement
+            )
+            
+            Add(
+                in1 := "DB_LENNIX_SEND".iMessageNo, 
+                in2 := 1, 
+                out => "DB_LENNIX_SEND".iMessageNo
+            )
+        END_RUNG
+    END_NETWORK
+    { S7_Language := "LAD" }
+    NETWORK
+        RUNG wire#powerrail
+            Contact( "mLOGIC1" )
+            
+            Move(
+                in := "DB_LENNIX_RECEIVE".iMessageNo, 
+                out1 => "DB_LENNIX_SEND".iMessageNo
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_du"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            #TUSEND_INST.TUSEND(
+                REQ := wire#w1, 
+                ID := 1, 
+                LEN := 80, 
+                DONE => #TSEND.sendDone, 
+                BUSY => #TSEND.sendBusy, 
+                ERROR => #TSEND.sendError, 
+                STATUS => #TSEND.sendStatus, 
+                DATA := P#DB401.DBX0.0 BYTE 80, 
+                ADDR := #ADDR_DATA_SEND
+            )
+        END_RUNG
+        RUNG wire#powerrail
+            P_Contact(
+                operand := "Clock_5Hz", 
+                bit := #mClockPos
+            )
+            Contact( #TSEND.sendReq )
+        END_RUNG wire#w1
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_yj"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Contact( #TSEND.sendReq )
+            wire#w1
+            Contact( #TSEND.sendBusy )
+            wire#w2
+            P_Trig( #mResetRequest )
+            R_Coil( #TSEND.sendReq )
+        END_RUNG
+        RUNG wire#w1
+            Contact( #TSEND.sendError )
+        END_RUNG wire#w2
+        RUNG wire#w1
+            Contact( #TSEND.sendDone )
+        END_RUNG wire#w2
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_363"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            { S7_Templates := "SrcType := Word" }
+            EQ_Contact(
+                in1 := #TSEND.sendStatus, 
+                in2 := 16#7000
+            )
+            I_Contact( #TSEND.sendBusy )
+            I_Contact( #TSEND.sendDone )
+            S_Coil( #TSEND.sendReq )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_Uw"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Contact( #TSEND.sendReq )
+            { S7_Templates := "time_type := Time" }
+            #tReq.TON(
+                pt := t#100ms, 
+                et =>  
+            )
+            R_Coil( #TSEND.sendReq )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_4Sp"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            I_Contact( #TSEND.sendReq )
+            { S7_Templates := "time_type := Time" }
+            #tNoReq.TON(
+                pt := t#100ms, 
+                et =>  
+            )
+            S_Coil( #TSEND.sendReq )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_XK"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            P_Contact(
+                operand := "Clock_5Hz", 
+                bit := #mClockPos
+            )
+            wire#w1
+            S_Coil( #TSEND.sendReq )
+        END_RUNG
+        RUNG wire#powerrail
+            N_Contact(
+                operand := "Clock_5Hz", 
+                bit := #mClockNeg
+            )
+        END_RUNG wire#w1
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_32k"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            { S7_Templates := "SrcType := UInt" }
+            EQ_Contact(
+                in1 := "DB_LENNIX_SEND".iMessageNo, 
+                in2 := #bReceiveNumLast
+            )
+            wire#w1
+            { S7_Templates := "time_type := Time" }
+            #tConnFault.TON(
+                pt := T#350ms, 
+                et =>  
+            )
+            Coil( #bConnFault )
+        END_RUNG
+        RUNG wire#powerrail
+            Contact( "DB_LENNIX_RECEIVE".Faults.Communication )
+        END_RUNG wire#w1
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_yW"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            P_Contact(
+                operand := #bConnFault, 
+                bit := #bConnFaultEdge
+            )
+            wire#w1
+            R_Coil( #TRECEIVE.rcvReq )
+        END_RUNG
+        RUNG wire#w1
+            { S7_Templates := "time_type := Time" }
+            #tReconnect.TP(
+                pt := T#1s, 
+                et =>  
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_3uV"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Contact( #tReconnect.Q )
+            wire#w1
+            Coil( #TCON.conReq )
+        END_RUNG
+        RUNG wire#powerrail
+            Contact( #bConnFault )
+            I_Contact( #tReconnect.Q )
+            Contact( "Clock_1Hz" )
+        END_RUNG wire#w1
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_3qA"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            N_Contact(
+                operand := #TCON.conReq, 
+                bit := #mConnNeg
+            )
+            S_Coil( #TRECEIVE.rcvReq )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_36a"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Contact( #bConnFault )
+            { S7_Templates := "time_type := Time" }
+            #tConnFaultInd.TON(
+                pt := T#100ms, 
+                et =>  
+            )
+            Coil( #bCommunicationFault )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_4cM"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            
+            Move(
+                in := "DB_LENNIX_RECEIVE".iMessageNo, 
+                out1 => #bReceiveNumLast
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_3xh"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            I_Contact( #bCommunicationFault )
+            wire#w1
+            Contact( "DB_LENNIX_RECEIVE".Faults.CPUTemperature )
+            Coil( #bOverTemperature )
+        END_RUNG
+        RUNG wire#w1
+            Contact( "DB_LENNIX_RECEIVE".Faults.Track )
+            Coil( #bTrackingError )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

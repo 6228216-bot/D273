@@ -1,0 +1,9 @@
+﻿MultiLingualTexts:
+  - id: MLC_4t4
+    en-US: Logic 0 and 1
+  - id: MLC_4pM
+    en-US: Установка логических битов
+  - id: MLC_4Ya
+    en-US: Temporary used for commissioning logic 0 and 1
+  - id: MLC_4wJ
+    en-US: Установка логических битов, используемых временно для наладки

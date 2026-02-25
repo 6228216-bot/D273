@@ -1,0 +1,343 @@
+﻿{
+    S7_Author := "Dvesta";
+    S7_BlockComment := "MLC_tZ";
+    S7_BlockNumber := "100";
+    S7_Optimized := "FALSE";
+    S7_PreferredLanguage := "LAD";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "FB_CU320"
+    VAR_INPUT DB_SPECIFIC
+        { S7_MLC := "MLC_yT" }
+        iDrvAddress : Int;
+        { S7_MLC := "MLC_3Pm" }
+        bAcknowledge : Bool;
+    END_VAR
+    VAR DB_SPECIFIC
+        { S7_MLC := "MLC_5C4" }
+        PZD_IN : STRUCT
+            { S7_MLC := "MLC_4G3" }
+            SW1 : STRUCT
+                { S7_MLC := "MLC_4fu" }
+                synk : Bool;
+                { S7_MLC := "MLC_3s2" }
+                res9 : Bool;
+                { S7_MLC := "MLC_57u" }
+                res10 : Bool;
+                { S7_MLC := "MLC_3mY" }
+                res11 : Bool;
+                { S7_MLC := "MLC_jr" }
+                res12 : Bool;
+                { S7_MLC := "MLC_4sY" }
+                res13 : Bool;
+                { S7_MLC := "MLC_3NX" }
+                res14 : Bool;
+                { S7_MLC := "MLC_z5" }
+                res15 : Bool;
+                { S7_MLC := "MLC_SD" }
+                res0 : Bool;
+                { S7_MLC := "MLC_3Xm" }
+                res1 : Bool;
+                { S7_MLC := "MLC_4Xh" }
+                res2 : Bool;
+                { S7_MLC := "MLC_nK" }
+                faultActive : Bool;
+                { S7_MLC := "MLC_393" }
+                res4 : Bool;
+                { S7_MLC := "MLC_42k" }
+                res5 : Bool;
+                { S7_MLC := "MLC_4s2" }
+                res6 : Bool;
+                { S7_MLC := "MLC_3qF" }
+                warnActive : Bool;
+            END_STRUCT;
+            { S7_MLC := "MLC_3in" }
+            INPUTS : STRUCT
+                { S7_MLC := "MLC_58v" }
+                brakingModuleAlarm : Bool;
+                { S7_MLC := "MLC_3aw" }
+                brakingModuleFault : Bool;
+                { S7_MLC := "MLC_3qq" }
+                b10 : Bool;
+                { S7_MLC := "MLC_55i" }
+                b11 : Bool;
+                { S7_MLC := "MLC_4dT" }
+                b12 : Bool;
+                { S7_MLC := "MLC_43x" }
+                b13 : Bool;
+                { S7_MLC := "MLC_vU" }
+                b14 : Bool;
+                { S7_MLC := "MLC_48q" }
+                b15 : Bool;
+                { S7_MLC := "MLC_4qu" }
+                b0 : Bool;
+                { S7_MLC := "MLC_3pb" }
+                b1 : Bool;
+                { S7_MLC := "MLC_3kV" }
+                b2 : Bool;
+                { S7_MLC := "MLC_4yF" }
+                b3 : Bool;
+                { S7_MLC := "MLC_aF" }
+                b4 : Bool;
+                { S7_MLC := "MLC_3gR" }
+                b5 : Bool;
+                { S7_MLC := "MLC_tC" }
+                b6 : Bool;
+                { S7_MLC := "MLC_3Tm" }
+                b7 : Bool;
+            END_STRUCT;
+        END_STRUCT;
+        { S7_MLC := "MLC_3B6" }
+        PZD_OUT : STRUCT
+            { S7_MLC := "MLC_4bn" }
+            CW1 : STRUCT
+                { S7_MLC := "MLC_nq" }
+                res8 : Bool;
+                { S7_MLC := "MLC_5AV" }
+                res9 : Bool;
+                { S7_MLC := "MLC_3bW" }
+                res10 : Bool;
+                { S7_MLC := "MLC_fi" }
+                res11 : Bool;
+                { S7_MLC := "MLC_4kk" }
+                res12 : Bool;
+                { S7_MLC := "MLC_3hz" }
+                res13 : Bool;
+                { S7_MLC := "MLC_4Bh" }
+                res14 : Bool;
+                { S7_MLC := "MLC_57N" }
+                res15 : Bool;
+                { S7_MLC := "MLC_3se" }
+                synkFlag : Bool;
+                { S7_MLC := "MLC_4jW" }
+                res1 : Bool;
+                { S7_MLC := "MLC_3Dy" }
+                res2 : Bool;
+                { S7_MLC := "MLC_Yy" }
+                res3 : Bool;
+                { S7_MLC := "MLC_4qN" }
+                res4 : Bool;
+                { S7_MLC := "MLC_4hE" }
+                res5 : Bool;
+                { S7_MLC := "MLC_5Bi" }
+                res6 : Bool;
+                { S7_MLC := "MLC_3pG" }
+                faultReset : Bool;
+            END_STRUCT;
+            { S7_MLC := "MLC_3w2" }
+            OUTPUTS : STRUCT
+                { S7_MLC := "MLC_Sm" }
+                b8 : Bool;
+                { S7_MLC := "MLC_4ig" }
+                b9 : Bool;
+                { S7_MLC := "MLC_3Fr" }
+                b10 : Bool;
+                { S7_MLC := "MLC_3xs" }
+                b11 : Bool;
+                { S7_MLC := "MLC_3Dz" }
+                b12 : Bool;
+                { S7_MLC := "MLC_529" }
+                b13 : Bool;
+                { S7_MLC := "MLC_3Se" }
+                b14 : Bool;
+                { S7_MLC := "MLC_xn" }
+                b15 : Bool;
+                { S7_MLC := "MLC_3GQ" }
+                b0 : Bool;
+                { S7_MLC := "MLC_3Jv" }
+                b1 : Bool;
+                { S7_MLC := "MLC_49C" }
+                b2 : Bool;
+                { S7_MLC := "MLC_48n" }
+                b3 : Bool;
+                { S7_MLC := "MLC_3Rv" }
+                b4 : Bool;
+                { S7_MLC := "MLC_3aq" }
+                b5 : Bool;
+                { S7_MLC := "MLC_ig" }
+                b6 : Bool;
+                { S7_MLC := "MLC_3wL" }
+                b7 : Bool;
+            END_STRUCT;
+        END_STRUCT;
+        { S7_MLC := "MLC_j7" }
+        bConnectionFailed : Bool;
+        { S7_MLC := "MLC_4WA" }
+        bFailed : Bool;
+    END_VAR
+    VAR_TEMP 
+        iZero : Int;
+        iStatusFill : Int;
+        aBufferIn : Array[1..7] of Word;
+        aBufferOut : Array[1..3] of Word;
+        iStatusWRDP : Int;
+        iStatusRDDP : Int;
+        iStatusMove : Int;
+        wDrvAddress : HW_IO;
+    END_VAR
+
+    {
+        S7_Language := "LAD";
+        S7_NetworkComment := "MLC_56W";
+        S7_NetworkTitle := "MLC_3Wv"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            { S7_GenerateENO := "TRUE" }
+            Move(
+                in := #iDrvAddress, 
+                out1 => #wDrvAddress
+            )
+            { S7_GenerateENO := "TRUE" }
+            Move(
+                in := 0, 
+                out1 => #iZero
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkComment := "MLC_gN";
+        S7_NetworkTitle := "MLC_39r"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            S_Fill(
+                BVAL := #iZero, 
+                RET_VAL => #iStatusFill, 
+                BLK => #aBufferIn
+            )
+            S_Fill(
+                BVAL := #iZero, 
+                RET_VAL => #iStatusFill, 
+                BLK => #PZD_IN
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkComment := "MLC_TY";
+        S7_NetworkTitle := "MLC_4V3"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            S_Fill(
+                BVAL := #iZero, 
+                RET_VAL => #iStatusFill, 
+                BLK => #aBufferOut
+            )
+            S_Fill(
+                BVAL := #iZero, 
+                RET_VAL => #iStatusFill, 
+                BLK => #PZD_OUT
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkComment := "MLC_59m";
+        S7_NetworkTitle := "MLC_3qS"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            DPRD_DAT(
+                LADDR := #wDrvAddress, 
+                RET_VAL => #iStatusRDDP, 
+                RECORD => #aBufferIn
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkComment := "MLC_347";
+        S7_NetworkTitle := "MLC_4rL"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            { S7_Templates := "SrcType := Int" }
+            NE_Contact(
+                in1 := #iStatusRDDP, 
+                in2 := 0
+            )
+            Coil( #bConnectionFailed )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkComment := "MLC_47s";
+        S7_NetworkTitle := "MLC_kS"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Contact( #bConnectionFailed )
+            JumpCoil( NULL )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkComment := "MLC_zF";
+        S7_NetworkTitle := "MLC_Zd"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            S_BlockMove(
+                srcBlock := #aBufferIn, 
+                ret_val => #iStatusMove, 
+                dstBlock => #PZD_IN
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkComment := "MLC_xa";
+        S7_NetworkTitle := "MLC_43g"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Contact( #PZD_IN.SW1.faultActive )
+            Coil( #bFailed )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkComment := "MLC_3mh";
+        S7_NetworkTitle := "MLC_4bs"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Contact( #bAcknowledge )
+            Coil( #PZD_OUT.CW1.faultReset )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkComment := "MLC_Nm";
+        S7_NetworkTitle := "MLC_4mM"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            S_BlockMove(
+                srcBlock := #PZD_OUT, 
+                ret_val => #iStatusMove, 
+                dstBlock => #aBufferOut
+            )
+            DPWR_DAT(
+                LADDR := #wDrvAddress, 
+                RECORD := #aBufferOut, 
+                RET_VAL => #iStatusWRDP
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkComment := "MLC_bg";
+        S7_NetworkTitle := "MLC_3zJ"
+    }
+    NETWORK
+        Label(NULL)
+        RUNG wire#powerrail
+            Contact( "mLOGIC1" )
+            Return()
+        END_RUNG
+    END_NETWORK
+END_FUNCTION_BLOCK

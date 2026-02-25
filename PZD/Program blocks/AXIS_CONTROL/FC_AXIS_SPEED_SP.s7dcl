@@ -1,0 +1,128 @@
+﻿{
+    S7_Author := "YuryAbrosimov";
+    S7_BlockNumber := "71";
+    S7_EditorMode := "SCL";
+    S7_Optimized := "FALSE";
+    S7_Version := "0.1"
+}
+FUNCTION "FC_AXIS_SPEED_SP" : Void
+    VAR_INPUT 
+        { S7_MLC := "MLC_3ZD" }
+        SPEED_SETPOINTS : _.SPEED_SETPOINTS;
+        { S7_MLC := "MLC_3si" }
+        STATUS_BITS : _.AXIS_STATUS_BITS;
+        { S7_MLC := "MLC_4r2" }
+        CONTROL_BITS : _.AXIS_CONTROL_BITS;
+        { S7_MLC := "MLC_3VK" }
+        MASTERSWITCH : _.MASTERSWITCH;
+    END_VAR
+    VAR_IN_OUT 
+        AXIS_SETPOINTS : _.AXIS_SETPOINTS;
+    END_VAR
+    VAR_TEMP 
+        { S7_MLC := "MLC_4Wu" }
+        iMasterswitchSetpoint : Int;
+        { S7_MLC := "MLC_42F" }
+        iSpeedSPTemp : Int;
+        bMasterswitchSetpointPositive : Bool;
+        { S7_MLC := "MLC_MM" }
+        bMasterswitchSetpointNegative : Bool;
+        { S7_MLC := "MLC_YY" }
+        bMovementFRUActive : Bool;
+        { S7_MLC := "MLC_3bh" }
+        bMovementBLDActive : Bool;
+        { S7_MLC := "MLC_Sd" }
+        iSpeedSP : Int;
+    END_VAR
+
+    { S7_Language := "SCL" }
+    NETWORK
+        //Init TEMP
+        #iMasterswitchSetpoint := 0;
+        #iSpeedSPTemp := 0;
+        #iSpeedSP := 0;
+        //Init final SpeedSP
+        #AXIS_SETPOINTS.iSpeedSPMasterswitch := 0;
+        
+        //Moving MasterSwitch to TEMP define positive or negative direction
+        //Define Analog or Discrete masterswitch uses
+        IF #MASTERSWITCH.bMasterSwitchAnalogActive THEN
+            #iMasterswitchSetpoint := REAL_TO_INT (INT_TO_REAL(#MASTERSWITCH.iMasterSwitchSetpointAnalog)*16384.0/100.0);
+        ELSE
+            #iMasterswitchSetpoint := #MASTERSWITCH.iMasterswitchSetpointDiscrete;
+        END_IF;
+        
+        #bMasterswitchSetpointPositive := #iMasterswitchSetpoint > 0;
+        #bMasterswitchSetpointNegative := #iMasterswitchSetpoint < 0;
+        
+        //Define FRU or BLD movement active
+        #bMovementFRUActive := #STATUS_BITS.bMovementFRUActive;
+        #bMovementBLDActive := #STATUS_BITS.bMovementBLDActive;
+        
+        //Define SpeedSP according to steps
+        IF #MASTERSWITCH.bMasterSwitchAnalogActive THEN
+            #iSpeedSPTemp := ABS(#iMasterswitchSetpoint);
+        ELSE
+            CASE ABS(#iMasterswitchSetpoint) OF
+                5:
+                    #iSpeedSPTemp := #SPEED_SETPOINTS.iSpeedSP5;
+                4:
+                    #iSpeedSPTemp := #SPEED_SETPOINTS.iSpeedSP4;
+                3:
+                    #iSpeedSPTemp := #SPEED_SETPOINTS.iSpeedSP3;
+                2:
+                    #iSpeedSPTemp := #SPEED_SETPOINTS.iSpeedSP2;
+                1:
+                    #iSpeedSPTemp := #SPEED_SETPOINTS.iSpeedSP1;
+                0:
+                    #iSpeedSPTemp := 0;
+                ELSE
+                    #iSpeedSPTemp := 0;
+            END_CASE;
+        END_IF;
+        
+        
+        //Speed reduce 50% needed
+        IF #CONTROL_BITS.bSpeedMaxReducingNeeded AND (#iSpeedSPTemp > 8192) THEN
+            #iSpeedSPTemp := 8192;
+        END_IF;
+        
+        
+        
+        //Slowdown limit switches
+        IF  (((#bMasterswitchSetpointPositive OR #bMovementFRUActive) AND    NOT (#CONTROL_BITS.bNoSlowDownFRU))
+            OR
+            ((#bMasterswitchSetpointNegative OR #bMovementBLDActive) AND    NOT (#CONTROL_BITS.bNoSlowDownBLD)))
+            AND
+            (#iSpeedSPTemp > #SPEED_SETPOINTS.iSpeedReduced)
+        THEN
+            #iSpeedSPTemp := #SPEED_SETPOINTS.iSpeedReduced;
+            
+            
+            
+        END_IF;
+        IF #CONTROL_BITS.bSynchroSpeed AND #CONTROL_BITS.bSemiAuto THEN
+            #iSpeedSPTemp := #iSpeedSPTemp / 3;
+        END_IF;
+        //Stop limit switches
+        IF  ((#bMasterswitchSetpointPositive OR #bMovementFRUActive) AND (NOT (#CONTROL_BITS.bNoLimSwitchFRU) OR #CONTROL_BITS.bExtFRUDenied))
+            OR
+            ((#bMasterswitchSetpointNegative OR #bMovementBLDActive) AND (NOT (#CONTROL_BITS.bNoLimSwitchBLD) OR #CONTROL_BITS.bExtBLDDenied))
+            OR
+            #iMasterswitchSetpoint = 0
+        THEN
+            #iSpeedSPTemp := 0;
+        END_IF;
+        
+        #iSpeedSP := #iSpeedSPTemp;
+        //Define final sign
+        
+        IF (#bMasterswitchSetpointNegative) THEN
+            #iSpeedSP := (-1) * #iSpeedSPTemp;
+        END_IF;
+        
+        //Moving final SpeedSP to Axis DB
+        #AXIS_SETPOINTS.iSpeedSPMasterswitch := #iSpeedSP;
+        
+    END_NETWORK
+END_FUNCTION

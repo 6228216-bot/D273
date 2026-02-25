@@ -1,0 +1,195 @@
+﻿MultiLingualTexts:
+  - id: MLC_tZ
+    ru-RU: Блок управления модулем управления приводами
+  - id: MLC_yT
+    en-US: HW address of the DO telegramm
+  - id: MLC_3Pm
+    en-US: Fault acknowledgement
+  - id: MLC_5C4
+    en-US: Process data receive structure
+  - id: MLC_4G3
+    en-US: Status word
+  - id: MLC_4fu
+    en-US: b8
+  - id: MLC_3s2
+    en-US: b9
+  - id: MLC_57u
+    en-US: b10
+  - id: MLC_3mY
+    en-US: b11
+  - id: MLC_jr
+    en-US: b12
+  - id: MLC_4sY
+    en-US: b13
+  - id: MLC_3NX
+    en-US: b14
+  - id: MLC_z5
+    en-US: b15
+  - id: MLC_SD
+    en-US: b0
+  - id: MLC_3Xm
+    en-US: b1
+  - id: MLC_4Xh
+    en-US: b2
+  - id: MLC_nK
+    en-US: b3
+  - id: MLC_393
+    en-US: b4
+  - id: MLC_42k
+    en-US: b5
+  - id: MLC_4s2
+    en-US: b6
+  - id: MLC_3qF
+    en-US: b7
+  - id: MLC_3in
+    en-US: CU digital inputs status
+  - id: MLC_58v
+    en-US: Braking module alarm
+  - id: MLC_3aw
+    en-US: Braking module fault
+  - id: MLC_3qq
+    en-US: b10
+  - id: MLC_55i
+    en-US: b11
+  - id: MLC_4dT
+    en-US: b12
+  - id: MLC_43x
+    en-US: b13
+  - id: MLC_vU
+    en-US: b14
+  - id: MLC_48q
+    en-US: b15
+  - id: MLC_4qu
+    en-US: b0
+  - id: MLC_3pb
+    en-US: b1
+  - id: MLC_3kV
+    en-US: b2
+  - id: MLC_4yF
+    en-US: b3
+  - id: MLC_aF
+    en-US: b4
+  - id: MLC_3gR
+    en-US: b5
+  - id: MLC_tC
+    en-US: b6
+  - id: MLC_3Tm
+    en-US: b7
+  - id: MLC_3B6
+    en-US: Process data transmit structure
+  - id: MLC_4bn
+    en-US: Control word
+  - id: MLC_nq
+    en-US: b8
+  - id: MLC_5AV
+    en-US: b9
+  - id: MLC_3bW
+    en-US: b10
+  - id: MLC_fi
+    en-US: b11
+  - id: MLC_4kk
+    en-US: b12
+  - id: MLC_3hz
+    en-US: b13
+  - id: MLC_4Bh
+    en-US: b14
+  - id: MLC_57N
+    en-US: b15
+  - id: MLC_3se
+    en-US: b0
+  - id: MLC_4jW
+    en-US: b1
+  - id: MLC_3Dy
+    en-US: b2
+  - id: MLC_Yy
+    en-US: b3
+  - id: MLC_4qN
+    en-US: b4
+  - id: MLC_4hE
+    en-US: b5
+  - id: MLC_5Bi
+    en-US: b6
+  - id: MLC_3pG
+    en-US: Faults reset
+  - id: MLC_3w2
+    en-US: CU digital outputs
+  - id: MLC_Sm
+    en-US: b8
+  - id: MLC_4ig
+    en-US: b9
+  - id: MLC_3Fr
+    en-US: b10
+  - id: MLC_3xs
+    en-US: b11
+  - id: MLC_3Dz
+    en-US: b12
+  - id: MLC_529
+    en-US: b13
+  - id: MLC_3Se
+    en-US: b14
+  - id: MLC_xn
+    en-US: b15
+  - id: MLC_3GQ
+    en-US: b0
+  - id: MLC_3Jv
+    en-US: b1
+  - id: MLC_49C
+    en-US: b2
+  - id: MLC_48n
+    en-US: b3
+  - id: MLC_3Rv
+    en-US: b4
+  - id: MLC_3aq
+    en-US: b5
+  - id: MLC_ig
+    en-US: b6
+  - id: MLC_3wL
+    en-US: b7
+  - id: MLC_j7
+    en-US: Communication fault
+  - id: MLC_4WA
+    en-US: Module fault
+  - id: MLC_3Wv
+    ru-RU: Функция механизма
+  - id: MLC_56W
+    en-US: Initialization of temporary variables
+  - id: MLC_39r
+    ru-RU: Инициализация переменных из области TEMP
+  - id: MLC_gN
+    en-US: Initialization of receive stuctures
+  - id: MLC_4V3
+    en-US: 1 = No OFF2 (enable is possible) 0 = OFF2 (immediate pulse suppression and switching on inhibited)
+  - id: MLC_TY
+    en-US: Initialization of transmit stuctures
+  - id: MLC_3qS
+    ru-RU: Нет никакой команды остановки
+  - id: MLC_59m
+    en-US: Reading from slave
+  - id: MLC_4rL
+    en-US: Drive Data Set selection bit 0
+  - id: MLC_347
+    en-US: Connection fault if reading status is not 0
+  - id: MLC_kS
+    en-US: If connection failed then jump
+  - id: MLC_47s
+    en-US: Jump to the end of block if connection failed
+  - id: MLC_Zd
+    en-US: Start command
+  - id: MLC_zF
+    en-US: Filling variables by process data
+  - id: MLC_43g
+    en-US: 1=Unconditionaly close holding brake
+  - id: MLC_xa
+    en-US: Fault of the CU received by PZD
+  - id: MLC_4bs
+    ru-RU: Коэффициенты рампы разгона и торможения по умолчанию
+  - id: MLC_3mh
+    en-US: Fault acknowledge of CU and braking module by CU digital output
+  - id: MLC_4mM
+    en-US: Writing to slave
+  - id: MLC_Nm
+    en-US: Writing variables to process data and transmiting to slave
+  - id: MLC_3zJ
+    en-US: Return
+  - id: MLC_bg
+    en-US: Return to main - label for connection fault

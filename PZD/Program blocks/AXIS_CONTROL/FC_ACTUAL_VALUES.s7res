@@ -1,0 +1,23 @@
+﻿MultiLingualTexts:
+  - id: MLC_3i6
+    en-US: FC for organizaze absolute values calculation
+  - id: MLC_3Za
+    ru-RU: Функция преобразования значений параметров привода
+  - id: MLC_59T
+    en-US: Drive 1
+    ru-RU: Коэффициенты задатчика интенсивности
+  - id: MLC_3X8
+    ru-RU: Вычисление значений физических величин привода 1
+  - id: MLC_S7
+    en-US: Drive 2
+  - id: MLC_3TB
+    ru-RU: Вычисление значений физических величин привода 2
+  - id: MLC_469
+    en-US: Drive 3
+    ru-RU: Механизм движется в отрицательном направлении
+  - id: MLC_5Br
+    ru-RU: Вычисление значений физических величин привода 3
+  - id: MLC_4bB
+    en-US: Drive 4
+  - id: MLC_T3
+    ru-RU: Вычисление значений физических величин привода 4

@@ -1,0 +1,8 @@
+﻿{
+    S7_BlockNumber := "528";
+    S7_Optimized := "FALSE";
+    S7_StandardRetain := "FALSE";
+    S7_Version := "0.1"
+}
+DATA_BLOCK CMS_LONG_TRAVEL_DRIVE2_DB : CMS_DRIVE_DB
+END_DATA_BLOCK

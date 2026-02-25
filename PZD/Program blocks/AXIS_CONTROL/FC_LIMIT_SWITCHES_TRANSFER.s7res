@@ -1,0 +1,41 @@
+﻿MultiLingualTexts:
+  - id: MLC_3ZH
+    en-US: LIMIT SWITCHES TRANSFER TO AXIS DB
+  - id: MLC_3YA
+    en-US: Emergency limit switch positive direction
+  - id: MLC_3HJ
+    en-US: Emergency limit switch negative direction
+  - id: MLC_57t
+    en-US: Stop limit switch positive direction
+  - id: MLC_3VX
+    en-US: Stop limit switch negative direction
+  - id: MLC_3Se
+    en-US: Slow down limit switch positive direction
+  - id: MLC_4Q7
+    en-US: Slow down limit switch negative direction
+  - id: MLC_574
+    en-US: Referencing point for position control
+  - id: MLC_yS
+    ru-RU: Внешний запрет на движение в положительном направлении
+  - id: MLC_496
+    ru-RU: Внешний запрет на движение в отрицательном направлении
+  - id: MLC_fg
+    en-US: Emergency limit switch positive direction
+  - id: MLC_5C3
+    en-US: Emergency limit switch negative direction
+  - id: MLC_3jF
+    en-US: Stop limit switch positive direction
+  - id: MLC_4AG
+    en-US: Stop limit switch negative direction
+  - id: MLC_3Wa
+    en-US: Slow down limit switch positive direction
+  - id: MLC_3pE
+    en-US: Slow down limit switch negative direction
+  - id: MLC_LX
+    en-US: Referencing point for position control
+  - id: MLC_3f2
+    ru-RU: Внешний запрет на движение в положительном направлении
+  - id: MLC_4dA
+    ru-RU: Внешний запрет на движение в отрицательном направлении
+  - id: MLC_3RE
+    ru-RU: Пересылка блокировок в блок данных оси
