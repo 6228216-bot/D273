@@ -1,0 +1,35 @@
+﻿TYPE
+    { S7_BlockComment := "MLC_3F9" }
+    LNX_GEN_FAULTS : STRUCT
+        { S7_MLC := "MLC_58R" }
+        Camera0 : Bool;
+        { S7_MLC := "MLC_XF" }
+        CollisionBackward : Bool;
+        { S7_MLC := "MLC_4Vh" }
+        CollisionForward : Bool;
+        { S7_MLC := "MLC_4up" }
+        PositionGeneration : Bool;
+        { S7_MLC := "MLC_ui" }
+        Communication : Bool;
+        { S7_MLC := "MLC_ec" }
+        DriveAxis1 : Bool;
+        { S7_MLC := "MLC_3cQ" }
+        DriveAxis2 : Bool;
+        { S7_MLC := "MLC_45n" }
+        DriveAxis3 : Bool;
+        Reserved_8 : Bool;
+        { S7_MLC := "MLC_3EK" }
+        CPUTemperature : Bool;
+        { S7_MLC := "MLC_42h" }
+        Track : Bool;
+        { S7_MLC := "MLC_3De" }
+        PositionNotSaved : Bool;
+        { S7_MLC := "MLC_3aQ" }
+        PositionStart : Bool;
+        { S7_MLC := "MLC_35D" }
+        PositionTarget : Bool;
+        { S7_MLC := "MLC_VK" }
+        PositionObstacle : Bool;
+        Reserved_15 : Bool;
+    END_STRUCT;
+END_TYPE

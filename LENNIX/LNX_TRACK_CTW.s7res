@@ -1,0 +1,44 @@
+﻿MultiLingualTexts:
+  - id: MLC_4N3
+    en-US: |2-
+       =========================================================
+       Track + Collision input (PLC -> LENNIX Pro), 16 bytes
+       Combines Table 23 (Track controller) and Table 24 (Collision avoidance)
+       =========================================================
+       ---------------------------------------------------------
+       Track CTW (Control Word), 16 bits
+       Low byte: reserved
+       High byte: validity flags + laser
+       ---------------------------------------------------------
+  - id: MLC_j6
+    en-US: Reserved
+  - id: MLC_3Mx
+    en-US: Reserved
+  - id: MLC_52a
+    en-US: Reserved
+  - id: MLC_st
+    en-US: Reserved
+  - id: MLC_3a4
+    en-US: Reserved
+  - id: MLC_4Su
+    en-US: Reserved
+  - id: MLC_4Yf
+    en-US: Reserved
+  - id: MLC_3zZ
+    en-US: Reserved High byte
+  - id: MLC_4D9
+    en-US: Sensor 1 value valid
+  - id: MLC_qX
+    en-US: Sensor 2 value valid
+  - id: MLC_55K
+    en-US: Sensor 3 value valid
+  - id: MLC_4p5
+    en-US: Sensor 4 value valid
+  - id: MLC_3pR
+    en-US: Laser active / used
+  - id: MLC_Nw
+    en-US: Reserved
+  - id: MLC_59v
+    en-US: Reserved
+  - id: MLC_VE
+    en-US: Reserved

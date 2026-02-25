@@ -1,0 +1,41 @@
+﻿TYPE
+    { S7_Safety := "True" }
+    S_IO_MODULES : STRUCT
+        EROOM_1A10 : Bool;
+        EROOM_1A11 : Bool;
+        EROOM_1A12 : Bool;
+        EROOM_1A13 : Bool;
+        EROOM_1A14 : Bool;
+        EROOM_1A15 : Bool;
+        EROOM_1A16 : Bool;
+        EROOM_1A17 : Bool;
+        EROOM_1A18 : Bool;
+        EROOM_1A19 : Bool;
+        EROOM_1A20 : Bool;
+        EROOM_1A21 : Bool;
+        EROOM_1A22 : Bool;
+        EROOM_1A23 : Bool;
+        EROOM_1A24 : Bool;
+        EROOM_1A25 : Bool;
+        TROLLEY_1A10 : Bool;
+        TROLLEY_1A11 : Bool;
+        TROLLEY_1A12 : Bool;
+        TROLLEY_1A13 : Bool;
+        TROLLEY_1A14 : Bool;
+        TROLLEY_1A15 : Bool;
+        TROLLEY_1A20 : Bool;
+        TROLLEY_1A21 : Bool;
+        TROLLEY_1A22 : Bool;
+        CABIN_1A10 : Bool;
+        ENTRANCE_1A10 : Bool;
+        MainHoist1 : Bool;
+        MainHoist2 : Bool;
+        CrossTravel1 : Bool;
+        CrossTravel2 : Bool;
+        Slew : Bool;
+        LongTravel1 : Bool;
+        LongTravel2 : Bool;
+        LongTravel3 : Bool;
+        LongTravel4 : Bool;
+    END_STRUCT;
+END_TYPE

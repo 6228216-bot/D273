@@ -1,0 +1,40 @@
+﻿TYPE
+    EMERGENCY_STOP_BTNS : STRUCT
+        { S7_MLC := "MLC_3eB" }
+        btnEmStopCabin : Bool;
+        { S7_MLC := "MLC_4Vt" }
+        btnEmStopCabinEntrancePlatform : Bool;
+        { S7_MLC := "MLC_3RG" }
+        btnEmStopCableReel : Bool;
+        { S7_MLC := "MLC_3UM" }
+        btnEmStopCableReelGate : Bool;
+        { S7_MLC := "MLC_4qv" }
+        btnEmStopCraneEntCU : Bool;
+        { S7_MLC := "MLC_3zp" }
+        btnEmStopCraneEntranceGate : Bool;
+        { S7_MLC := "MLC_4eY" }
+        btnEmStopEroom : Bool;
+        { S7_MLC := "MLC_44B" }
+        btnEmStopGirderNESide : Bool;
+        { S7_MLC := "MLC_3Yk" }
+        btnEmStopGirderNWSide : Bool;
+        { S7_MLC := "MLC_rY" }
+        btnEmStopGirderSESide : Bool;
+        { S7_MLC := "MLC_hU" }
+        btnEmStopGirderSWSide : Bool;
+        { S7_MLC := "MLC_4Z8" }
+        btnEmStopRopeChangeBox : Bool;
+        { S7_MLC := "MLC_ac" }
+        btnEmStopSpreader : Bool;
+        { S7_MLC := "MLC_4a9" }
+        btnEmStopSupportNESide : Bool;
+        { S7_MLC := "MLC_Zv" }
+        btnEmStopSupportNWSide : Bool;
+        { S7_MLC := "MLC_4tT" }
+        btnEmStopTrolleyCabinet : Bool;
+        { S7_MLC := "MLC_4v7" }
+        btnEmStopTrolleyNorth : Bool;
+        { S7_MLC := "MLC_3kF" }
+        btnEmStopTrolleySouth : Bool;
+    END_STRUCT;
+END_TYPE

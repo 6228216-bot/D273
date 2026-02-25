@@ -1,0 +1,64 @@
+﻿{
+    S7_Author := "YuryAbrosimov";
+    S7_BlockNumber := "75";
+    S7_Optimized := "FALSE";
+    S7_PreferredLanguage := "LAD";
+    S7_Version := "0.1"
+}
+FUNCTION "FC_HW_IO_COLLECTOR" : Void
+    VAR_INPUT 
+        hwDrive1 : HW_IO;
+        hwDrive2 : HW_IO;
+        hwDrive3 : HW_IO;
+        hwDrive4 : HW_IO;
+    END_VAR
+    VAR_OUTPUT 
+        HW_IO_DRIVES : Array[1..4] of HW_IO;
+    END_VAR
+
+    { S7_Language := "LAD" }
+    NETWORK
+        RUNG wire#powerrail
+            
+            Move(
+                in := #hwDrive1, 
+                out1 => #HW_IO_DRIVES[1]
+            )
+        END_RUNG
+    END_NETWORK
+    { S7_Language := "LAD" }
+    NETWORK
+        RUNG wire#powerrail
+            
+            Move(
+                in := #hwDrive2, 
+                out1 => #HW_IO_DRIVES[2]
+            )
+        END_RUNG
+    END_NETWORK
+    { S7_Language := "LAD" }
+    NETWORK
+        RUNG wire#powerrail
+            
+            Move(
+                in := #hwDrive3, 
+                out1 => #HW_IO_DRIVES[3]
+            )
+        END_RUNG
+    END_NETWORK
+    { S7_Language := "LAD" }
+    NETWORK
+        RUNG wire#powerrail
+            
+            Move(
+                in := #hwDrive4, 
+                out1 => #HW_IO_DRIVES[4]
+            )
+        END_RUNG
+    END_NETWORK
+    { S7_Language := "LAD" }
+    NETWORK
+        RUNG wire#powerrail
+        END_RUNG
+    END_NETWORK
+END_FUNCTION

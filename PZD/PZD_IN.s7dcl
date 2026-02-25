@@ -1,0 +1,42 @@
+﻿TYPE
+    PZD_IN : STRUCT
+        {
+            S7_MLC := "MLC_4Vk";
+            S7_Setpoint := "False"
+        }
+        STW1 : _.STW1;
+        {
+            S7_MLC := "MLC_3WC";
+            S7_Setpoint := "False"
+        }
+        STW2 : _.STW2;
+        { S7_MLC := "MLC_3YA" }
+        iMotorSpeed : Int;
+        { S7_MLC := "MLC_xB" }
+        iMotorCurrent : Int;
+        { S7_MLC := "MLC_gQ" }
+        iMotorTorque : Int;
+        { S7_MLC := "MLC_39Q" }
+        iMotorVoltage : Int;
+        { S7_MLC := "MLC_3dV" }
+        iDriveTemperature : Int;
+        { S7_MLC := "MLC_P5" }
+        iSpeedSPAfterRamp : Int;
+        { S7_MLC := "MLC_4RN" }
+        iMotorTemperature : Int;
+        { S7_MLC := "MLC_ua" }
+        iAlarmActualNumber : Int;
+        { S7_MLC := "MLC_4Pu" }
+        iFaultActualNumber : Int;
+        { S7_MLC := "MLC_3VF" }
+        iMotorTorqueSP : Int;
+        { S7_MLC := "MLC_dd" }
+        iMotorCurrentSP : Int;
+        { S7_MLC := "MLC_3aK" }
+        iReserve13 : Int;
+        { S7_MLC := "MLC_4FP" }
+        iReserve14 : Int;
+        { S7_MLC := "MLC_4hv" }
+        iReserve15 : Int;
+    END_STRUCT;
+END_TYPE

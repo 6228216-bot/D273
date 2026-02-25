@@ -1,0 +1,33 @@
+﻿MultiLingualTexts:
+  - id: MLC_4ct
+    en-US: Comand Data Set selection bit 0
+  - id: MLC_35u
+    en-US: Comand Data Set selection bit 1
+  - id: MLC_3Yd
+    en-US: 1 = Torque control
+  - id: MLC_3tk
+    en-US: 1=Unconditionaly close holding brake
+  - id: MLC_ME
+    en-US: Reserved
+  - id: MLC_PU
+    en-US: Reserved
+  - id: MLC_4Gk
+    en-US: Reserved
+  - id: MLC_3Y4
+    en-US: Reserved
+  - id: MLC_34P
+    en-US: Drive Data Set selection bit 0
+  - id: MLC_3hc
+    en-US: Drive Data Set selection bit 1
+  - id: MLC_46A
+    en-US: Drive Data Set selection bit 2
+  - id: MLC_4c7
+    en-US: Drive Data Set selection bit 3
+  - id: MLC_454
+    en-US: Reserved
+  - id: MLC_aZ
+    en-US: Reserved
+  - id: MLC_57M
+    en-US: Reserved
+  - id: MLC_432
+    en-US: Reserved

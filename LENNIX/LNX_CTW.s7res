@@ -1,0 +1,48 @@
+﻿MultiLingualTexts:
+  - id: MLC_yV
+    en-US: |2-
+       =========================================================
+       Table 19 (General input data) - TIA Portal V20
+       Goal: "inline bits" inside the 16-byte structure (as in your screenshot)
+       NOTE: This relies on TIA packing BOOLs as bits inside UDT fields.
+       =========================================================
+       ---------------------------------------------------------
+       CTW (Control Word) bits for Table 19, Byte 6..7
+       Manual defines the used bits in Byte 7 (7.0..7.7).
+       Therefore we place Byte 6 bits first, then Byte 7 bits.
+       This way in DB you will see:
+         Reserved_6_0..Reserved_6_7 => 6.0..6.7
+         ControllerReleased..Reserved_7_7 => 7.0..7.7
+       ---------------------------------------------------------
+  - id: MLC_4gd
+    en-US: 6.0 Reserved
+  - id: MLC_46N
+    en-US: 6.1 Reserved
+  - id: MLC_57j
+    en-US: 6.2 Reserved
+  - id: MLC_SN
+    en-US: 6.3 Reserved
+  - id: MLC_4JB
+    en-US: 6.4 Reserved
+  - id: MLC_4Bp
+    en-US: 6.5 Reserved
+  - id: MLC_4Hu
+    en-US: 6.6 Reserved
+  - id: MLC_3Sq
+    en-US: 6.7 Reserved Byte 7 (bits 7.0 .. 7.7)
+  - id: MLC_38V
+    en-US: 7.0 Controller released (release of controller)
+  - id: MLC_3yQ
+    en-US: 7.1 Load attached (must be set when load is attached)
+  - id: MLC_Pd
+    en-US: 7.2 Parameter set, bit 0
+  - id: MLC_3St
+    en-US: 7.3 Parameter set, bit 1
+  - id: MLC_dU
+    en-US: 7.4 Obstacles active in manual operation
+  - id: MLC_4Z6
+    en-US: 7.5 Use of target memory
+  - id: MLC_4ry
+    en-US: 7.6 Position saving
+  - id: MLC_Pg
+    en-US: 7.7 Reserved

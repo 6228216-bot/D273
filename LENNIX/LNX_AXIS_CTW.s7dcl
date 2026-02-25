@@ -1,0 +1,37 @@
+﻿TYPE
+    { S7_BlockComment := "MLC_4rV" }
+    LNX_AXIS_CTW : STRUCT
+        { S7_MLC := "MLC_46m" }
+        ModePositioning : Bool;
+        { S7_MLC := "MLC_4Ae" }
+        AntiSwayLocal : Bool;
+        { S7_MLC := "MLC_32k" }
+        BrakeClosed : Bool;
+        { S7_MLC := "MLC_3Tb" }
+        Reserved_3 : Bool;
+        { S7_MLC := "MLC_43p" }
+        Reserved_4 : Bool;
+        { S7_MLC := "MLC_3se" }
+        Reserved_5 : Bool;
+        { S7_MLC := "MLC_4LA" }
+        Reserved_6 : Bool;
+        { S7_MLC := "MLC_3Jh" }
+        Reserved_7 : Bool;
+        { S7_MLC := "MLC_sG" }
+        Travel : Bool;
+        { S7_MLC := "MLC_4hV" }
+        PrelimitBackward : Bool;
+        { S7_MLC := "MLC_4FG" }
+        PrelimitForward : Bool;
+        { S7_MLC := "MLC_fD" }
+        LimitBackward : Bool;
+        { S7_MLC := "MLC_sy" }
+        LimitForward : Bool;
+        { S7_MLC := "MLC_3MX" }
+        Stop : Bool;
+        { S7_MLC := "MLC_Rr" }
+        AntiSway : Bool;
+        { S7_MLC := "MLC_y4" }
+        ModeManual : Bool;
+    END_STRUCT;
+END_TYPE

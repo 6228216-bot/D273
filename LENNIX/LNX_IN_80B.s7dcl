@@ -1,0 +1,37 @@
+﻿TYPE
+    LNX_IN_80B : STRUCT
+        { S7_MLC := "MLC_dz" }
+        "ID" : Int;
+        { S7_MLC := "MLC_3CJ" }
+        iMessageNo : UInt;
+        { S7_MLC := "MLC_3QE" }
+        LoadWeight_kg : Int;
+        { S7_MLC := "MLC_3Qr" }
+        CTW : _.LNX_CTW;
+        { S7_MLC := "MLC_bL" }
+        diHoistPos_mm : DInt;
+        { S7_MLC := "MLC_4GA" }
+        ObstacleZones : _.LNX_OBS_ZONE_BITS;
+        LONG_TRAVEL : _.LNX_AXIS_IN_16B;
+        CROSS_TRAVEL : _.LNX_AXIS_IN_16B;
+        SLEW : _.LNX_AXIS_IN_16B;
+        { S7_MLC := "MLC_3qE" }
+        TrackCTW : _.LNX_TRACK_CTW;
+        { S7_MLC := "MLC_pW" }
+        bySensor1 : Byte;
+        { S7_MLC := "MLC_3kU" }
+        bySensor2 : Byte;
+        { S7_MLC := "MLC_4Wr" }
+        bySensor3 : Byte;
+        { S7_MLC := "MLC_4mE" }
+        bySensor4 : Byte;
+        { S7_MLC := "MLC_4r7" }
+        CollCTW : _.LNX_COLL_CTW;
+        { S7_MLC := "MLC_3A9" }
+        iDistBackward : Int;
+        { S7_MLC := "MLC_jK" }
+        iDistForward : Int;
+        { S7_MLC := "MLC_3et" }
+        Reserved : DWord;
+    END_STRUCT;
+END_TYPE

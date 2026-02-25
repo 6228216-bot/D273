@@ -1,0 +1,42 @@
+﻿TYPE
+    PZD_OUT : STRUCT
+        {
+            S7_MLC := "MLC_3nx";
+            S7_Setpoint := "False"
+        }
+        CTW1 : _.CTW1;
+        {
+            S7_MLC := "MLC_bp";
+            S7_Setpoint := "False"
+        }
+        CTW2 : _.CTW2;
+        { S7_MLC := "MLC_Mh" }
+        iSpeedSP : Int;
+        { S7_MLC := "MLC_Zk" }
+        iSpeedSPAdditional : Int;
+        { S7_MLC := "MLC_3dv" }
+        iRampUpScaling : Int;
+        { S7_MLC := "MLC_3Jj" }
+        iRampDownScaling : Int;
+        { S7_MLC := "MLC_4ib" }
+        iMainSetpointScaling : Int := 100;
+        { S7_MLC := "MLC_4ka" }
+        iAdditSetpointScaling : Int := 0;
+        { S7_MLC := "MLC_4Zc" }
+        iTorqueSP : Int;
+        { S7_MLC := "MLC_3Sz" }
+        iTorqueLimitPos : Int;
+        { S7_MLC := "MLC_QL" }
+        iTorqueLimitNeg : Int;
+        { S7_MLC := "MLC_3Mk" }
+        iReserve11 : Int;
+        { S7_MLC := "MLC_3Zs" }
+        iReserve12 : Int;
+        { S7_MLC := "MLC_4Nx" }
+        iReserve13 : Int;
+        { S7_MLC := "MLC_4vG" }
+        iReserve14 : Int;
+        { S7_MLC := "MLC_49F" }
+        iReserve15 : Int;
+    END_STRUCT;
+END_TYPE

@@ -1,0 +1,12 @@
+﻿TYPE
+    { S7_Safety := "True" }
+    S_TLG30 : STRUCT
+        {
+            S7_MLC := "MLC_mS";
+            S7_Setpoint := "False"
+        }
+        "STW" : _.S_STW1;
+        { S7_MLC := "MLC_tc" }
+        ZSW : _.S_ZSW1;
+    END_STRUCT;
+END_TYPE

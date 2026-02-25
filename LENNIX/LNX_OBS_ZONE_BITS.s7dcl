@@ -1,0 +1,69 @@
+﻿TYPE
+    { S7_BlockComment := "MLC_3Ai" }
+    LNX_OBS_ZONE_BITS : STRUCT
+        { S7_MLC := "MLC_3QP" }
+        ObstacleZone24 : Bool;
+        { S7_MLC := "MLC_4nw" }
+        ObstacleZone25 : Bool;
+        { S7_MLC := "MLC_3m6" }
+        ObstacleZone26 : Bool;
+        { S7_MLC := "MLC_4sL" }
+        ObstacleZone27 : Bool;
+        { S7_MLC := "MLC_4RE" }
+        ObstacleZone28 : Bool;
+        { S7_MLC := "MLC_sd" }
+        ObstacleZone29 : Bool;
+        { S7_MLC := "MLC_5Au" }
+        ObstacleZone30 : Bool;
+        { S7_MLC := "MLC_4FU" }
+        ObstacleZone31 : Bool;
+        { S7_MLC := "MLC_3cS" }
+        ObstacleZone16 : Bool;
+        { S7_MLC := "MLC_Ue" }
+        ObstacleZone17 : Bool;
+        { S7_MLC := "MLC_WZ" }
+        ObstacleZone18 : Bool;
+        { S7_MLC := "MLC_4LE" }
+        ObstacleZone19 : Bool;
+        { S7_MLC := "MLC_3Xm" }
+        ObstacleZone20 : Bool;
+        { S7_MLC := "MLC_4jq" }
+        ObstacleZone21 : Bool;
+        { S7_MLC := "MLC_42F" }
+        ObstacleZone22 : Bool;
+        { S7_MLC := "MLC_3re" }
+        ObstacleZone23 : Bool;
+        { S7_MLC := "MLC_3r5" }
+        ObstacleZone8 : Bool;
+        { S7_MLC := "MLC_a7" }
+        ObstacleZone9 : Bool;
+        { S7_MLC := "MLC_5BW" }
+        ObstacleZone10 : Bool;
+        { S7_MLC := "MLC_4E2" }
+        ObstacleZone11 : Bool;
+        { S7_MLC := "MLC_3qJ" }
+        ObstacleZone12 : Bool;
+        { S7_MLC := "MLC_3Q5" }
+        ObstacleZone13 : Bool;
+        { S7_MLC := "MLC_3AA" }
+        ObstacleZone14 : Bool;
+        { S7_MLC := "MLC_43S" }
+        ObstacleZone15 : Bool;
+        { S7_MLC := "MLC_3Jz" }
+        ObstacleZone0 : Bool;
+        { S7_MLC := "MLC_3Lx" }
+        ObstacleZone1 : Bool;
+        { S7_MLC := "MLC_3yR" }
+        ObstacleZone2 : Bool;
+        { S7_MLC := "MLC_3L8" }
+        ObstacleZone3 : Bool;
+        { S7_MLC := "MLC_3YZ" }
+        ObstacleZone4 : Bool;
+        { S7_MLC := "MLC_Uh" }
+        ObstacleZone5 : Bool;
+        { S7_MLC := "MLC_3dQ" }
+        ObstacleZone6 : Bool;
+        { S7_MLC := "MLC_3qT" }
+        ObstacleZone7 : Bool;
+    END_STRUCT;
+END_TYPE

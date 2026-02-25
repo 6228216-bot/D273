@@ -1,0 +1,36 @@
+﻿TYPE
+    CTW1 : STRUCT
+        { S7_MLC := "MLC_4Nn" }
+        bEnableSpeedCtrl : Bool;
+        { S7_MLC := "MLC_Xa" }
+        bOpenHoldingBrake : Bool;
+        { S7_MLC := "MLC_4Vi" }
+        bPLCControl : Bool;
+        { S7_MLC := "MLC_4Rj" }
+        bDisableMotorBlockedMon : Bool;
+        { S7_MLC := "MLC_Xu" }
+        bReserve12 : Bool;
+        { S7_MLC := "MLC_4yj" }
+        bReserve13 : Bool;
+        { S7_MLC := "MLC_3hf" }
+        bReserve14 : Bool;
+        { S7_MLC := "MLC_4Qk" }
+        bSignOfLive : Bool;
+        { S7_MLC := "MLC_4Ra" }
+        OFF1 : Bool;
+        { S7_MLC := "MLC_4nh" }
+        OFF2 : Bool;
+        { S7_MLC := "MLC_3W8" }
+        OFF3 : Bool;
+        { S7_MLC := "MLC_Tx" }
+        bOperationEnable : Bool;
+        { S7_MLC := "MLC_53p" }
+        bEnableRamp : Bool;
+        { S7_MLC := "MLC_4Wb" }
+        bReserved : Bool;
+        { S7_MLC := "MLC_RW" }
+        bSetpointEnable : Bool;
+        { S7_MLC := "MLC_42K" }
+        bAcknowledge : Bool;
+    END_STRUCT;
+END_TYPE

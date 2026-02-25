@@ -1,0 +1,76 @@
+﻿{
+    S7_BlockNumber := "102";
+    S7_EditorMode := "SCL";
+    S7_Optimized := "FALSE";
+    S7_Version := "0.1"
+}
+FUNCTION "FC_DRIVE_COMMUNICATION" : Void
+    VAR_INPUT 
+        HW_ADDRESSES : Array[1..4] of HW_IO;
+    END_VAR
+    VAR_OUTPUT 
+        FAULT_RECEIVED : Array[1..4] of _.DRIVE_RECEIVED_FAULTS;
+    END_VAR
+    VAR_IN_OUT 
+        DRIVE_COMMUNICATION : Array[1..4] of _.DRIVE_COMMUNICATION;
+    END_VAR
+    VAR_TEMP 
+        READING_ARRAY : Array[1..32] of Byte;
+        WRITING_ARRAY : Array[1..32] of Byte;
+        iZero : Int;
+        iStatusFill : Int;
+        iStatusReading : Int;
+        iStatusWriting : Int;
+        iStatusMove : Int;
+        "i" : Int;
+    END_VAR
+
+    {
+        S7_Language := "SCL";
+        S7_NetworkTitle := "MLC_4jc"
+    }
+    NETWORK
+        #iZero := 0;
+        #i := 0;
+        
+        //Read data
+        FOR #i := 1 TO 4 DO
+            #iStatusReading := 0;
+            #iStatusFill := FILL(BVAL := #iZero, BLK => #DRIVE_COMMUNICATION[#i].PZD_IN);
+            #iStatusFill := FILL(BVAL := #iZero, BLK => #READING_ARRAY);
+            IF #HW_ADDRESSES[#i] <> 0 THEN
+                #iStatusReading := DPRD_DAT(LADDR := #HW_ADDRESSES[#i], RECORD => #READING_ARRAY);
+            END_IF;
+            IF #iStatusReading = 0 THEN
+                #iStatusMove := BLKMOV(SRCBLK := #READING_ARRAY, DSTBLK => #DRIVE_COMMUNICATION[#i].PZD_IN);
+                #FAULT_RECEIVED[#i].connectionFault := FALSE;
+                #FAULT_RECEIVED[#i].driveFault := #DRIVE_COMMUNICATION[#i].PZD_IN.STW1.bFaultPresent;
+                #FAULT_RECEIVED[#i].brakeOpenCmd := #DRIVE_COMMUNICATION[#i].PZD_IN.STW1.bOpenBrake;
+                #FAULT_RECEIVED[#i].iFaultActualNumber := #DRIVE_COMMUNICATION[#i].PZD_IN.iFaultActualNumber;
+                #FAULT_RECEIVED[#i].iAlarmActualNumber := #DRIVE_COMMUNICATION[#i].PZD_IN.iAlarmActualNumber;
+            ELSE
+                #iStatusFill := FILL(BVAL := #iZero, BLK => #DRIVE_COMMUNICATION[#i].PZD_IN);
+                #FAULT_RECEIVED[#i].connectionFault := TRUE;
+            END_IF;
+        END_FOR;
+                
+        //Write data
+        FOR #i := 1 TO 4 DO
+            #iStatusWriting := 0;
+            #iStatusFill := FILL(BVAL := #iZero, BLK => #WRITING_ARRAY);
+            IF #HW_ADDRESSES[#i] <> 0 THEN
+                #iStatusMove := BLKMOV(SRCBLK := #DRIVE_COMMUNICATION[#i].PZD_OUT, DSTBLK => #WRITING_ARRAY);
+                #iStatusWriting := DPWR_DAT(LADDR := #HW_ADDRESSES[#i], RECORD := #WRITING_ARRAY);
+            END_IF;
+            IF #iStatusWriting <> 0 THEN
+                #FAULT_RECEIVED[#i].connectionFault := TRUE;
+            END_IF;
+            #iStatusFill := FILL(BVAL := #iZero, BLK => #DRIVE_COMMUNICATION[#i].PZD_OUT);
+        END_FOR;
+                
+        
+        
+        
+        
+    END_NETWORK
+END_FUNCTION

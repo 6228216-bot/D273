@@ -1,0 +1,14 @@
+﻿MultiLingualTexts:
+  - id: MLC_4h6
+    en-US: |2-
+       ---------------------------------------------------------
+       General STW (Status Word), 16 bits
+       ---------------------------------------------------------
+  - id: MLC_4HC
+    en-US: High byte
+  - id: MLC_3rD
+    en-US: Controller ready
+  - id: MLC_3tv
+    en-US: Positioning possible
+  - id: MLC_4ME
+    en-US: Position successfully saved

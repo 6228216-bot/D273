@@ -1,0 +1,21 @@
+﻿MultiLingualTexts:
+  - id: MLC_4Vq
+    en-US: Cabin door safety switch
+  - id: MLC_4qw
+    en-US: Cabin platform gate safety switch
+  - id: MLC_3g7
+    en-US: Machine room door safety switch
+  - id: MLC_4pc
+    en-US: E-Room door safety switch
+  - id: MLC_53E
+    en-US: TR-Room door safety switch
+  - id: MLC_ti
+    en-US: TR-Room fence safety switch
+  - id: MLC_35Q
+    en-US: Girder entrance gate safety switch
+  - id: MLC_3MX
+    en-US: Trolley entrance gate North side safety switch
+  - id: MLC_ZR
+    en-US: Trolley entrance gate South side safety switch
+  - id: MLC_4bP
+    en-US: Cabin platform gate trolley side safety switch

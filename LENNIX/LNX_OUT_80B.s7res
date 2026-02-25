@@ -1,0 +1,23 @@
+﻿MultiLingualTexts:
+  - id: MLC_3ms
+    en-US: Identification of data structure
+  - id: MLC_4dx
+    en-US: Byte 2..3  Must be increased by 1 for every new message (0..65535)
+  - id: MLC_427
+    en-US: General status word
+  - id: MLC_33s
+    en-US: Faults and messages
+  - id: MLC_SB
+    en-US: Obstacle ID (-1 = no obstacle)
+  - id: MLC_44g
+    en-US: Reference speed left-hand drive (normalized)
+  - id: MLC_3uq
+    en-US: Reference speed right-hand drive (normalized)
+  - id: MLC_3Sg
+    en-US: Absolute load position in crane direction (mm)
+  - id: MLC_52e
+    en-US: Absolute load position in trolley direction (mm)
+  - id: MLC_3P3
+    en-US: Absolute load velocity in crane direction
+  - id: MLC_3dv
+    en-US: Absolute load velocity in trolley direction

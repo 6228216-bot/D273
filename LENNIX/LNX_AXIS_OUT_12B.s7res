@@ -1,0 +1,17 @@
+﻿MultiLingualTexts:
+  - id: MLC_4Ji
+    en-US: |2-
+       =========================================================
+       Axis output data – 12 bytes
+       According to Table 28 (Output data)
+       =========================================================
+  - id: MLC_3Au
+    en-US: Status word
+  - id: MLC_54z
+    en-US: Reserved
+  - id: MLC_tG
+    en-US: Speed set-point (normalized)
+  - id: MLC_439
+    en-US: Sway angle
+  - id: MLC_4C6
+    en-US: Reference position correction

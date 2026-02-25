@@ -1,0 +1,5 @@
+﻿MultiLingualTexts:
+  - id: MLC_mS
+    en-US: Control word
+  - id: MLC_tc
+    en-US: Status word

@@ -1,0 +1,34 @@
+﻿MultiLingualTexts:
+  - id: MLC_3F9
+    en-US: |2-
+       ---------------------------------------------------------
+       General faults and messages, 16 bits
+       ---------------------------------------------------------
+  - id: MLC_58R
+    en-US: No reflector recognition
+  - id: MLC_XF
+    en-US: Collision backward
+  - id: MLC_4Vh
+    en-US: Collision forward
+  - id: MLC_4up
+    en-US: Target cannot be generated
+  - id: MLC_ui
+    en-US: Communication fault
+  - id: MLC_ec
+    en-US: Drive / sensor fault axis 1
+  - id: MLC_3cQ
+    en-US: Drive / sensor fault axis 2
+  - id: MLC_45n
+    en-US: Drive / sensor fault axis 3 High byte
+  - id: MLC_3EK
+    en-US: CPU temperature too high
+  - id: MLC_42h
+    en-US: Tracking not possible
+  - id: MLC_3De
+    en-US: Position not saved
+  - id: MLC_3aQ
+    en-US: Start position inside obstacle
+  - id: MLC_35D
+    en-US: Target cannot be achieved
+  - id: MLC_VK
+    en-US: Target inside obstacle

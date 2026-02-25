@@ -1,0 +1,19 @@
+﻿MultiLingualTexts:
+  - id: MLC_bQ
+    en-US: FC for calculation absolute values
+  - id: MLC_49A
+    en-US: Нулевая цепь механизма собрана
+  - id: MLC_US
+    ru-RU: Промежуточный абс. ток
+  - id: MLC_4Nj
+    ru-RU: Промежуточный абс. момент
+  - id: MLC_4St
+    ru-RU: Промежуточное абс. напряжение
+  - id: MLC_55b
+    ru-RU: Промежуточная абс. температура
+  - id: MLC_4kU
+    ru-RU: Пром. относит. скорость
+  - id: MLC_48y
+    ru-RU: Пром. относит. задание скорости
+  - id: MLC_bL
+    ru-RU: Пром. скорость

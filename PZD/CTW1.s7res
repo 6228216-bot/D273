@@ -1,0 +1,33 @@
+﻿MultiLingualTexts:
+  - id: MLC_4Nn
+    en-US: 1=Enable speed controller
+  - id: MLC_Xa
+    en-US: 1=Unconditionaly open holding brake
+  - id: MLC_4Vi
+    en-US: 1 = Control by PLC
+  - id: MLC_4Rj
+    en-US: 1 = Disable motor blocked monitoring
+  - id: MLC_Xu
+    en-US: 1 = Reference command
+  - id: MLC_4yj
+    en-US: Reserved
+  - id: MLC_3hf
+    en-US: Reserved
+  - id: MLC_4Qk
+    en-US: 1=Send sign of life
+  - id: MLC_4Ra
+    en-US: 1 = No OFF1 Start cmd
+  - id: MLC_4nh
+    en-US: 1 = No OFF2 (enable is possible) 0 = OFF2 (immediate pulse suppression and switching on inhibited)
+  - id: MLC_3W8
+    en-US: 1 = No OFF3 (enable possible) 0 = OFF3 (braking with the OFF3 ramp p1135, then pulse suppression & switching on inhibited)
+  - id: MLC_Tx
+    en-US: 1 = Enable operation (pulses can be enabled) 0 = Inhibit operation (suppress pulses)
+  - id: MLC_53p
+    en-US: 1 = Ramp function generator enable
+  - id: MLC_4Wb
+    en-US: Resesrve
+  - id: MLC_RW
+    en-US: 1= Setpoint enable
+  - id: MLC_42K
+    en-US: 1= Acknowledge faults

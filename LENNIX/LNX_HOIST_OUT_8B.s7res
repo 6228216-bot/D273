@@ -1,0 +1,12 @@
+﻿MultiLingualTexts:
+  - id: MLC_54Q
+    en-US: |2-
+       ---------------------------------------------------------
+       Hoist output structure (Table 33), 8 bytes
+       ---------------------------------------------------------
+  - id: MLC_43Q
+    en-US: Hoist status word
+  - id: MLC_4hJ
+    en-US: Reserved
+  - id: MLC_gV
+    en-US: Reference position correction of the hoist, normalized

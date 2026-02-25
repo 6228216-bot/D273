@@ -1,0 +1,19 @@
+﻿MultiLingualTexts:
+  - id: MLC_4yY
+    en-US: Main hoist 1
+  - id: MLC_4WC
+    en-US: Main hoist 2
+  - id: MLC_49N
+    en-US: Cross travel 1
+  - id: MLC_3Rn
+    en-US: Cross travel 2
+  - id: MLC_4Bh
+    en-US: Long travel 1
+  - id: MLC_uP
+    en-US: Long travel 2
+  - id: MLC_3ae
+    en-US: Long travel 3
+  - id: MLC_3gK
+    en-US: Long travel 4
+  - id: MLC_4ad
+    en-US: Slew / slewing

@@ -1,0 +1,20 @@
+﻿MultiLingualTexts:
+  - id: MLC_kq
+    en-US: |2-
+       ---------------------------------------------------------
+       Axis STW (Status Word), 16 bits
+       ---------------------------------------------------------
+  - id: MLC_34g
+    en-US: High byte
+  - id: MLC_4G8
+    en-US: Axis active (positioning or manual movement active)
+  - id: MLC_3JS
+    en-US: Target position reached
+  - id: MLC_UV
+    en-US: Load sway has stopped
+  - id: MLC_ng
+    en-US: Movement backward
+  - id: MLC_43G
+    en-US: Movement forward
+  - id: MLC_47k
+    en-US: Anti-sway function active

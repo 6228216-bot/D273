@@ -1,0 +1,30 @@
+﻿TYPE
+    LNX_OUT_80B : STRUCT
+        { S7_MLC := "MLC_3ms" }
+        "ID" : Int;
+        { S7_MLC := "MLC_4dx" }
+        iMessageNo : UInt;
+        { S7_MLC := "MLC_427" }
+        GenSTW : _.LNX_GEN_STW;
+        { S7_MLC := "MLC_33s" }
+        Faults : _.LNX_GEN_FAULTS;
+        { S7_MLC := "MLC_SB" }
+        diIntersectionID : DInt;
+        LONG_TRAVEL : _.LNX_AXIS_OUT_12B;
+        CROSS_TRAVEL : _.LNX_AXIS_OUT_12B;
+        SLEW : _.LNX_AXIS_OUT_12B;
+        { S7_MLC := "MLC_44g" }
+        diTrackingSetpointVelocity1 : DInt;
+        { S7_MLC := "MLC_3uq" }
+        diTrackingSetpointVelocity2 : DInt;
+        { S7_MLC := "MLC_3Sg" }
+        diCraneLoadPosition : DInt;
+        { S7_MLC := "MLC_52e" }
+        diTrolleyLoadPosition : DInt;
+        { S7_MLC := "MLC_3P3" }
+        diCraneLoadVelocity : DInt;
+        { S7_MLC := "MLC_3dv" }
+        diTrolleyLoadVelocity : DInt;
+        HOIST : _.LNX_HOIST_OUT_8B;
+    END_STRUCT;
+END_TYPE

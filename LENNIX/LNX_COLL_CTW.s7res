@@ -1,0 +1,40 @@
+﻿MultiLingualTexts:
+  - id: MLC_5A8
+    en-US: |2-
+       ---------------------------------------------------------
+       Collision avoidance CTW (Control Word), 16 bits
+       Low byte: reserved
+       High byte: validity flags for backward/forward distances
+       ---------------------------------------------------------
+  - id: MLC_sj
+    en-US: Reserved
+  - id: MLC_RS
+    en-US: Reserved
+  - id: MLC_SK
+    en-US: Reserved
+  - id: MLC_39w
+    en-US: Reserved
+  - id: MLC_48k
+    en-US: Reserved
+  - id: MLC_32p
+    en-US: Reserved
+  - id: MLC_m7
+    en-US: Reserved
+  - id: MLC_4fq
+    en-US: Reserved High byte
+  - id: MLC_4T3
+    en-US: Backward distance valid
+  - id: MLC_4gn
+    en-US: Forward distance valid
+  - id: MLC_3YT
+    en-US: Reserved
+  - id: MLC_rp
+    en-US: Reserved
+  - id: MLC_37k
+    en-US: Reserved
+  - id: MLC_wa
+    en-US: Reserved
+  - id: MLC_4xs
+    en-US: Reserved
+  - id: MLC_4ts
+    en-US: Reserved

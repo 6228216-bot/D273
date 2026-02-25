@@ -1,0 +1,33 @@
+﻿MultiLingualTexts:
+  - id: MLC_3fu
+    en-US: 1 = Speed setpoint - actual value deviation in tolerance t_off 2197.7
+  - id: MLC_3sZ
+    en-US: 1 = Control requested
+  - id: MLC_4g4
+    en-US: 1 = f or n comparison value reached or exceeded 2199.1
+  - id: MLC_39q
+    en-US: 1 = Torque limit reached
+  - id: MLC_3j9
+    en-US: 1 = Command to open brake
+  - id: MLC_Ux
+    en-US: 1 = Magnetization completed
+  - id: MLC_4wZ
+    en-US: 1 = Pulses enabled
+  - id: MLC_57i
+    en-US: Sign of life
+  - id: MLC_4Rx
+    en-US: 1 = Ready for switching on
+  - id: MLC_3cQ
+    en-US: 1 = Ready for operation (DC link loaded, pulses blocked)
+  - id: MLC_3my
+    en-US: 1 = Operation enabled (drive follows n_set) 899.2
+  - id: MLC_4Wm
+    en-US: 1 = Fault present
+  - id: MLC_4qd
+    en-US: 1 = No coast down active (OFF2 inactive)
+  - id: MLC_S6
+    en-US: 1 = No quick stop active (OFF3 inactive)
+  - id: MLC_3u4
+    en-US: 1 = Switching on inhibited active
+  - id: MLC_3ij
+    en-US: 1 = Alarm present

@@ -1,0 +1,95 @@
+﻿TYPE
+    { S7_Safety := "True" }
+    S_BUTTONS : STRUCT
+        {
+            S7_MLC := "MLC_4rM";
+            S7_Setpoint := "False"
+        }
+        CABIN : _.S_ESTOP;
+        {
+            S7_MLC := "MLC_VG";
+            S7_Setpoint := "False"
+        }
+        CABIN_ENTRANCE_PLATFORM : _.S_ESTOP;
+        {
+            S7_MLC := "MLC_3kd";
+            S7_Setpoint := "False"
+        }
+        CABLE_REEL : _.S_ESTOP;
+        {
+            S7_MLC := "MLC_4G8";
+            S7_Setpoint := "False"
+        }
+        CABLE_REEL_GATE : _.S_ESTOP;
+        {
+            S7_MLC := "MLC_3PQ";
+            S7_Setpoint := "False"
+        }
+        CRANE_ENT_CU : _.S_ESTOP;
+        {
+            S7_MLC := "MLC_3Ws";
+            S7_Setpoint := "False"
+        }
+        CRANE_ENTRANCE_GATE : _.S_ESTOP;
+        {
+            S7_MLC := "MLC_b7";
+            S7_Setpoint := "False"
+        }
+        E_ROOM : _.S_ESTOP;
+        {
+            S7_MLC := "MLC_4tH";
+            S7_Setpoint := "False"
+        }
+        GIRDER_NE_SIDE : _.S_ESTOP;
+        {
+            S7_MLC := "MLC_4Ni";
+            S7_Setpoint := "False"
+        }
+        GIRDER_NW_SIDE : _.S_ESTOP;
+        {
+            S7_MLC := "MLC_43M";
+            S7_Setpoint := "False"
+        }
+        GIRDER_SE_SIDE : _.S_ESTOP;
+        {
+            S7_MLC := "MLC_4Lp";
+            S7_Setpoint := "False"
+        }
+        GIRDER_SW_SIDE : _.S_ESTOP;
+        {
+            S7_MLC := "MLC_4W2";
+            S7_Setpoint := "False"
+        }
+        ROPE_CHANGE_BOX : _.S_ESTOP;
+        {
+            S7_MLC := "MLC_eK";
+            S7_Setpoint := "False"
+        }
+        SPREADER : _.S_ESTOP;
+        {
+            S7_MLC := "MLC_4yG";
+            S7_Setpoint := "False"
+        }
+        SUPPORT_NE_SIDE : _.S_ESTOP;
+        {
+            S7_MLC := "MLC_3EJ";
+            S7_Setpoint := "False"
+        }
+        SUPPORT_NW_SIDE : _.S_ESTOP;
+        {
+            S7_MLC := "MLC_4YX";
+            S7_Setpoint := "False"
+        }
+        TROLLEY_CABINET : _.S_ESTOP;
+        {
+            S7_MLC := "MLC_4mg";
+            S7_Setpoint := "False"
+        }
+        TROLLEY_NORTH : _.S_ESTOP;
+        {
+            S7_MLC := "MLC_4qs";
+            S7_Setpoint := "False"
+        }
+        TROLLEY_SOUTH : _.S_ESTOP;
+    END_STRUCT;
+END_TYPE

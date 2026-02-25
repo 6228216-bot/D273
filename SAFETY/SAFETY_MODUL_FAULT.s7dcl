@@ -1,0 +1,8 @@
+﻿TYPE
+    SAFETY_MODUL_FAULT : STRUCT
+        { S7_MLC := "MLC_46Y" }
+        bModulFault : Bool;
+        { S7_Setpoint := "False" }
+        CHANEL_FAULT : _.SAFETY_CHANEL_FAULT;
+    END_STRUCT;
+END_TYPE

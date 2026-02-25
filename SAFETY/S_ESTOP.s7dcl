@@ -1,0 +1,11 @@
+﻿TYPE
+    { S7_Safety := "True" }
+    S_ESTOP : STRUCT
+        { S7_MLC := "MLC_3iu" }
+        bQ : Bool;
+        { S7_MLC := "MLC_3TJ" }
+        bQ_DELAY : Bool;
+        { S7_MLC := "MLC_325" }
+        bACK_REQ : Bool;
+    END_STRUCT;
+END_TYPE

@@ -1,0 +1,23 @@
+﻿TYPE
+    { S7_Safety := "True" }
+    S_DRIVES : STRUCT
+        { S7_MLC := "MLC_4yY" }
+        MH1 : _.S_TLG30;
+        { S7_MLC := "MLC_4WC" }
+        MH2 : _.S_TLG30;
+        { S7_MLC := "MLC_49N" }
+        CT1 : _.S_TLG30;
+        { S7_MLC := "MLC_3Rn" }
+        CT2 : _.S_TLG30;
+        { S7_MLC := "MLC_4Bh" }
+        LT1 : _.S_TLG30;
+        { S7_MLC := "MLC_uP" }
+        LT2 : _.S_TLG30;
+        { S7_MLC := "MLC_3ae" }
+        LT3 : _.S_TLG30;
+        { S7_MLC := "MLC_3gK" }
+        LT4 : _.S_TLG30;
+        { S7_MLC := "MLC_4ad" }
+        SL : _.S_TLG30;
+    END_STRUCT;
+END_TYPE

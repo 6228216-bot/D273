@@ -1,0 +1,36 @@
+﻿TYPE
+    CTW2 : STRUCT
+        { S7_MLC := "MLC_4ct" }
+        bDriveCDSSelectionBit0 : Bool;
+        { S7_MLC := "MLC_35u" }
+        bDriveCDSSelectionBit1 : Bool;
+        { S7_MLC := "MLC_3Yd" }
+        bTorqueControl : Bool;
+        { S7_MLC := "MLC_3tk" }
+        bCloseHoldingBrake : Bool;
+        { S7_MLC := "MLC_ME" }
+        bReserve12 : Bool;
+        { S7_MLC := "MLC_PU" }
+        bReserve13 : Bool;
+        { S7_MLC := "MLC_4Gk" }
+        bReserve14 : Bool;
+        { S7_MLC := "MLC_3Y4" }
+        bReserve15 : Bool;
+        { S7_MLC := "MLC_34P" }
+        bDriveDDSSelectionBit0 : Bool;
+        { S7_MLC := "MLC_3hc" }
+        bDriveDDSSelectionBit1 : Bool;
+        { S7_MLC := "MLC_46A" }
+        bDriveDDSSelectionBit2 : Bool;
+        { S7_MLC := "MLC_4c7" }
+        bDriveDDSSelectionBit3 : Bool;
+        { S7_MLC := "MLC_454" }
+        bReserve4 : Bool;
+        { S7_MLC := "MLC_aZ" }
+        bReserve5 : Bool;
+        { S7_MLC := "MLC_57M" }
+        bReserve6 : Bool;
+        { S7_MLC := "MLC_432" }
+        bReserve7 : Bool;
+    END_STRUCT;
+END_TYPE

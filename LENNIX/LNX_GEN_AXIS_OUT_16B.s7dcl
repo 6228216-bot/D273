@@ -1,0 +1,19 @@
+﻿TYPE
+    { S7_BlockComment := "MLC_383" }
+    LNX_GEN_AXIS_OUT_16B : STRUCT
+        { S7_MLC := "MLC_4V3" }
+        "ID" : Int;
+        { S7_MLC := "MLC_5Ai" }
+        No : Int;
+        { S7_MLC := "MLC_4qN" }
+        GenSTW : _.LNX_GEN_STW;
+        { S7_MLC := "MLC_32Z" }
+        Faults : _.LNX_GEN_FAULTS;
+        { S7_MLC := "MLC_3NU" }
+        IntersectionID : DInt;
+        { S7_MLC := "MLC_4pc" }
+        AxisSTW : _.LNX_AXIS_STW;
+        { S7_MLC := "MLC_4Mg" }
+        Reserved : Word;
+    END_STRUCT;
+END_TYPE

@@ -1,0 +1,36 @@
+﻿TYPE
+    SAFETY_CHANEL_FAULT : STRUCT
+        { S7_MLC := "MLC_59K" }
+        bChanel0 : Bool;
+        { S7_MLC := "MLC_Ty" }
+        bChanel1 : Bool;
+        { S7_MLC := "MLC_3uz" }
+        bChanel2 : Bool;
+        { S7_MLC := "MLC_49q" }
+        bChanel3 : Bool;
+        { S7_MLC := "MLC_397" }
+        bChanel4 : Bool;
+        { S7_MLC := "MLC_33x" }
+        bChanel5 : Bool;
+        { S7_MLC := "MLC_44k" }
+        bChanel6 : Bool;
+        { S7_MLC := "MLC_35n" }
+        bChanel7 : Bool;
+        { S7_MLC := "MLC_3ce" }
+        bChanel8 : Bool;
+        { S7_MLC := "MLC_52n" }
+        bChanel9 : Bool;
+        { S7_MLC := "MLC_3HB" }
+        bChanel10 : Bool;
+        { S7_MLC := "MLC_3mh" }
+        bChanel11 : Bool;
+        { S7_MLC := "MLC_YN" }
+        bChanel12 : Bool;
+        { S7_MLC := "MLC_4Ne" }
+        bChanel13 : Bool;
+        { S7_MLC := "MLC_4CU" }
+        bChanel14 : Bool;
+        { S7_MLC := "MLC_3cq" }
+        bChanel15 : Bool;
+    END_STRUCT;
+END_TYPE

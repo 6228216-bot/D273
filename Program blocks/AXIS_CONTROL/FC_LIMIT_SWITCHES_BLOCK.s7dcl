@@ -1,0 +1,121 @@
+﻿{
+    S7_BlockNumber := "76";
+    S7_BlockTitle := "MLC_4cQ";
+    S7_Optimized := "FALSE";
+    S7_PreferredLanguage := "LAD";
+    S7_Version := "0.1"
+}
+FUNCTION "FC_LIMIT_SWITCHES_BLOCK" : Void
+    VAR_INPUT 
+        LIMIT_SWITCHES : _.AXIS_LIMIT_SWITCHES;
+        BLOCKINGS : _.BLOCKINGS;
+    END_VAR
+    VAR_OUTPUT 
+        CONTROL_BITS : _.AXIS_CONTROL_BITS;
+    END_VAR
+
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_3UC"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Contact( #LIMIT_SWITCHES.bEmLimSwitchFRU )
+            wire#w1
+            Coil( #CONTROL_BITS.bNoEmLimSwitchFRU )
+        END_RUNG
+        RUNG wire#powerrail
+            Contact( #BLOCKINGS.bBlockEmLimSwitchFRU )
+        END_RUNG wire#w1
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_3ER"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Contact( #LIMIT_SWITCHES.bEmLimSwitchBLD )
+            wire#w1
+            Coil( #CONTROL_BITS.bNoEmLimSwitchBLD )
+        END_RUNG
+        RUNG wire#powerrail
+            Contact( #BLOCKINGS.bBlockEmLimSwitchBLD )
+        END_RUNG wire#w1
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_38M"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Contact( #LIMIT_SWITCHES.bLimitSwitchFRU )
+            wire#w1
+            Coil( #CONTROL_BITS.bNoLimSwitchFRU )
+        END_RUNG
+        RUNG wire#powerrail
+            Contact( #BLOCKINGS.bBlockLimitSwitchFRU )
+        END_RUNG wire#w1
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_34H"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Contact( #LIMIT_SWITCHES.bLimitSwitchBLD )
+            wire#w1
+            Coil( #CONTROL_BITS.bNoLimSwitchBLD )
+        END_RUNG
+        RUNG wire#powerrail
+            Contact( #BLOCKINGS.bBlockLimitSwitchBLD )
+        END_RUNG wire#w1
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_4t2"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Contact( #LIMIT_SWITCHES.bSlowDownFRU )
+            wire#w1
+            Coil( #CONTROL_BITS.bNoSlowDownFRU )
+        END_RUNG
+        RUNG wire#powerrail
+            Contact( #BLOCKINGS.bBlockSlowDownFRU )
+        END_RUNG wire#w1
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_yR"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Contact( #LIMIT_SWITCHES.bSlowDownBLD )
+            wire#w1
+            Coil( #CONTROL_BITS.bNoSlowDownBLD )
+        END_RUNG
+        RUNG wire#powerrail
+            Contact( #BLOCKINGS.bBlockSlowDownBLD )
+        END_RUNG wire#w1
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_4Ni"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Contact( #LIMIT_SWITCHES.bExtFRUDenied )
+            Coil( #CONTROL_BITS.bExtFRUDenied )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkTitle := "MLC_3UR"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            Contact( #LIMIT_SWITCHES.bExtBLDDenied )
+            Coil( #CONTROL_BITS.bExtBLDDenied )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION

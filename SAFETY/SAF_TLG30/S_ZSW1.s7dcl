@@ -1,0 +1,85 @@
+﻿TYPE
+    { S7_Safety := "True" }
+    S_ZSW1 : STRUCT
+        {
+            S7_Access := "ReadOnly := External";
+            S7_MLC := "MLC_4rL"
+        }
+        STO : Bool;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_MLC := "MLC_4re"
+        }
+        SS1 : Bool;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_MLC := "MLC_ZQ"
+        }
+        SS2 : Bool;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_MLC := "MLC_4Ge"
+        }
+        SOS : Bool;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_MLC := "MLC_WL"
+        }
+        SLS : Bool;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_MLC := "MLC_3Zj"
+        }
+        reserved1 : Bool;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_MLC := "MLC_4JE"
+        }
+        SLP : Bool;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_MLC := "MLC_eg"
+        }
+        internalEvent : Bool;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_MLC := "MLC_yt"
+        }
+        SLA : Bool;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_MLC := "MLC_38U"
+        }
+        selectSLSbit0 : Bool;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_MLC := "MLC_qc"
+        }
+        selectSLSbit1 : Bool;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_MLC := "MLC_45r"
+        }
+        reserved3 : Bool;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_MLC := "MLC_e2"
+        }
+        SDIpositive : Bool;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_MLC := "MLC_3BW"
+        }
+        SDInegative : Bool;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_MLC := "MLC_3aj"
+        }
+        reserved4 : Bool;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_MLC := "MLC_LL"
+        }
+        SSM : Bool;
+    END_STRUCT;
+END_TYPE

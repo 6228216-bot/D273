@@ -1,0 +1,28 @@
+﻿TYPE
+    { S7_Safety := "True" }
+    S_ACCESS : STRUCT
+        {
+            S7_MLC := "MLC_4Vp";
+            S7_Setpoint := "False"
+        }
+        CABIN_DOOR : _.S_ESTOP;
+        { S7_MLC := "MLC_3Am" }
+        CABIN_PLATFORM_GATE : _.S_ESTOP;
+        { S7_MLC := "MLC_4XT" }
+        MACHINE_ROOM_DOOR : _.S_ESTOP;
+        { S7_MLC := "MLC_jQ" }
+        E_ROOM_DOOR : _.S_ESTOP;
+        { S7_MLC := "MLC_4pQ" }
+        TR_ROOM_DOOR : _.S_ESTOP;
+        { S7_MLC := "MLC_4Cg" }
+        TR_ROOM_FENCE : _.S_ESTOP;
+        { S7_MLC := "MLC_3pR" }
+        GIRDER_ENTRANCE_GATE : _.S_ESTOP;
+        { S7_MLC := "MLC_59R" }
+        TROLLEY_ENTRANCE_NORTH_GATE : _.S_ESTOP;
+        { S7_MLC := "MLC_gM" }
+        TROLLEY_ENTRANCE_SOUTH_GATE : _.S_ESTOP;
+        { S7_MLC := "MLC_498" }
+        CABIN_PLATFORM_TROLLEY_SIDE_GATE : _.S_ESTOP;
+    END_STRUCT;
+END_TYPE

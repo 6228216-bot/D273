@@ -1,0 +1,19 @@
+﻿MultiLingualTexts:
+  - id: MLC_4tg
+    en-US: |2-
+       ---------------------------------------------------------
+       Table 19 full structure: 16 bytes (Byte 0..15)
+       
+       ---------------------------------------------------------
+  - id: MLC_Kw
+    en-US: Byte 0..1  Identification of data structure (106/108/110)
+  - id: MLC_Yw
+    en-US: Byte 2..3  Must be increased by 1 for every new message (0..65535)
+  - id: MLC_4DS
+    en-US: Byte 4..5  Weight of load on the hook (0..65535 kg)
+  - id: MLC_4VK
+    en-US: Byte 6..7  General control word (bits)
+  - id: MLC_4nx
+    en-US: Byte 8..11 Hoisting position (mm). Use max 32-bit value if unknown.
+  - id: MLC_3Vh
+    en-US: Byte 12..15 Obstacle and zone activation (bits)

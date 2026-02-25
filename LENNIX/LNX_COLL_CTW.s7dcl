@@ -1,0 +1,37 @@
+﻿TYPE
+    { S7_BlockComment := "MLC_5A8" }
+    LNX_COLL_CTW : STRUCT
+        { S7_MLC := "MLC_sj" }
+        Reserved_0 : Bool;
+        { S7_MLC := "MLC_RS" }
+        Reserved_1 : Bool;
+        { S7_MLC := "MLC_SK" }
+        Reserved_2 : Bool;
+        { S7_MLC := "MLC_39w" }
+        Reserved_3 : Bool;
+        { S7_MLC := "MLC_48k" }
+        Reserved_4 : Bool;
+        { S7_MLC := "MLC_32p" }
+        Reserved_5 : Bool;
+        { S7_MLC := "MLC_m7" }
+        Reserved_6 : Bool;
+        { S7_MLC := "MLC_4fq" }
+        Reserved_7 : Bool;
+        { S7_MLC := "MLC_4T3" }
+        ValidBackward : Bool;
+        { S7_MLC := "MLC_4gn" }
+        ValidForward : Bool;
+        { S7_MLC := "MLC_3YT" }
+        Reserved_10 : Bool;
+        { S7_MLC := "MLC_rp" }
+        Reserved_11 : Bool;
+        { S7_MLC := "MLC_37k" }
+        Reserved_12 : Bool;
+        { S7_MLC := "MLC_wa" }
+        Reserved_13 : Bool;
+        { S7_MLC := "MLC_4xs" }
+        Reserved_14 : Bool;
+        { S7_MLC := "MLC_4ts" }
+        Reserved_15 : Bool;
+    END_STRUCT;
+END_TYPE

@@ -1,0 +1,41 @@
+﻿MultiLingualTexts:
+  - id: MLC_3CL
+    en-US: |2-
+       =========================================================
+       Table 33: Hoist output data (LENNIX -> PLC), 8 bytes
+       =========================================================
+       ---------------------------------------------------------
+       Hoist STW (Status Word), 16 bits
+       ---------------------------------------------------------
+  - id: MLC_rd
+    en-US: Reserved
+  - id: MLC_4Fu
+    en-US: Reserved
+  - id: MLC_4U7
+    en-US: Reserved
+  - id: MLC_Wv
+    en-US: Reserved
+  - id: MLC_38j
+    en-US: Reserved
+  - id: MLC_3Pn
+    en-US: Reserved
+  - id: MLC_4WG
+    en-US: Reserved
+  - id: MLC_3Jj
+    en-US: Reserved High byte
+  - id: MLC_478
+    en-US: Active
+  - id: MLC_ik
+    en-US: Finished
+  - id: MLC_33k
+    en-US: Backward
+  - id: MLC_3n8
+    en-US: Upward (Forward)
+  - id: MLC_4PT
+    en-US: Reserved
+  - id: MLC_4Yg
+    en-US: Reserved
+  - id: MLC_42H
+    en-US: Reserved
+  - id: MLC_3YC
+    en-US: Reserved

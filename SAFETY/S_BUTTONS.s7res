@@ -1,0 +1,37 @@
+﻿MultiLingualTexts:
+  - id: MLC_4rM
+    en-US: Cabin emergency stop button
+  - id: MLC_VG
+    en-US: Cabin entrance platform emergency stop button
+  - id: MLC_3kd
+    en-US: Cable reel emergency stop button
+  - id: MLC_4G8
+    en-US: Cable reel gate emergency stop button
+  - id: MLC_3PQ
+    en-US: Crane entrance control unit emergency stop button
+  - id: MLC_3Ws
+    en-US: Crane entrance gate emergency stop button
+  - id: MLC_b7
+    en-US: Electrical room emergency stop button
+  - id: MLC_4tH
+    en-US: Girder north-east side emergency stop button
+  - id: MLC_4Ni
+    en-US: Girder north-west side emergency stop button
+  - id: MLC_43M
+    en-US: Girder south-east side emergency stop button
+  - id: MLC_4Lp
+    en-US: Girder south-west side emergency stop button
+  - id: MLC_4W2
+    en-US: Rope change box emergency stop button
+  - id: MLC_eK
+    en-US: Spreader emergency stop button
+  - id: MLC_4yG
+    en-US: Support north-east side emergency stop button
+  - id: MLC_3EJ
+    en-US: Support north-west side emergency stop button
+  - id: MLC_4YX
+    en-US: Trolley cabinet emergency stop button
+  - id: MLC_4mg
+    en-US: Trolley north side emergency stop button
+  - id: MLC_4qs
+    en-US: Trolley south side emergency stop button

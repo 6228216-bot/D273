@@ -1,0 +1,16 @@
+﻿{
+    S7_BlockNumber := "110";
+    S7_Optimized := "FALSE";
+    S7_StandardRetain := "TRUE";
+    S7_Version := "0.1"
+}
+DATA_BLOCK DB_AXIS_MAIN_HOIST : AXIS_DB
+    RATED_VALUES.rRatedSpeed := 986.0;
+    RATED_VALUES.rRatedCurrent := 145.0;
+    RATED_VALUES.rRatedTorque := 532.67;
+    RATED_VALUES.rRatedVoltage := 400.0;
+    RATED_VALUES.rRatedTemperature := 100.0;
+    RATED_VALUES.rReferenceSpeed := 1000.0;
+    RATED_VALUES.rReferenceCurrent := 217.5;
+    RATED_VALUES.rReferenceTorque := 1065.34;
+END_DATA_BLOCK

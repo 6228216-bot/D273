@@ -1,0 +1,33 @@
+﻿MultiLingualTexts:
+  - id: MLC_3nx
+    en-US: Control word 1 (CTW1)
+  - id: MLC_bp
+    en-US: Control word 2 (CTW2)
+  - id: MLC_Mh
+    en-US: Speed setpoint
+  - id: MLC_Zk
+    en-US: Additional speed setpoint
+  - id: MLC_3dv
+    en-US: Ramp-up scaling factor
+  - id: MLC_3Jj
+    en-US: Ramp-down scaling factor
+  - id: MLC_4ib
+    en-US: Main setpoint scaling factor
+  - id: MLC_4ka
+    en-US: Additional setpoint scaling factor
+  - id: MLC_4Zc
+    en-US: Torque setpoint
+  - id: MLC_3Sz
+    en-US: Positive torque limit
+  - id: MLC_QL
+    en-US: Negative torque limit
+  - id: MLC_3Mk
+    en-US: Reserved
+  - id: MLC_3Zs
+    en-US: Reserved
+  - id: MLC_4Nx
+    en-US: Reserved
+  - id: MLC_4vG
+    en-US: Reserved
+  - id: MLC_49F
+    en-US: Reserved

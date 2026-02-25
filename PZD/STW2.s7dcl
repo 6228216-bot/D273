@@ -1,0 +1,36 @@
+﻿TYPE
+    STW2 : STRUCT
+        { S7_MLC := "MLC_4NQ" }
+        bReserve8 : Bool;
+        { S7_MLC := "MLC_52T" }
+        bReserve9 : Bool;
+        { S7_MLC := "MLC_UV" }
+        bReserve10 : Bool;
+        { S7_MLC := "MLC_54q" }
+        bReserve11 : Bool;
+        { S7_MLC := "MLC_3tP" }
+        bReserve12 : Bool;
+        { S7_MLC := "MLC_3yz" }
+        bReserve13 : Bool;
+        { S7_MLC := "MLC_Q2" }
+        bReserve14 : Bool;
+        { S7_MLC := "MLC_4Sq" }
+        bReserve15 : Bool;
+        { S7_MLC := "MLC_34W" }
+        bDDS0Active : Bool;
+        { S7_MLC := "MLC_Vu" }
+        bDDS1Active : Bool;
+        { S7_MLC := "MLC_Nb" }
+        bDDS2Active : Bool;
+        { S7_MLC := "MLC_42Q" }
+        bDDS3Active : Bool;
+        { S7_MLC := "MLC_3Pr" }
+        bReserve4 : Bool;
+        { S7_MLC := "MLC_56a" }
+        bReserve5 : Bool;
+        { S7_MLC := "MLC_Rq" }
+        bReserve6 : Bool;
+        { S7_MLC := "MLC_3Xj" }
+        bReserve7 : Bool;
+    END_STRUCT;
+END_TYPE

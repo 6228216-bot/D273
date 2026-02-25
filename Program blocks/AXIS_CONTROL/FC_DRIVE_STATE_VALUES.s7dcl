@@ -1,0 +1,108 @@
+﻿{
+    S7_Author := "Dvesta";
+    S7_BlockComment := "MLC_49A";
+    S7_BlockNumber := "86";
+    S7_BlockTitle := "MLC_bQ";
+    S7_EditorMode := "SCL";
+    S7_Optimized := "FALSE";
+    S7_Version := "0.1"
+}
+FUNCTION "FC_DRIVE_STATE_VALUES" : Void
+    VAR_INPUT 
+        PZD_IN : _.PZD_IN;
+        RATED_VALUES : _.AXIS_RATED_VALUES;
+        CONTROL_BITS : _.AXIS_CONTROL_BITS;
+    END_VAR
+    VAR_OUTPUT 
+        RELATIVE_VALUES : _.DRIVE_RELATIVE_VALUES;
+        ABSOLUTE_VALUES : _.DRIVE_ABSOLUTE_VALUES;
+        STATUS_BITS : _.DRIVE_STATUS_BITS;
+    END_VAR
+    VAR_TEMP 
+        { S7_MLC := "MLC_US" }
+        rTempInputCurrent : Real;
+        { S7_MLC := "MLC_4Nj" }
+        rTempInputTorque : Real;
+        { S7_MLC := "MLC_4St" }
+        rTempInputVotage : Real;
+        { S7_MLC := "MLC_55b" }
+        rTempInputTemp : Real;
+        { S7_MLC := "MLC_4kU" }
+        rTempInputSpeed : Real;
+        { S7_MLC := "MLC_48y" }
+        rTempInputSpeedSP : Real;
+        { S7_MLC := "MLC_bL" }
+        rTempSpeed : Real;
+        rTempSpeedSP : Real;
+        rTempRelSpeed : Real;
+        rTempRelSpeedSP : Real;
+        rTempAbsCurrent : Real;
+        rTempAbsTorque : Real;
+        rTempAbsVoltage : Real;
+        rTempAbsTemp : Real;
+    END_VAR
+
+    { S7_Language := "SCL" }
+    NETWORK
+        //--------------SPEED---------------
+        
+        #rTempInputSpeed := INT_TO_REAL(#PZD_IN.iMotorSpeed);
+        #rTempSpeed := #rTempInputSpeed * #RATED_VALUES.rReferenceSpeed / 16384.0;
+        #rTempRelSpeed := #rTempSpeed * 100.0 / #RATED_VALUES.rRatedSpeed; //Relative speed
+        #RELATIVE_VALUES.rRelativeSpeed := #rTempRelSpeed;
+        #RELATIVE_VALUES.rRelativeSpeedAbs := ABS_REAL(#RELATIVE_VALUES.rRelativeSpeed);
+        #ABSOLUTE_VALUES.rAbsoluteSpeed := #rTempRelSpeed * 50.0 / 100.0; //Calculation in Hz absolute speed
+        
+        //--------------SPEED SETPOINT---------------
+        
+        #rTempInputSpeedSP := INT_TO_REAL(#PZD_IN.iSpeedSPAfterRamp);
+        #rTempSpeedSP := #rTempInputSpeedSP * #RATED_VALUES.rReferenceSpeed / 16384.0;
+        #rTempRelSpeedSP := #rTempSpeedSP * 100.0 / #RATED_VALUES.rRatedSpeed; //Relative speed setpoint
+        #RELATIVE_VALUES.rRelativeSpeedSP := #rTempRelSpeedSP;
+        #ABSOLUTE_VALUES.rReserve1 := #rTempRelSpeedSP * 50.0 / 100.0; //Calculation in Hz absolute speed setpoint
+        
+        //--------------CURRENT--------------
+        
+        #rTempInputCurrent := INT_TO_REAL(#PZD_IN.iMotorCurrent);
+        #rTempAbsCurrent := #rTempInputCurrent * #RATED_VALUES.rReferenceCurrent / 16384.0;
+        #ABSOLUTE_VALUES.rAbsoluteCurrent := #rTempAbsCurrent;
+        #RELATIVE_VALUES.rRelativeCurrent := #rTempAbsCurrent * 100.0 / #RATED_VALUES.rRatedCurrent;
+        
+        //--------------TORQUE---------------
+        
+        #rTempInputTorque := INT_TO_REAL(#PZD_IN.iMotorTorque);
+        #rTempAbsTorque := #rTempInputTorque * #RATED_VALUES.rReferenceTorque / 16384.0;
+        #ABSOLUTE_VALUES.rAbsoluteTorque := #rTempAbsTorque;
+        #RELATIVE_VALUES.rRelativeTorque := #rTempAbsTorque * 100.0 / #RATED_VALUES.rRatedTorque;
+        #RELATIVE_VALUES.rRelativeTorqueAbs := ABS_REAL(#RELATIVE_VALUES.rRelativeTorque);
+        
+        //--------------VOLTAGE---------------
+        
+        #rTempInputVotage := INT_TO_REAL(#PZD_IN.iMotorVoltage);
+        #rTempAbsVoltage := #rTempInputVotage * 1000.0 / 16384.0;
+        #ABSOLUTE_VALUES.rAbsoluteVoltage := #rTempAbsVoltage;
+        #RELATIVE_VALUES.rRelativeVoltage := #rTempAbsVoltage * 100.0 / #RATED_VALUES.rRatedVoltage;
+        
+        //--------------TEMPERATURE---------------
+        #rTempInputTemp := INT_TO_REAL(#PZD_IN.#iDriveTemperature);
+        #rTempAbsTemp := #rTempInputTemp * 100.0 / 16384.0;
+        #ABSOLUTE_VALUES.rAbsoluteTemperature := #rTempAbsTemp;
+        #RELATIVE_VALUES.rRelativeTemperature := #rTempAbsTemp * 100.0 / 60.0;
+        
+        
+        //--------------STATUS BITS---------------
+        #STATUS_BITS.bReadyToSwitchOn := #PZD_IN.STW1.bReadyForSwitchingOn;
+        #STATUS_BITS.bReadyToRun := #PZD_IN.STW1.bReadyForOperation;
+        #STATUS_BITS.bPulsesEnabled := #PZD_IN.STW1.bPulsesEnabled;
+        #STATUS_BITS.bFault := #PZD_IN.STW1.bFaultPresent;
+        #STATUS_BITS.bAlarm := #PZD_IN.STW1.bAlarmPresent;
+        #STATUS_BITS.bSwitchOnInhibited := #PZD_IN.STW1.bSwitchingOnInhibited;
+        
+        #STATUS_BITS.bBrakeOpened := #PZD_IN.STW1.bOpenBrake;
+        
+        #STATUS_BITS.bDriveActive := (#CONTROL_BITS.bNoCoastStop AND #CONTROL_BITS.bNoFastStop AND
+        #CONTROL_BITS.bNoNormalStop AND NOT (#PZD_IN.STW1.bFaultPresent));
+        
+        
+    END_NETWORK
+END_FUNCTION

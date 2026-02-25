@@ -1,0 +1,33 @@
+﻿MultiLingualTexts:
+  - id: MLC_4XV
+    en-US: 0 = Safety Function Safe Torque Off
+  - id: MLC_47m
+    en-US: 0 = Safety Function Safe Stop 1
+  - id: MLC_4tQ
+    en-US: 0 = Safety Function Safe Stop 2
+  - id: MLC_Ty
+    en-US: 0 = Safety Function Safe Operating Stop
+  - id: MLC_NN
+    en-US: 0 = Safety Function Safely-limited Speed
+  - id: MLC_4dA
+    en-US: Reserve bit 1
+  - id: MLC_yc
+    en-US: 0 = Safety Function Safely-limited Position
+  - id: MLC_54s
+    en-US: 1 = Acknowledge Safety errors  in the drive
+  - id: MLC_53s
+    en-US: 0 = Safety Function Safely-limited Acceleration
+  - id: MLC_4jV
+    en-US: Select one of the the four SLS limits; operates together with bit 0
+  - id: MLC_36h
+    en-US: Select one of the the four SLS limits; operates together with bit 1
+  - id: MLC_hD
+    en-US: Reserve bit 3
+  - id: MLC_3mF
+    en-US: 0 = Safety Function Safe Direction (positive direction)
+  - id: MLC_Ya
+    en-US: 0 = Safety Function Safe Direction (negative direction)
+  - id: MLC_qB
+    en-US: Reserve bit 4
+  - id: MLC_Rw
+    en-US: Reserve bit 5

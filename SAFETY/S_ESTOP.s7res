@@ -1,0 +1,7 @@
+﻿MultiLingualTexts:
+  - id: MLC_3iu
+    en-US: Emergency stop request
+  - id: MLC_3TJ
+    en-US: Delayed emergency stop request
+  - id: MLC_325
+    en-US: Emergency stop reset request

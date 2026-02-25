@@ -1,0 +1,46 @@
+﻿MultiLingualTexts:
+  - id: MLC_4R3
+    en-US: Axis readiness lamp
+  - id: MLC_44W
+    en-US: Variable initialization
+    ru-RU: Инициализация переменных
+  - id: MLC_4r9
+    en-US: Axis null circuit
+    ru-RU: Нулевая цепь оси
+  - id: MLC_4qk
+    en-US: Limit switch interlock
+    ru-RU: Блокировка концевых выключателей
+  - id: MLC_ci
+    en-US: Setpoint from all setpoint sources – positive
+    ru-RU: Задание от всех источников задания - положительное
+  - id: MLC_3zu
+    en-US: Setpoint from all setpoint sources – negative
+    ru-RU: Задание от всех источников задания - отрицательное
+  - id: MLC_3Us
+    en-US: Braking time reduction required when approaching limit stop
+    ru-RU: Требуется уменьшение времени торможения при наезде на концевые остановки
+  - id: MLC_47E
+    en-US: Ramp increase required when at least one drive is interlocked
+    ru-RU: Требуется увеличение рампы при блокировке хотя бы одного из приводов
+  - id: MLC_3d2
+    en-US: Speed reduction required when half of the drives are interlocked
+    ru-RU: Требуется уменьшение скорости при блокировке половины приводов
+  - id: MLC_4Lm
+    en-US: Drive communication
+  - id: MLC_NX
+    en-US: Calculation of actual values and determination of drive status
+    ru-RU: Вычисление действующих значений и определение статуса приводов
+  - id: MLC_38J
+    en-US: 1=No blocking active
+  - id: MLC_qN
+    en-US: 1=No normal stop active
+    ru-RU: Инициализация переменных
+  - id: MLC_4Uu
+    en-US: Axis is moving in positive direction
+    ru-RU: Задание скорости от джойстика
+  - id: MLC_3tp
+    en-US: Axis is moving in negative direction
+    ru-RU: Задание от всех источников задания - положительное
+  - id: MLC_3nv
+    en-US: Pulse output is disabled
+    ru-RU: Требуется увеличение рампы при блокировке хотя бы одного из приводов

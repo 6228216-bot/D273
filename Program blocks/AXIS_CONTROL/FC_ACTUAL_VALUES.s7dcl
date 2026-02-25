@@ -1,0 +1,91 @@
+﻿{
+    S7_Author := "Dvesta";
+    S7_BlockComment := "MLC_3Za";
+    S7_BlockNumber := "85";
+    S7_BlockTitle := "MLC_3i6";
+    S7_Optimized := "FALSE";
+    S7_PreferredLanguage := "LAD";
+    S7_Version := "0.1"
+}
+FUNCTION "FC_ACTUAL_VALUES" : Void
+    VAR_INPUT 
+        DRIVE_COMMUNICCATION : Array[1..4] of _.DRIVE_COMMUNICATION;
+        RATED_VALUES : _.AXIS_RATED_VALUES;
+        CONTROL_BITS : _.AXIS_CONTROL_BITS;
+    END_VAR
+    VAR_OUTPUT 
+        DRIVE1_STATE : _.DRIVE_ACTUAL_STATE;
+        DRIVE2_STATE : _.DRIVE_ACTUAL_STATE;
+        DRIVE3_STATE : _.DRIVE_ACTUAL_STATE;
+        DRIVE4_STATE : _.DRIVE_ACTUAL_STATE;
+    END_VAR
+
+    {
+        S7_Language := "LAD";
+        S7_NetworkComment := "MLC_3X8";
+        S7_NetworkTitle := "MLC_59T"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            "FC_DRIVE_STATE_VALUES"(
+                PZD_IN := #DRIVE_COMMUNICCATION[1].PZD_IN, 
+                RATED_VALUES := #RATED_VALUES, 
+                CONTROL_BITS := #CONTROL_BITS, 
+                RELATIVE_VALUES => #DRIVE1_STATE.RELATIVE_VALUES, 
+                ABSOLUTE_VALUES => #DRIVE1_STATE.ABSOLUTE_VALUES, 
+                STATUS_BITS => #DRIVE1_STATE.STATUS_BITS
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkComment := "MLC_3TB";
+        S7_NetworkTitle := "MLC_S7"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            "FC_DRIVE_STATE_VALUES"(
+                PZD_IN := #DRIVE_COMMUNICCATION[2].PZD_IN, 
+                RATED_VALUES := #RATED_VALUES, 
+                CONTROL_BITS := #CONTROL_BITS, 
+                RELATIVE_VALUES => #DRIVE2_STATE.RELATIVE_VALUES, 
+                ABSOLUTE_VALUES => #DRIVE2_STATE.ABSOLUTE_VALUES, 
+                STATUS_BITS => #DRIVE2_STATE.STATUS_BITS
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkComment := "MLC_5Br";
+        S7_NetworkTitle := "MLC_469"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            "FC_DRIVE_STATE_VALUES"(
+                PZD_IN := #DRIVE_COMMUNICCATION[3].PZD_IN, 
+                RATED_VALUES := #RATED_VALUES, 
+                CONTROL_BITS := #CONTROL_BITS, 
+                RELATIVE_VALUES => #DRIVE3_STATE.RELATIVE_VALUES, 
+                ABSOLUTE_VALUES => #DRIVE3_STATE.ABSOLUTE_VALUES, 
+                STATUS_BITS => #DRIVE3_STATE.STATUS_BITS
+            )
+        END_RUNG
+    END_NETWORK
+    {
+        S7_Language := "LAD";
+        S7_NetworkComment := "MLC_T3";
+        S7_NetworkTitle := "MLC_4bB"
+    }
+    NETWORK
+        RUNG wire#powerrail
+            "FC_DRIVE_STATE_VALUES"(
+                PZD_IN := #DRIVE_COMMUNICCATION[4].PZD_IN, 
+                RATED_VALUES := #RATED_VALUES, 
+                CONTROL_BITS := #CONTROL_BITS, 
+                RELATIVE_VALUES => #DRIVE4_STATE.RELATIVE_VALUES, 
+                ABSOLUTE_VALUES => #DRIVE4_STATE.ABSOLUTE_VALUES, 
+                STATUS_BITS => #DRIVE4_STATE.STATUS_BITS
+            )
+        END_RUNG
+    END_NETWORK
+END_FUNCTION

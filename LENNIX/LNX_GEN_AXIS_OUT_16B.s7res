@@ -1,0 +1,22 @@
+﻿MultiLingualTexts:
+  - id: MLC_383
+    en-US: |2-
+       =========================================================
+       Output data block: Table 27 + Table 28
+       LENNIX Pro -> PLC
+       Total size: 16 bytes
+       =========================================================
+  - id: MLC_4V3
+    en-US: Identification of data structure
+  - id: MLC_5Ai
+    en-US: Message counter
+  - id: MLC_4qN
+    en-US: General status word
+  - id: MLC_32Z
+    en-US: Faults and messages
+  - id: MLC_3NU
+    en-US: Obstacle ID (-1 = no obstacle)
+  - id: MLC_4pc
+    en-US: Axis status word (axis 1)
+  - id: MLC_4Mg
+    en-US: Reserved

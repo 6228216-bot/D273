@@ -1,0 +1,78 @@
+﻿MultiLingualTexts:
+  - id: MLC_3Ai
+    en-US: |2-
+       ---------------------------------------------------------
+       Obstacle and zone activation bits, DWORD Byte 12..15
+       Manual lists zones by bytes 15,14,13,12.
+       To get DB offsets matching the manual (15.x,14.x,13.x,12.x),
+       we place Byte 12 bits first, then 13, 14, 15.
+       This way in DB you will see:
+         ObstacleZone24..31 => 12.0..12.7
+         ObstacleZone16..23 => 13.0..13.7
+         ObstacleZone8..15  => 14.0..14.7
+         ObstacleZone0..7   => 15.0..15.7
+       ---------------------------------------------------------
+  - id: MLC_3QP
+    en-US: 12.0 Zone group 25 active
+  - id: MLC_4nw
+    en-US: 12.1 Zone group 26 active
+  - id: MLC_3m6
+    en-US: 12.2 Zone group 27 active
+  - id: MLC_4sL
+    en-US: 12.3 Zone group 28 active
+  - id: MLC_4RE
+    en-US: 12.4 Zone group 29 active
+  - id: MLC_sd
+    en-US: 12.5 Zone group 30 active
+  - id: MLC_5Au
+    en-US: 12.6 Zone group 31 active
+  - id: MLC_4FU
+    en-US: 12.7 Zone group 32 active Byte 13 (bits 13.0 .. 13.7)
+  - id: MLC_3cS
+    en-US: 13.0 Zone group 17 active
+  - id: MLC_Ue
+    en-US: 13.1 Zone group 18 active
+  - id: MLC_WZ
+    en-US: 13.2 Zone group 19 active
+  - id: MLC_4LE
+    en-US: 13.3 Zone group 20 active
+  - id: MLC_3Xm
+    en-US: 13.4 Zone group 21 active
+  - id: MLC_4jq
+    en-US: 13.5 Zone group 22 active
+  - id: MLC_42F
+    en-US: 13.6 Zone group 23 active
+  - id: MLC_3re
+    en-US: 13.7 Zone group 24 active Byte 14 (bits 14.0 .. 14.7)
+  - id: MLC_3r5
+    en-US: 14.0 Zone group 9 active
+  - id: MLC_a7
+    en-US: 14.1 Zone group 10 active
+  - id: MLC_5BW
+    en-US: 14.2 Zone group 11 active
+  - id: MLC_4E2
+    en-US: 14.3 Zone group 12 active
+  - id: MLC_3qJ
+    en-US: 14.4 Zone group 13 active
+  - id: MLC_3Q5
+    en-US: 14.5 Zone group 14 active
+  - id: MLC_3AA
+    en-US: 14.6 Zone group 15 active
+  - id: MLC_43S
+    en-US: 14.7 Zone group 16 active Byte 15 (bits 15.0 .. 15.7)
+  - id: MLC_3Jz
+    en-US: 15.0 Zone group 1 active
+  - id: MLC_3Lx
+    en-US: 15.1 Zone group 2 active
+  - id: MLC_3yR
+    en-US: 15.2 Zone group 3 active
+  - id: MLC_3L8
+    en-US: 15.3 Zone group 4 active
+  - id: MLC_3YZ
+    en-US: 15.4 Zone group 5 active
+  - id: MLC_Uh
+    en-US: 15.5 Zone group 6 active
+  - id: MLC_3dQ
+    en-US: 15.6 Zone group 7 active
+  - id: MLC_3qT
+    en-US: 15.7 Zone group 8 active

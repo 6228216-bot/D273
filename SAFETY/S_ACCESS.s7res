@@ -1,0 +1,21 @@
+﻿MultiLingualTexts:
+  - id: MLC_4Vp
+    en-US: Cabin door safety monitoring
+  - id: MLC_3Am
+    en-US: Cabin platform gate safety monitoring
+  - id: MLC_4XT
+    en-US: Machine room door safety monitoring
+  - id: MLC_jQ
+    en-US: Electrical room door safety monitoring
+  - id: MLC_4pQ
+    en-US: Transformer room door safety monitoring
+  - id: MLC_4Cg
+    en-US: Transformer room fence safety monitoring
+  - id: MLC_3pR
+    en-US: Girder entrance gate safety monitoring
+  - id: MLC_59R
+    en-US: Trolley entrance north gate safety monitoring
+  - id: MLC_gM
+    en-US: Trolley entrance south gate safety monitoring
+  - id: MLC_498
+    en-US: Cabin platform trolley side gate safety monitoring

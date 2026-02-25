@@ -1,0 +1,33 @@
+﻿MultiLingualTexts:
+  - id: MLC_4NQ
+    en-US: Reserved
+  - id: MLC_52T
+    en-US: Reserved
+  - id: MLC_UV
+    en-US: Reserved
+  - id: MLC_54q
+    en-US: Reserved
+  - id: MLC_3tP
+    en-US: Reserved
+  - id: MLC_3yz
+    en-US: Reserved
+  - id: MLC_Q2
+    en-US: Reserved
+  - id: MLC_4Sq
+    en-US: Reserved
+  - id: MLC_34W
+    en-US: 1 =DDS bit 0 active
+  - id: MLC_Vu
+    en-US: 1 =DDS bit 1 active
+  - id: MLC_Nb
+    en-US: 1 =DDS bit 2 active
+  - id: MLC_42Q
+    en-US: 1 =DDS bit 3 active
+  - id: MLC_3Pr
+    en-US: Reserved
+  - id: MLC_56a
+    en-US: Reserved
+  - id: MLC_Rq
+    en-US: Reserved
+  - id: MLC_3Xj
+    en-US: Reserved

@@ -1,0 +1,21 @@
+﻿MultiLingualTexts:
+  - id: MLC_3eb
+    en-US: |2-
+       ---------------------------------------------------------
+       Axis input structure, 16 bytes
+       Notes:
+       - TargetVel is normalized (you use 16378 as full-scale)
+       - Position / TargetPosition are mm for travel/trolley,
+         and cgr (centi-degree) for slewing (per manual).
+       - TargetPosition can carry target-memory number in positioning mode (per manual).
+       ---------------------------------------------------------
+  - id: MLC_4a9
+    en-US: Control word (axis)
+  - id: MLC_4DL
+    en-US: Reserved
+  - id: MLC_NC
+    en-US: Reference speed (normalized)
+  - id: MLC_3MK
+    en-US: Actual position (mm or cgr)
+  - id: MLC_3Rv
+    en-US: Target position (mm or cgr) or target-memory number

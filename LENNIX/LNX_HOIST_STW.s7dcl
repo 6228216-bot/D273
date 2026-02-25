@@ -1,0 +1,37 @@
+﻿TYPE
+    { S7_BlockComment := "MLC_3CL" }
+    LNX_HOIST_STW : STRUCT
+        { S7_MLC := "MLC_rd" }
+        Reserved_0 : Bool;
+        { S7_MLC := "MLC_4Fu" }
+        Reserved_1 : Bool;
+        { S7_MLC := "MLC_4U7" }
+        Reserved_2 : Bool;
+        { S7_MLC := "MLC_Wv" }
+        Reserved_3 : Bool;
+        { S7_MLC := "MLC_38j" }
+        Reserved_4 : Bool;
+        { S7_MLC := "MLC_3Pn" }
+        Reserved_5 : Bool;
+        { S7_MLC := "MLC_4WG" }
+        Reserved_6 : Bool;
+        { S7_MLC := "MLC_3Jj" }
+        Reserved_7 : Bool;
+        { S7_MLC := "MLC_478" }
+        Active : Bool;
+        { S7_MLC := "MLC_ik" }
+        Finished : Bool;
+        { S7_MLC := "MLC_33k" }
+        Backward : Bool;
+        { S7_MLC := "MLC_3n8" }
+        Upward : Bool;
+        { S7_MLC := "MLC_4PT" }
+        Reserved_12 : Bool;
+        { S7_MLC := "MLC_4Yg" }
+        Reserved_13 : Bool;
+        { S7_MLC := "MLC_42H" }
+        Reserved_14 : Bool;
+        { S7_MLC := "MLC_3YC" }
+        Reserved_15 : Bool;
+    END_STRUCT;
+END_TYPE

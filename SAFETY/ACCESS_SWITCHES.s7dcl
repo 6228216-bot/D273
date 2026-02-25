@@ -1,0 +1,29 @@
+﻿TYPE
+    ACCESS_SWITCHES : STRUCT
+        { S7_MLC := "MLC_4Vq" }
+        cabinDoor : Bool;
+        { S7_MLC := "MLC_4qw" }
+        cabinPlatformGate : Bool;
+        { S7_MLC := "MLC_3g7" }
+        machineRoomDoor : Bool;
+        { S7_MLC := "MLC_4pc" }
+        eRoomDoor : Bool;
+        { S7_MLC := "MLC_53E" }
+        trRoomDoor : Bool;
+        { S7_MLC := "MLC_ti" }
+        trRoomFence : Bool;
+        { S7_MLC := "MLC_35Q" }
+        girderEntranceGate : Bool;
+        { S7_MLC := "MLC_3MX" }
+        trolleyEntranceGateNorth : Bool;
+        { S7_MLC := "MLC_ZR" }
+        trolleyEntranceGateSouth : Bool;
+        { S7_MLC := "MLC_4bP" }
+        cabinPlatformGateTrolleySide : Bool;
+        spare1 : Bool;
+        spare2 : Bool;
+        spare3 : Bool;
+        spare4 : Bool;
+        spare5 : Bool;
+    END_STRUCT;
+END_TYPE

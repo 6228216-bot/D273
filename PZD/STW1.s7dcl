@@ -1,0 +1,36 @@
+﻿TYPE
+    STW1 : STRUCT
+        { S7_MLC := "MLC_3fu" }
+        bSpeedInTolerance : Bool;
+        { S7_MLC := "MLC_3sZ" }
+        bControlRequest : Bool;
+        { S7_MLC := "MLC_4g4" }
+        bSpeedSPReached : Bool;
+        { S7_MLC := "MLC_39q" }
+        bTorqueLimitReached : Bool;
+        { S7_MLC := "MLC_3j9" }
+        bOpenBrake : Bool;
+        { S7_MLC := "MLC_Ux" }
+        bMagnetizationComleted : Bool;
+        { S7_MLC := "MLC_4wZ" }
+        bPulsesEnabled : Bool;
+        { S7_MLC := "MLC_57i" }
+        bSignOfLife : Bool;
+        { S7_MLC := "MLC_4Rx" }
+        bReadyForSwitchingOn : Bool;
+        { S7_MLC := "MLC_3cQ" }
+        bReadyForOperation : Bool;
+        { S7_MLC := "MLC_3my" }
+        bOperationEnabled : Bool;
+        { S7_MLC := "MLC_4Wm" }
+        bFaultPresent : Bool;
+        { S7_MLC := "MLC_4qd" }
+        bNoOFF2 : Bool;
+        { S7_MLC := "MLC_S6" }
+        bNoOFF3 : Bool;
+        { S7_MLC := "MLC_3u4" }
+        bSwitchingOnInhibited : Bool;
+        { S7_MLC := "MLC_3ij" }
+        bAlarmPresent : Bool;
+    END_STRUCT;
+END_TYPE

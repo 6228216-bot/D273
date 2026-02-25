@@ -1,0 +1,37 @@
+﻿TYPE
+    { S7_BlockComment := "MLC_yV" }
+    LNX_CTW : STRUCT
+        { S7_MLC := "MLC_4gd" }
+        Reserved_6_0 : Bool;
+        { S7_MLC := "MLC_46N" }
+        Reserved_6_1 : Bool;
+        { S7_MLC := "MLC_57j" }
+        Reserved_6_2 : Bool;
+        { S7_MLC := "MLC_SN" }
+        Reserved_6_3 : Bool;
+        { S7_MLC := "MLC_4JB" }
+        Reserved_6_4 : Bool;
+        { S7_MLC := "MLC_4Bp" }
+        Reserved_6_5 : Bool;
+        { S7_MLC := "MLC_4Hu" }
+        Reserved_6_6 : Bool;
+        { S7_MLC := "MLC_3Sq" }
+        Reserved_6_7 : Bool;
+        { S7_MLC := "MLC_38V" }
+        ControllerReleased : Bool;
+        { S7_MLC := "MLC_3yQ" }
+        LoadAttached : Bool;
+        { S7_MLC := "MLC_Pd" }
+        Par_Set0 : Bool;
+        { S7_MLC := "MLC_3St" }
+        Par_Set1 : Bool;
+        { S7_MLC := "MLC_dU" }
+        ObstacleActive : Bool;
+        { S7_MLC := "MLC_4Z6" }
+        TargetMemory : Bool;
+        { S7_MLC := "MLC_4ry" }
+        PositionSave : Bool;
+        { S7_MLC := "MLC_Pg" }
+        Reserved_7_7 : Bool;
+    END_STRUCT;
+END_TYPE

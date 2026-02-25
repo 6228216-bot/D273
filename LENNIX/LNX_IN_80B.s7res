@@ -1,0 +1,31 @@
+﻿MultiLingualTexts:
+  - id: MLC_dz
+    en-US: Byte 0..1  Identification of data structure (106/108/110)
+  - id: MLC_3CJ
+    en-US: Byte 2..3  Must be increased by 1 for every new message (0..65535)
+  - id: MLC_3QE
+    en-US: Byte 4..5  Weight of load on the hook (0..65535 kg)
+  - id: MLC_3Qr
+    en-US: Byte 6..7  General control word (bits)
+  - id: MLC_bL
+    en-US: Byte 8..11 Hoisting position (mm). Use max 32-bit value if unknown.
+  - id: MLC_4GA
+    en-US: Byte 12..15 Obstacle and zone activation (bits)
+  - id: MLC_3qE
+    en-US: Track control word
+  - id: MLC_pW
+    en-US: Sensor 1
+  - id: MLC_3kU
+    en-US: Sensor 2
+  - id: MLC_4Wr
+    en-US: Sensor 3
+  - id: MLC_4mE
+    en-US: Sensor 4
+  - id: MLC_4r7
+    en-US: Collision avoidance control word
+  - id: MLC_3A9
+    en-US: Distance backward (mm)
+  - id: MLC_jK
+    en-US: Distance forward (mm)
+  - id: MLC_3et
+    en-US: Reserved

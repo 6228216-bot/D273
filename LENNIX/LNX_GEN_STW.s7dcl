@@ -1,0 +1,25 @@
+﻿TYPE
+    { S7_BlockComment := "MLC_4h6" }
+    LNX_GEN_STW : STRUCT
+        Reserved_0 : Bool;
+        Reserved_1 : Bool;
+        Reserved_2 : Bool;
+        Reserved_3 : Bool;
+        Reserved_4 : Bool;
+        Reserved_5 : Bool;
+        Reserved_6 : Bool;
+        { S7_MLC := "MLC_4HC" }
+        Reserved_7 : Bool;
+        { S7_MLC := "MLC_3rD" }
+        ControllerReady : Bool;
+        Reserved_9 : Bool;
+        { S7_MLC := "MLC_3tv" }
+        PositioningPossible : Bool;
+        { S7_MLC := "MLC_4ME" }
+        PositionSaved : Bool;
+        Reserved_12 : Bool;
+        Reserved_13 : Bool;
+        Reserved_14 : Bool;
+        Reserved_15 : Bool;
+    END_STRUCT;
+END_TYPE

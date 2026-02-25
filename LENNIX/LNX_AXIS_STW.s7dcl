@@ -1,0 +1,28 @@
+﻿TYPE
+    { S7_BlockComment := "MLC_kq" }
+    LNX_AXIS_STW : STRUCT
+        Reserved_0 : Bool;
+        Reserved_1 : Bool;
+        Reserved_2 : Bool;
+        Reserved_3 : Bool;
+        Reserved_4 : Bool;
+        Reserved_5 : Bool;
+        Reserved_6 : Bool;
+        { S7_MLC := "MLC_34g" }
+        Reserved_7 : Bool;
+        { S7_MLC := "MLC_4G8" }
+        Active : Bool;
+        { S7_MLC := "MLC_3JS" }
+        Finished : Bool;
+        { S7_MLC := "MLC_UV" }
+        SwayStopped : Bool;
+        { S7_MLC := "MLC_ng" }
+        Backward : Bool;
+        { S7_MLC := "MLC_43G" }
+        Forward : Bool;
+        { S7_MLC := "MLC_47k" }
+        AntiSwayActive : Bool;
+        Reserved_14 : Bool;
+        Reserved_15 : Bool;
+    END_STRUCT;
+END_TYPE

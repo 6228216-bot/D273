@@ -1,0 +1,42 @@
+﻿MultiLingualTexts:
+  - id: MLC_4rV
+    en-US: |2-
+       =========================================================
+       Universal axis input (PLC -> LENNIX Pro), 16 bytes
+       Suitable for: Crane, Trolley, Slewing (Input tables 20/21/22)
+       =========================================================
+       ---------------------------------------------------------
+       Axis CTW (Control Word), 16 bits
+       ---------------------------------------------------------
+  - id: MLC_46m
+    en-US: Operation mode "positioning"
+  - id: MLC_4Ae
+    en-US: Load stabilization (sway elimination while stop)
+  - id: MLC_32k
+    en-US: Brake is closed
+  - id: MLC_3Tb
+    en-US: Reserved
+  - id: MLC_43p
+    en-US: Reserved
+  - id: MLC_3se
+    en-US: Reserved
+  - id: MLC_4LA
+    en-US: Reserved
+  - id: MLC_3Jh
+    en-US: Reserved High byte
+  - id: MLC_sG
+    en-US: Travelling (axis enabled to move in selected mode)
+  - id: MLC_4hV
+    en-US: Prelimit switch "Backward"
+  - id: MLC_4FG
+    en-US: Prelimit switch "Forward"
+  - id: MLC_fD
+    en-US: Limit switch "Backward"
+  - id: MLC_sy
+    en-US: Limit switch "Forward"
+  - id: MLC_3MX
+    en-US: Stop (controlled interruption of positioning)
+  - id: MLC_Rr
+    en-US: Anti-sway ON
+  - id: MLC_y4
+    en-US: Operation mode "manual"

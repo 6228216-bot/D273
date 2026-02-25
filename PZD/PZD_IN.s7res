@@ -1,0 +1,33 @@
+﻿MultiLingualTexts:
+  - id: MLC_4Vk
+    en-US: Status word 1 (STW1)
+  - id: MLC_3WC
+    en-US: Status word 2 (STW2)
+  - id: MLC_3YA
+    en-US: Actual motor speed
+  - id: MLC_xB
+    en-US: Actual motor current
+  - id: MLC_gQ
+    en-US: Actual motor torque
+  - id: MLC_39Q
+    en-US: Actual motor voltage
+  - id: MLC_3dV
+    en-US: Drive temperature
+  - id: MLC_P5
+    en-US: Speed setpoint after ramp
+  - id: MLC_4RN
+    en-US: Reserved
+  - id: MLC_ua
+    en-US: Actual alarm number
+  - id: MLC_4Pu
+    en-US: Actual fault number
+  - id: MLC_3VF
+    en-US: Motor torque setpoint
+  - id: MLC_dd
+    en-US: Motor current setpoint
+  - id: MLC_3aK
+    en-US: Reserved
+  - id: MLC_4FP
+    en-US: Reserved
+  - id: MLC_4hv
+    en-US: Reserved
